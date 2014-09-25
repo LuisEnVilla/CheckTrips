@@ -1,97 +1,99 @@
-include ./modulos/header.jade
-.intro-header
-	.container
-		.row
-			.col-lg-12
-				.intro-message
-					h1 
-						i.fa.fa-suitcase.fa-fw
-						|Check Trips
-					h3
-						kbd ¿Sabes a donde han viajado nuestros servidores públicos?
-					hr.intro-divider
+extends modulos/header
+
+block contenido
+	.intro-header
+		.container
+			.row
+				.col-lg-12
+					.intro-message
+						h1 
+							i.fa.fa-suitcase.fa-fw
+							|Check Trips
+						h3
+							kbd ¿Sabes a donde han viajado nuestros servidores públicos?
+						hr.intro-divider
+						ul.list-inline.intro-social-buttons
+							li
+								a.btn.btn-default.btn-lg
+									i.fa.fa-twitter.fa-fw
+									span.network-name Twitter
+							li
+								a.btn.btn-default.btn-lg
+									i.fa.fa-facebook.fa-fw
+									span.network-name Facebook
+							li
+								a.btn.btn-default.btn-lg
+									i.fa.fa-github.fa-fw
+									span.network-name GitHub
+	.content-section-a
+		.container
+			.row
+				.col-lg-5.col-sm-6
+					hr.section-heading-spacer
+					.clearfix
+					h2.section-heading ¿Que es?
+					p.lead CheckTrips.mx es una app web de codigo abierto, con la que puedes acceder a la 
+						|información de todos los viajes que han echo los servideores públicos
+						|de méxico, desde cualquier dispositivo. Todo gracias a la información del 
+						a(target="_blank" href="http://inicio.ifai.org.mx/_catalogs/masterpage/ifai.aspx") ifai
+				.col-lg-5.col-lg-offset-2.col-sm-6
+					img.img-responsive(src="images/img1.jpg")
+
+	.content-section-b
+		.container
+			.row
+				.col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
+					hr.section-heading-spacer
+					.clearfix
+					h2.section-heading ¿Que información puedo ver?
+					p.lead Podras ver el nombre del funcionario y en la dependencia que trabaja, cuando realizo su viaje,
+						|por que razon viajo, en que se transporto, a que lugar fue, cuanto tiempo viajo y lo mas importante, 
+						|lo que hizo y cuanto dinero gasto en todo el viaje.
+
+				.col-lg-5.col-sm-pull-6.col-sm-6
+					img.img-responsive(src="images/img2.jpg")
+
+	.content-section-a
+		.container
+			.row
+				.col-lg-5.col-sm-6
+					hr.section-heading-spacer
+					.clearfix
+					h2.section-heading ¿Eso es todo? 
+					p.lead ¡Claro que no! Puedes registrarte y seguir a funcionarios e instituciones públicas,
+						|asi te notificaremos cuando hayan realizado un viaje mas. Ademas podras comprar la actividad 
+						|entre funcionarios o instituciones.
+
+				.col-lg-5.col-lg-offset-2.col-sm-6
+					img.img-responsive(src="images/img3.jpg")
+					hr.section-heading-spacer
+
+	.banner
+		.container
+			.row
+				.col-lg-12
+					h2 ¿Que esperas?, informate...
+					hr.section-heading-spacer
 					ul.list-inline.intro-social-buttons
 						li
 							a.btn.btn-default.btn-lg
-								i.fa.fa-twitter.fa-fw
-								span.network-name Twitter
+								i.fa.fa-user.fa-fw
+								span.network-name Iniciar Secion
 						li
 							a.btn.btn-default.btn-lg
-								i.fa.fa-facebook.fa-fw
-								span.network-name Facebook
+								i.fa.fa-search.fa-fw
+								span.network-name Buscar
 						li
 							a.btn.btn-default.btn-lg
-								i.fa.fa-github.fa-fw
-								span.network-name GitHub
-.content-section-a
-	.container
-		.row
-			.col-lg-5.col-sm-6
-				hr.section-heading-spacer
-				.clearfix
-				h2.section-heading ¿Que es?
-				p.lead CheckTrips.mx es una app web de codigo abierto, con la que puedes acceder a la 
-					|información de todos los viajes que han echo los servideores públicos
-					|de méxico, desde cualquier dispositivo. Todo gracias a la información del 
-					a(target="_blank" href="http://inicio.ifai.org.mx/_catalogs/masterpage/ifai.aspx") ifai
-			.col-lg-5.col-lg-offset-2.col-sm-6
-				img.img-responsive(src="images/img1.jpg")
+								i.fa.fa-code.fa-fw
+								span.network-name Ayudar
+						li
+							a.btn.btn-default.btn-lg
+								i.fa.fa-info-circle.fa-fw
+								span.network-name Saber más
 
-.content-section-b
-	.container
-		.row
-			.col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
-				hr.section-heading-spacer
-				.clearfix
-				h2.section-heading ¿Que información puedo ver?
-				p.lead Podras ver el nombre del funcionario y en la dependencia que trabaja, cuando realizo su viaje,
-					|por que razon viajo, en que se transporto, a que lugar fue, cuanto tiempo viajo y lo mas importante, 
-					|lo que hizo y cuanto dinero gasto en todo el viaje.
-
-			.col-lg-5.col-sm-pull-6.col-sm-6
-				img.img-responsive(src="images/img2.jpg")
-
-.content-section-a
-	.container
-		.row
-			.col-lg-5.col-sm-6
-				hr.section-heading-spacer
-				.clearfix
-				h2.section-heading ¿Eso es todo? 
-				p.lead ¡Claro que no! Puedes registrarte y seguir a funcionarios e instituciones públicas,
-					|asi te notificaremos cuando hayan realizado un viaje mas. Ademas podras comprar la actividad 
-					|entre funcionarios o instituciones.
-
-			.col-lg-5.col-lg-offset-2.col-sm-6
-				img.img-responsive(src="images/img3.jpg")
-				hr.section-heading-spacer
-
-.banner
-	.container
-		.row
-			.col-lg-12
-				h2 ¿Que esperas?, informate...
-				hr.section-heading-spacer
-				ul.list-inline.intro-social-buttons
-					li
-						a.btn.btn-default.btn-lg
-							i.fa.fa-user.fa-fw
-							span.network-name Iniciar Secion
-					li
-						a.btn.btn-default.btn-lg
-							i.fa.fa-search.fa-fw
-							span.network-name Buscar
-					li
-						a.btn.btn-default.btn-lg
-							i.fa.fa-code.fa-fw
-							span.network-name Ayudar
-					li
-						a.btn.btn-default.btn-lg
-							i.fa.fa-info-circle.fa-fw
-							span.network-name Saber más
-
-footer
-	.container
-		.row
-			.col-lg-12
-				p.copyright.text-muted.small Copyright Luis E. Villa 2014.
+	footer
+		.container
+			.row
+				.col-lg-12
+					p.copyright.text-muted.small Copyright Luis E. Villa 2014.

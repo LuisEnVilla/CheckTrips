@@ -1,0 +1,6 @@
+extends modulos/header
+
+block contenido
+  h1= message
+  h2= error.status
+  pre #{error.stack}
