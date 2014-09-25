@@ -1,6 +1,7 @@
-extends modulos/header
+extends layout
 
-block contenido
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+block content
+	include ./header
+		h1= message
+		h2= error.status
+		pre #{error.stack}
