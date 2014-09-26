@@ -2,26 +2,39 @@ extends layout
 
 block content
 	include ./header
+	.float-btn +
 	#main.container
 		.row
 			h2.top-title Viajes más costosos
 		.row
-			.col-md-4.card
-				.card-img
-					h3 Viaje 1
-				.card-content
-					dl.dl-horizontal
-						dt Funcionario
-						dd Juan Pérez
-						dt Costo
-						dd $1000.00
-					a Ver más
-			.col-md-4.card
-				h3 Viaje 2
-				img.img-responsive
-				a Ver más
-			.col-md-4.card
-				h3 Viaje 3
-				img.img-responsive
-				a Ver más
+			.col-md-4
+				.card
+					.card-img
+						h3 DF <i class="fa fa-chevron-right fa-fw"></i>  AGS
+					.card-content
+						p: span.glyphicon.glyphicon-user   Juan Pérez
+						p: span.glyphicon.glyphicon-briefcase   Autorregulación
+						p: span.glyphicon.glyphicon-usd   10000
+						hr.divider
+						a.flat-btn Ver más
+			.col-md-4
+				.card
+					.card-img
+						h3 HGO <i class="fa fa-chevron-right fa-fw"></i>  SON
+					.card-content
+						p: span.glyphicon.glyphicon-user   Pedro Hernández
+						p: span.glyphicon.glyphicon-briefcase   Contabilidad
+						p: span.glyphicon.glyphicon-usd   25000
+						hr.divider
+						a.flat-btn Ver más
+			.col-md-4
+				.card
+					.card-img
+						h3 PUE  <i class="fa fa-chevron-right fa-fw"></i>  NL
+					.card-content
+						p: span.glyphicon.glyphicon-user   Marco López
+						p: span.glyphicon.glyphicon-briefcase   Recursos humanos
+						p: span.glyphicon.glyphicon-usd   17500
+						hr.divider
+						a.flat-btn Ver más
 	include ./footer
