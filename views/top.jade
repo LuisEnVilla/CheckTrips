@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	include ./header
+	#main.container
+		.row
+			h2.top-title Viajes más costosos
+		.row
+			.col-md-4.card
+				.card-img
+					h3 Viaje 1
+				.card-content
+					dl.dl-horizontal
+						dt Funcionario
+						dd Juan Pérez
+						dt Costo
+						dd $1000.00
+					a Ver más
+			.col-md-4.card
+				h3 Viaje 2
+				img.img-responsive
+				a Ver más
+			.col-md-4.card
+				h3 Viaje 3
+				img.img-responsive
+				a Ver más
+	include ./footer
