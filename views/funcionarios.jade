@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	include ./header
+	.container
+		.row
+			.col-sm-4.col-sm-offset-4
+				.intro-message
+					ol
+						each user, i in funciona
+							li #{user.Correo}
+	include ./footer
