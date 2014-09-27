@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  include header
+  .float-btn(style="right:40px; top:260px") +
+  div#map
+  .container#main
+    .row
+      .col-md-8.col-md-offset-2.card(style="height:300px")
+        .row.details-title Detalles de Viaje
+        hr.divider
+        .row
+          .col-md-6
+            ul
+              li Juan Pérez
+              li Contabilidad
+              li IFAI
+              li 2012.215464.0001
+          .col-md-6
+            ul
+              li Tipo
+              li Acuerdo
+              li Oficio
+    .row
+      .col-md-8.col-md-offset-2.card(style="height:300px")
+        .row.details-title Detalles de Origen - Destino
+        hr.divider
+        .row.details
+          .col-md-6
+            ul
+              li Mexico DF
+              li Montevideo Uruguay
+              li Internacional
+              li 15-sep   17-sep
+          .col-md-6
+            ul
+              li Tarifa diaria $450 USD
+              li Comisión
