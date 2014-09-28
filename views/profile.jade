@@ -12,13 +12,13 @@ block content
         .row
           .col-md-6
             ul
-              li Juan Pérez
-              li Contabilidad
-              li IFAI
-              li 2012.215464.0001
+              li #{viajedate.Funcionario_id.Nombre.Nombres} #{viajedate.Funcionario_id.Nombre.ApellidoP} #{viajedate.Funcionario_id.Nombre.ApellidoM }
+              li #{viajedate.Funcionario_id.Trabajo.Puesto}
+              li #{viajedate.Funcionario_id.Trabajo.UnidadAdministrativa}
+              li #{viajedate.Consecutivo}
           .col-md-6
             ul
-              li Tipo
+              li #{viajedate.Consecutivo}
               li Acuerdo
               li Oficio
     .row
@@ -28,9 +28,9 @@ block content
         .row.details
           .col-md-6
             ul
-              li Mexico DF
-              li Montevideo Uruguay
-              li Internacional
+              li #{viajedate.Origen.Pais}
+              li #{viajedate.Origen.Ciudad}
+              li #{viajedate.Origen.Estado}
               li 15-sep   17-sep
           .col-md-6
             ul
