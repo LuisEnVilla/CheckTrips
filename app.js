@@ -5,23 +5,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 
 var index = require('./controllers/index');
 var log = require('./controllers/logeo');
 var top = require('./controllers/top');
 var profile = require('./controllers/profile');
-var funcionarios = require('./controllers/funcionarios');
+var Funcionarios = require('./controllers/funcionarios');
 var app = express();
-// Connection to DB
-/*mongoose.connect('mongodb://localhost/CheckTrip', function(err, res) {
-if(err) throw err;
-console.log('Connected to Database');
-});
-
-// Import Models
-var models = require('./models/modelFuncionario')(app, mongoose);
-*/
 // Configuration
 
 // view engine setup
@@ -41,7 +31,7 @@ app.use('/', index);
 app.use('/log',log);
 app.use('/top', top);
 app.use('/profile', profile);
-app.use('/fun',funcionarios);
+app.use('/fun',Funcionarios);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

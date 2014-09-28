@@ -38,5 +38,6 @@ module.exports = function(mongoose) {
 		UnidadAdministrativa : String
 	}
   });
+  SchemaFuncionario.set('collection','Funcionario');
   return mongoose.model('Funcionario', SchemaFuncionario);
 }
