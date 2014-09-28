@@ -7,34 +7,36 @@ block content
 		.row
 			h2.top-title Viajes más costosos
 		.row
-			.col-md-4
-				.card
-					.card-img
-						h3 DF <i class="fa fa-chevron-right fa-fw"></i>  AGS
-					.card-content
-						p: span.glyphicon.glyphicon-user   Juan Pérez
-						p: span.glyphicon.glyphicon-briefcase   Autorregulación
-						p: span.glyphicon.glyphicon-usd   10000
-						hr.divider
-						a.flat-btn Ver más
-			.col-md-4
-				.card
-					.card-img
-						h3 HGO <i class="fa fa-chevron-right fa-fw"></i>  SON
-					.card-content
-						p: span.glyphicon.glyphicon-user   Pedro Hernández
-						p: span.glyphicon.glyphicon-briefcase   Contabilidad
-						p: span.glyphicon.glyphicon-usd   25000
-						hr.divider
-						a.flat-btn Ver más
-			.col-md-4
-				.card
-					.card-img
-						h3 PUE  <i class="fa fa-chevron-right fa-fw"></i>  NL
-					.card-content
-						p: span.glyphicon.glyphicon-user   Marco López
-						p: span.glyphicon.glyphicon-briefcase   Recursos humanos
-						p: span.glyphicon.glyphicon-usd   17500
-						hr.divider
-						a.flat-btn Ver más
+			each viaje, i in viajes
+				.col-md-4
+					.card
+						.card-img
+							h3 #{viaje.Origen.Pais} <i class="fa fa-chevron-right fa-fw"></i>  #{viaje.Destino.Pais}
+						.card-content
+							p: span.glyphicon.glyphicon-user   #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+							p: span.glyphicon.glyphicon-briefcase #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+							p: span.glyphicon.glyphicon-usd   #{viaje.TarifaDiaria} #{viaje.Moneda}
+							hr.divider
+							a.flat-btn Ver más
+			//
+				.col-md-4
+					.card
+						.card-img
+							h3 HGO <i class="fa fa-chevron-right fa-fw"></i>  SON
+						.card-content
+							p: span.glyphicon.glyphicon-user   Pedro Hernández
+							p: span.glyphicon.glyphicon-briefcase   Contabilidad
+							p: span.glyphicon.glyphicon-usd   25000
+							hr.divider
+							a.flat-btn Ver más
+				.col-md-4
+					.card
+						.card-img
+							h3 PUE  <i class="fa fa-chevron-right fa-fw"></i>  NL
+						.card-content
+							p: span.glyphicon.glyphicon-user   Marco López
+							p: span.glyphicon.glyphicon-briefcase   Recursos humanos
+							p: span.glyphicon.glyphicon-usd   17500
+							hr.divider
+							a.flat-btn Ver más
 	include ./footer

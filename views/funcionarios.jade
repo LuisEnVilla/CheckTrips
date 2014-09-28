@@ -8,5 +8,6 @@ block content
 				.intro-message
 					ol
 						each user, i in Funcionario
-							li #{user.Nombre.Nombres}
+							li #{user.Funcionario_id._id}
+							li #{user.Tipo}
 	include ./footer
