@@ -11,6 +11,9 @@ Recuerda revisar la convocatoria completa del [RetoViajesTransparentes](http://i
 ##Dependencias
 Esta sección debe tener una lista completa de todas las dependencias necesarias para ejecutar el proyecto.
 
+- NodeJS v0.10.30
+- 
+
 ##Instalación / Configuración 
 Esta sección es una guía paso a paso para instalar el proyecto. Se recomienda una lista ordenada.
 
