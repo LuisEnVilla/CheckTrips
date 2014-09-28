@@ -5,17 +5,67 @@ block content
 	.float-btn +
 	#main.container
 		.row
-			h2.top-title Viajes más costosos
+			h2.top-title Viajes más recientes
+		.row
+			each viaje, i in fecha
+				.col-md-4
+					.card
+						.card-img
+							if viaje.Tipo == "Nacional"
+								h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+							else
+								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+						.card-content
+							p: span.glyphicon.glyphicon-user  #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+							p: span.glyphicon.glyphicon-briefcase  #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+							p: span.glyphicon.glyphicon-calendar  #{viaje.FechaInicio}
+							hr.divider
+							a.flat-btn Ver más
+		.row
+			h2.top-title Viajes más costosos en traslado
 		.row
 			each viaje, i in viajes
 				.col-md-4
 					.card
 						.card-img
-							h3 #{viaje.Origen.Pais} <i class="fa fa-chevron-right fa-fw"></i>  #{viaje.Destino.Pais}
+							if viaje.Tipo == "Nacional"
+								h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+							else
+								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 						.card-content
-							p: span.glyphicon.glyphicon-user   #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-							p: span.glyphicon.glyphicon-briefcase #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-							p: span.glyphicon.glyphicon-usd   #{viaje.TarifaDiaria} #{viaje.Moneda}
+							p: span.glyphicon.glyphicon-user  #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+							p: span.glyphicon.glyphicon-briefcase  #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+							p: span.glyphicon.glyphicon-usd  #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+							hr.divider
+							a.flat-btn Ver más
+		.row
+			h2.top-title Viajes más costosos en viaticos
+		.row
+			each viaje, i in viajes2
+				.col-md-4
+					.card
+						.card-img
+							if viaje.Tipo == "Nacional"
+								h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+							else
+								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+						.card-content
+							p: span.glyphicon.glyphicon-user  #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+							p: span.glyphicon.glyphicon-briefcase  #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+							p: span.glyphicon.glyphicon-usd  #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+							hr.divider
+							a.flat-btn Ver más
+		.row
+			h2.top-title Unidades que mas han viajado
+		.row
+			each viaje, i in unidades
+				.col-md-4
+					.card
+						.card-img
+							h5 #{viaje.Nombre}
+						.card-content
+							p: span.glyphicon.glyphicon-send  #{viaje.CounViajes } Viajes
+							p: span.glyphicon.glyphicon-user  #{viaje.CountFuncionarios} Funcionarios
 							hr.divider
 							a.flat-btn Ver más
 			//

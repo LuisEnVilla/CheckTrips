@@ -13,7 +13,7 @@ module.exports = function(mongoose) {
     TipoRepresentacion : String,
     Tema : String,
     ViaticosDevueltos : Number,
-    FechaInicio : Date,
+    FechaInicio : String,
     Hospedaje : {
         FechaEntrada : Date,
         NombreHotel : String,
