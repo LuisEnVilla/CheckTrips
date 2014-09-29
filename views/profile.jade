@@ -3,36 +3,132 @@ extends layout
 block content
   include header
   .float-btn(style="right:40px; top:260px") +
-  div#map
+  #map(style='background-image:url("http://maps.googleapis.com/maps/api/staticmap?center='+viajedate.Destino.Ciudad+'&zoom=8&size=1200x200&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=2&format=jpg&sensor=FALSE")')
   .container#main
     .row
-      .col-md-8.col-md-offset-2.card(style="height:300px")
-        .row.details-title Detalles de Viaje
+      .col-md-8.col-md-offset-2.card
+        .row.details-title  Detalles de Viaje
         hr.divider
         .row
           .col-md-6
-            ul
-              li #{viajedate.Funcionario_id.Nombre.Nombres} #{viajedate.Funcionario_id.Nombre.ApellidoP} #{viajedate.Funcionario_id.Nombre.ApellidoM }
-              li #{viajedate.Funcionario_id.Trabajo.Puesto}
-              li #{viajedate.Funcionario_id.Trabajo.UnidadAdministrativa}
-              li #{viajedate.Consecutivo}
+            dl.dl-horizontal
+              dt  Funcionario: 
+              dd  #{viajedate.Funcionario_id.Nombre.Nombres} #{viajedate.Funcionario_id.Nombre.ApellidoP} #{viajedate.Funcionario_id.Nombre.ApellidoM }
+              dt  Puesto:
+              dd  #{viajedate.Funcionario_id.Trabajo.Puesto}
+              dt  Unidad Administrativa: 
+              dd  <br>#{viajedate.Funcionario_id.Trabajo.UnidadAdministrativa}
+              dt  Consecutivo Asignado: 
+              dd  #{viajedate.Consecutivo}
           .col-md-6
-            ul
-              li #{viajedate.Consecutivo}
-              li Acuerdo
-              li Oficio
+            dl.dl-horizontal
+              dt  Mecanismo: 
+              dd  #{viajedate.MecanismoOrigen}
+              dt  Tema: 
+              dd  #{viajedate.Tema}
+              dt  Tipo de Comision: 
+              dd  #{viajedate.TipoComision}
+              dt: span.glyphicon.glyphicon-calendar
+              dd #{viajedate.FechaInicio} -  #{viajedate.FechaFin}
+              dt: h3 
+                span.glyphicon.glyphicon-usd
+              dd: h3 #{viajedate.GastoPasaje + viajedate.GastosViaticos + viajedate.CostoHospedaje}
     .row
-      .col-md-8.col-md-offset-2.card(style="height:300px")
-        .row.details-title Detalles de Origen - Destino
+      .col-md-8.col-md-offset-2.card
+        .row.details-title  Origen - Destino
         hr.divider
         .row.details
           .col-md-6
-            ul
-              li #{viajedate.Origen.Pais}
-              li #{viajedate.Origen.Ciudad}
-              li #{viajedate.Origen.Estado}
-              li 15-sep   17-sep
+            dl.dl-horizontal
+              dt: span.glyphicon.glyphicon-map-marker
+              if viajedate.Tipo == "Nacional"
+                dd  #{viajedate.Origen.Estado}, #{viajedate.Origen.Ciudad}   
+              else
+                dd  #{viajedate.Origen.Pais}, #{viajedate.Origen.Ciudad}, #{viajedate.Origen.Estado}
+              if viajedate.Pasaje.TipoPasaje == "Aéreo" || viajedate.Pasaje.TipoPasaje == "Aereo"
+                dt: span.glyphicon.glyphicon-plane
+                dd  #{viajedate.Pasaje.LineaOrigen} , Número: #{viajedate.Pasaje.VueloOrigen}
+                dt Cubierto por: 
+                dd  #{viajedate.Pasaje.CubrePasaje}
+              else 
+                dt: span.glyphicon.glyphicon-road
+                dd  #{viajedate.Pasaje.TipoPasaje}
           .col-md-6
-            ul
-              li Tarifa diaria $450 USD
-              li Comisión
+            dl.dl-horizontal
+              dt: span.glyphicon.glyphicon-map-marker
+              if viajedate.Tipo = "Nacional"
+                dd  #{viajedate.Destino.Estado}, #{viajedate.Destino.Ciudad}   
+              else
+                dd  #{viajedate.Destino.Pais}, #{viajedate.Destino.Ciudad}, #{viajedate.Origen.Estado}
+              if viajedate.Pasaje.TipoPasaje == "Aéreo" || viajedate.Pasaje.TipoPasaje == "Aereo"
+                dt: span.glyphicon.glyphicon-plane
+                dd  #{viajedate.Pasaje.LineaRegreso}, Número: #{viajedate.Pasaje.VueloOrigen}
+              else 
+                dt: span.glyphicon.glyphicon-road
+                dd  #{viajedate.Pasaje.TipoPasaje}
+              dt  Hotel
+              dd  #{viajedate.Hospedaje.NombreHotel}
+              dt: span.glyphicon.glyphicon-calendar
+              dd  #{viajedate.Hospedaje.FechaEntrada} - #{viajedate.Hospedaje.FechaSalida}
+              dt  Cubierto por:
+              dd  #{viajedate.Hospedaje.CubreHospedaje}
+    .row
+      .col-md-8.col-md-offset-2.card
+        .row.details
+          table.table-responsive.table-striped.table
+            tbody
+              tr
+                td Pasaje
+                td $ #{viajedate.GastoPasaje}
+              tr
+                td  Hospedaje
+                td $ #{viajedate.CostoHospedaje}
+              tr
+                td Viaticos
+                td $ #{viajedate.GastosViaticos}
+              tr
+                td Tarifa Diaria
+                td $ #{viajedate.TarifaDiaria} #{viajedate.Moneda}
+              tr
+                td Viaticos Comprobados
+                td $ #{viajedate.ViaticosComp}
+              tr
+                td Viaticos No Comprobados
+                td $ #{viajedate.ViaticosNoComp}
+              tr
+                td Viaticos Devueltos
+                td $ #{viajedate.ViaticosDevueltos}
+    .row
+      .col-md-8.col-md-offset-2.card
+        .row.details-title  Respaldo del Viaje
+        hr.divider
+        .row.details
+          .col-md-6
+            dl.dl-horizontal
+              dt  Instituto que Solicita:
+              dd  #{viajedate.InstitutoGenera}
+              dt  Tipo de reprecentacion:
+              dd  #{viajedate.TipoRepresentacion}
+          .col-md-6
+            dl.dl-horizontal
+              dt  Unidad responsable: 
+              dd  #{viajedate.UnidadResponsable} 
+              dt  Oficio:
+              dd  #{viajedate.Oficio}
+              dt  Acuerdo:
+              dd  #{viajedate.Acuerdo}
+        dl.dl
+          dt  Actividad Realizada:
+          dd  #{viajedate.Actividad}
+          dt  Motivo de Comision:
+          dd  #{viajedate.MotivoComision}
+          dt  Contribucion:
+          dd  #{viajedate.Contribucion}
+          dt  Resultado Obtenido:
+          dd  #{viajedate.Resultado}
+          dt  URL del evento:
+          dd  #{viajedate.DatosEvento.URL}
+          dt  Antecedentes:
+          dd  #{viajedate.Antecedentes}
+          dt  Observaciones:
+          dd  #{viajedate.Observaciones}

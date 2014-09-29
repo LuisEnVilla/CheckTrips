@@ -15,10 +15,10 @@ module.exports = function(mongoose) {
     ViaticosDevueltos : Number,
     FechaInicio : String,
     Hospedaje : {
-        FechaEntrada : Date,
+        FechaEntrada :String,
         NombreHotel : String,
         CubreHospedaje : String,
-        FechaSalida : Date
+        FechaSalida :String
     },
     Consecutivo : String,
     Origen : {
@@ -31,7 +31,7 @@ module.exports = function(mongoose) {
     MecanismoOrigen : String,
     Antecedentes : String,
     ViaticosComp : Number,
-    FechaFin : Date,
+    FechaFin :String,
     TipoComision : String,
     Oficio : String,
     Observaciones : String,
@@ -48,8 +48,8 @@ module.exports = function(mongoose) {
     DatosEvento : {
         URL : String,
         Nombre : String,
-        FechaFinPart : Date,
-        FechaInicioPart : Date
+        FechaFinPart :String,
+        FechaInicioPart :String
     },
     Pasaje : {
         LineaOrigen : String,

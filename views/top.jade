@@ -16,9 +16,15 @@ block content
 							else
 								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 						.card-content
-							p: span.glyphicon.glyphicon-user  #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-							p: span.glyphicon.glyphicon-briefcase  #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-							p: span.glyphicon.glyphicon-calendar  #{viaje.FechaInicio}
+							dl.dl-horizontal
+								dt: span.glyphicon.glyphicon-bookmark 
+								dd #{viaje.Tema}
+								dt: span.glyphicon.glyphicon-user
+								dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+								dt: span.glyphicon.glyphicon-briefcase
+								dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+								dt: span.glyphicon.glyphicon-calendar
+								dd #{viaje.FechaInicio}
 							hr.divider
 							a.flat-btn Ver más
 		.row
@@ -33,9 +39,15 @@ block content
 							else
 								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 						.card-content
-							p: span.glyphicon.glyphicon-user  #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-							p: span.glyphicon.glyphicon-briefcase  #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-							p: span.glyphicon.glyphicon-usd  #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+							dl.dl-horizontal
+								dt: span.glyphicon.glyphicon-bookmark 
+								dd #{viaje.Tema}
+								dt: span.glyphicon.glyphicon-user
+								dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+								dt: span.glyphicon.glyphicon-briefcase
+								dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+								dt: span.glyphicon.glyphicon-usd
+								dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							hr.divider
 							a.flat-btn Ver más
 		.row
@@ -50,9 +62,15 @@ block content
 							else
 								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 						.card-content
-							p: span.glyphicon.glyphicon-user  #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-							p: span.glyphicon.glyphicon-briefcase  #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-							p: span.glyphicon.glyphicon-usd  #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+							dl.dl-horizontal
+								dt: span.glyphicon.glyphicon-bookmark 
+								dd #{viaje.Tema}
+								dt: span.glyphicon.glyphicon-user
+								dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+								dt: span.glyphicon.glyphicon-briefcase
+								dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+								dt: span.glyphicon.glyphicon-usd
+								dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							hr.divider
 							a.flat-btn Ver más
 		.row
@@ -64,8 +82,11 @@ block content
 						.card-img
 							h5 #{viaje.Nombre}
 						.card-content
-							p: span.glyphicon.glyphicon-send  #{viaje.CounViajes } Viajes
-							p: span.glyphicon.glyphicon-user  #{viaje.CountFuncionarios} Funcionarios
+							dl.dl-horizontal
+								dt: span.glyphicon.glyphicon-send
+								dd  #{viaje.CounViajes } Viajes
+								dt: span.glyphicon.glyphicon-user
+								dd  #{viaje.CountFuncionarios} Funcionarios
 							hr.divider
 							a.flat-btn Ver más
 			//
