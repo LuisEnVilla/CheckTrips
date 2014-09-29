@@ -10,6 +10,7 @@ var index = require('./controllers/index');
 var log = require('./controllers/logeo');
 var top = require('./controllers/top');
 var profile = require('./controllers/profile');
+var compare = require('./controllers/compare');
 var Funcionarios = require('./controllers/funcionarios');
 var app = express();
 // Configuration
@@ -31,7 +32,12 @@ app.use('/', index);
 app.use('/log',log);
 app.use('/top', top);
 app.use('/profile', profile);
+<<<<<<< HEAD
 app.use('/funcionario',Funcionarios);
+=======
+app.use('/fun',Funcionarios);
+app.use('/compare', compare);
+>>>>>>> d16b2a72ea998c39f6551fe4ff0483db8c6ff464
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
