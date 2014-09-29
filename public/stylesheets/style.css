@@ -1,9 +1,11 @@
+*{
 
+    font-family: Roboto, sans-serif;
+}
   body,html {
     width: 100%;
     height: 100%;
     font-weight: 300;
-    font-family: Roboto, sans-serif;
     background-color: #ECF0F1;
 }
 
@@ -195,7 +197,6 @@ h1 {
     top: 0;
     left: 0;
     right: 0;
-    background-image: url("http://maps.googleapis.com/maps/api/staticmap?center=Pachuca,HGO&zoom=14&size=1200x400&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=2&format=jpg&sensor=FALSE");
     background-repeat: no-repeat;
     background-size:100% auto; 
     height: 300px;
@@ -208,6 +209,16 @@ a.navbar-brand {
     font-style: italic;
     margin: 0;
     font-size: 2.5em;
+}
+
+.dl-horizontal dt {
+    width: auto;
+    margin-right: 1em;
+    text-align: center;
+}
+.dl-horizontal dd{
+    margin-left: 2em;
+    font-weight: bolder;
 }
 
 @media only screen and (max-width: 768px){
