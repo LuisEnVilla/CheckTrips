@@ -13,7 +13,7 @@ block content
           .col-md-6
             dl.dl-horizontal
               dt  Funcionario: 
-              dd  #{viajedate.Funcionario_id.Nombre.Nombres} #{viajedate.Funcionario_id.Nombre.ApellidoP} #{viajedate.Funcionario_id.Nombre.ApellidoM }
+              dd: a(href="/funcionario/"+ viajedate.Funcionario_id._id) #{viajedate.Funcionario_id.Nombre.Nombres} #{viajedate.Funcionario_id.Nombre.ApellidoP} #{viajedate.Funcionario_id.Nombre.ApellidoM }
               dt  Puesto:
               dd  #{viajedate.Funcionario_id.Trabajo.Puesto}
               dt  Unidad Administrativa: 
@@ -132,3 +132,4 @@ block content
           dd  #{viajedate.Antecedentes}
           dt  Observaciones:
           dd  #{viajedate.Observaciones}
+  include ./footer

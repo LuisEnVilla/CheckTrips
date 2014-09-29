@@ -2,10 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res) {
-	db.funcionario.find(function (err, Funcionario){
-		if (err) res.send(500, err.message);
-		res.render('funcionarios',{Funcionario:Funcionario});
+router.get('/:id', function(req, res) {
+	db.funcionario.findById(req.params.id).exec(function (err, Funcionario){
+	  	if (err) res.render('error', {
+	        message: err.message,
+	        error: {}});
+	  	db.viaje.count({Funcionario_id: req.params.id},function (err, contador){
+	  		if (err) res.render('error', {
+	        message: err.message,
+	        error: {}});
+	  		else res.render('funcionarios',{Funcionario:Funcionario,contador:contador});
+	  	});
 	});
 });
 

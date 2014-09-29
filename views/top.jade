@@ -26,7 +26,7 @@ block content
 								dt: span.glyphicon.glyphicon-calendar
 								dd #{viaje.FechaInicio}
 							hr.divider
-							a.flat-btn Ver más
+							a.flat-btn(href ="/profile/" + viaje._id) Ver más
 		.row
 			h2.top-title Viajes más costosos en traslado
 		.row
@@ -49,7 +49,7 @@ block content
 								dt: span.glyphicon.glyphicon-usd
 								dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							hr.divider
-							a.flat-btn Ver más
+							a.flat-btn(href ="/profile/" + viaje._id) Ver más
 		.row
 			h2.top-title Viajes más costosos en viaticos
 		.row
@@ -72,7 +72,7 @@ block content
 								dt: span.glyphicon.glyphicon-usd
 								dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							hr.divider
-							a.flat-btn Ver más
+							a.flat-btn(href ="/profile/" + viaje._id) Ver más
 		.row
 			h2.top-title Unidades que mas han viajado
 		.row
@@ -87,27 +87,6 @@ block content
 								dd  #{viaje.CounViajes } Viajes
 								dt: span.glyphicon.glyphicon-user
 								dd  #{viaje.CountFuncionarios} Funcionarios
-							hr.divider
-							a.flat-btn Ver más
-			//
-				.col-md-4
-					.card
-						.card-img
-							h3 HGO <i class="fa fa-chevron-right fa-fw"></i>  SON
-						.card-content
-							p: span.glyphicon.glyphicon-user   Pedro Hernández
-							p: span.glyphicon.glyphicon-briefcase   Contabilidad
-							p: span.glyphicon.glyphicon-usd   25000
-							hr.divider
-							a.flat-btn Ver más
-				.col-md-4
-					.card
-						.card-img
-							h3 PUE  <i class="fa fa-chevron-right fa-fw"></i>  NL
-						.card-content
-							p: span.glyphicon.glyphicon-user   Marco López
-							p: span.glyphicon.glyphicon-briefcase   Recursos humanos
-							p: span.glyphicon.glyphicon-usd   17500
 							hr.divider
 							a.flat-btn Ver más
 	include ./footer
