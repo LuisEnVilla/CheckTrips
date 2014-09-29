@@ -32,12 +32,8 @@ app.use('/', index);
 app.use('/log',log);
 app.use('/top', top);
 app.use('/profile', profile);
-<<<<<<< HEAD
 app.use('/funcionario',Funcionarios);
-=======
-app.use('/fun',Funcionarios);
 app.use('/compare', compare);
->>>>>>> d16b2a72ea998c39f6551fe4ff0483db8c6ff464
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
