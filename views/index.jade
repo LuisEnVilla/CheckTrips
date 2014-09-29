@@ -13,83 +13,11 @@ block content
 						h3
 							kbd ¿Sabes a donde han viajado nuestros servidores públicos?
 						hr.intro-divider
-						ul.list-inline.intro-social-buttons
-							li
-								a.btn.btn-default.btn-lg
-									i.fa.fa-twitter.fa-fw
-									span.network-name Twitter
-							li
-								a.btn.btn-default.btn-lg
-									i.fa.fa-facebook.fa-fw
-									span.network-name Facebook
-							li
-								a.btn.btn-default.btn-lg
-									i.fa.fa-github.fa-fw
-									span.network-name GitHub
-	.content-section-a
-		.container
+						a.btn.btn-lg.raised-btn(href="/top") Explorar
+						p: a(href="#1") 
+							span.glyphicon.glyphicon-chevron-down
+		.container#1
 			.row
-				.col-lg-5.col-sm-6
-					hr.section-heading-spacer
-					.clearfix
-					h2.section-heading ¿Qué es?
-					p.lead CheckTrips.mx es una app web de codigo abierto, con la que puedes acceder a la 
-						|información de todos los viajes que han hecho los servidores públicos
-						|de México, desde cualquier dispositivo. Todo gracias a la información del 
-						a(target="_blank" href="http://inicio.ifai.org.mx/_catalogs/masterpage/ifai.aspx") IFAI.
-				.col-lg-5.col-lg-offset-2.col-sm-6
-					img.img-responsive(src="images/img1.jpg")
-
-	.content-section-b
-		.container
-			.row
-				.col-lg-5.col-lg-offset-1.col-sm-push-6.col-sm-6
-					hr.section-heading-spacer
-					.clearfix
-					h2.section-heading ¿Qué información puedo ver?
-					p.lead Podrás ver el nombre del funcionario y en la dependencia que trabaja, cuándo realizo su viaje,
-						|por qué razón viajó, en qué se transporto, a qué lugar fue, cuanto tiempo viajó y lo más importante, 
-						|lo que hizo y cuánto dinero gastó en todo el viaje.
-
-				.col-lg-5.col-sm-pull-6.col-sm-6
-					img.img-responsive(src="images/img2.jpg")
-
-	.content-section-a
-		.container
-			.row
-				.col-lg-5.col-sm-6
-					hr.section-heading-spacer
-					.clearfix
-					h2.section-heading ¿Eso es todo? 
-					p.lead ¡Claro que no! Puedes registrarte y seguir a funcionarios e instituciones públicas,
-						|asi te notificaremos cuando hayan realizado más viajes. Ademas podrás comparar la actividad 
-						|entre funcionarios o instituciones.
-
-				.col-lg-5.col-lg-offset-2.col-sm-6
-					img.img-responsive(src="images/img3.jpg")
-					hr.section-heading-spacer
-
-	.banner
-		.container
-			.row
-				.col-lg-12
-					h2 ¿Qué esperas?, Informate...
-					hr.section-heading-spacer
-					ul.list-inline.intro-social-buttons
-						li
-							a.btn.btn-default.btn-lg
-								i.fa.fa-user.fa-fw
-								span.network-name Iniciar Sesión
-						li
-							a.btn.btn-default.btn-lg
-								i.fa.fa-search.fa-fw
-								span.network-name Buscar
-						li
-							a.btn.btn-default.btn-lg
-								i.fa.fa-code.fa-fw
-								span.network-name Ayudar
-						li
-							a.btn.btn-default.btn-lg
-								i.fa.fa-info-circle.fa-fw
-								span.network-name Saber más
+				.col-md-3.col-md-offset-1.stats#money
+					h2 $100,000.00
 	include ./footer

@@ -1,0 +1,53 @@
+extends layout
+
+block content
+	include header
+	.float-btn +
+	.container-fluid
+		.row
+			.col-md-6.tripdesc.yellow.col-xs-6
+				h2.hidden-xs DF  -  TIJ
+				h3 Por Juan Pérez
+			.col-md-6.tripdesc.blue.col-xs-6
+				h2.hidden-xs HGO  -  SON
+				h3 Por Gabriela Castillo
+	.container
+		.row.card
+			.col-md-6
+				.chart#chart1
+				h2 Total  $
+			.col-md-6
+				.chart#chart2
+				h2 Total  $
+		.row.card
+			.col-md-12
+				table.table.table-responsive.table-striped
+					thead
+						tr
+							th Titulo
+							th Viaje 1
+							th Viaje 2
+					tbody
+						tr
+							td Duración de viaje
+							td 2 días
+							td 5 días
+						tr
+							td Aclaraciones solicitadas
+							td 5
+							td 0
+						tr
+							td Aclaraciones solicitadas
+							td 5
+							td 0
+						tr
+							td Aclaraciones solicitadas
+							td 5
+							td 0
+						tr
+							td Aclaraciones solicitadas
+							td 5
+							td 0
+	script(src="/javascripts/highcharts.js")
+	script(src="./javascripts/charts.js")
+	include footer

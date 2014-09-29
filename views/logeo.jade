@@ -5,25 +5,19 @@ block content
 	.intro-header#logeo
 		.container
 			.row
-				.col-sm-4.col-sm-offset-4
-					.intro-message
-						br
-						h3 
-							i.fa.fa-user.fa-fw
-							|Inicio de Sesión
-						form(role="form")
-							.input-group
-								span.input-group-addon @
-								input.form-control.input-lg(type="email",id="email",placeholder="Ingresa tu Email")
-							.input-group
-								span.input-group-addon ***
-								input.form-control.input-lg(type="password",id="password",placeholder="Ingresa tu Contraseña")
-							.input-group
-								button.btn.btn-primary(type="submit") Validar Datos
-						hr.intro-divider
-						ul.list-inline
-							li
-								a.btn.btn-default.btn-lg(href='#')
-									i.fa.fa-edit.fa-fw
-									span.network-name Registrate
+				.col-sm-4.col-sm-offset-4.card
+					h3 Inicio de Sesión
+					form(role="form")
+						.group
+							input(type="text" required)
+							span.highlight
+							span.bar
+							label e-mail
+						.group
+							input(type="password" required)
+							span.highlight
+							span.bar
+							label contraseña
+						button.btn.flat-btn.pull-right(type="submit") Ingresar
+						a.btn.flat-btn.pull-right(style="background-color:white;color:black;margin-left:1em") Registrarse
 	include ./footer
