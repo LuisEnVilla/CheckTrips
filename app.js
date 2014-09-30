@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./controllers/index');
+var insert = require('./controllers/insert');
 var log = require('./controllers/logeo');
 var top = require('./controllers/top');
 var profile = require('./controllers/profile');
@@ -34,6 +35,7 @@ app.use('/top', top);
 app.use('/profile', profile);
 app.use('/funcionario',Funcionarios);
 app.use('/compare', compare);
+app.use('/insert', insert);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

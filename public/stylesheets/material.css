@@ -2,6 +2,7 @@
 
 .group {
 	position:relative;
+	margin-top:45px;
 	margin-bottom:45px;
 }
 
@@ -162,7 +163,19 @@ input:focus ~ .highlight {
 		cursor: pointer;
 }
 
-/*------*/
+/*---DROPDOWN---*/
+
+.dropdown-toggle{
+	background-color: white !important;
+	background-image: none;
+	border-radius: 2px;
+	width:100px; 
+}
+
+.dropdown-menu {
+	width: 100px;
+	min-width: 100px;
+}
 
 @media only screen and (max-width: 768px) {
 	.float-btn {
