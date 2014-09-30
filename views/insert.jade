@@ -1,0 +1,49 @@
+extends layout
+
+block content
+	include header
+	.container.tabbable.col-md-8.col-md-offset-2.card
+		ul#tabs.nav.nav-tabs.nav-justified(role="tablist")
+			li.active
+				a(href="#pane1" role="tab" data-toggle="tab") General
+			li: a(href="#pane2" role="tab" data-toggle="tab") Viaticos
+			li: a(href="#pane3" role="tab" data-toggle="tab") Hospedaje
+			li: a(href="#pane4" role="tab" data-toggle="tab") Respaldo
+		form(role="form")
+		.tab-content
+			.tab-pane.active#pane1
+				select
+					option(value="Dep") Juan Pérez
+					option(value="Dep2") Alberto López
+				.group
+					input(type="text" required)
+					span.highlight
+					span.bar
+					label e-mail
+				select#sel
+					option(value="Dep") Dependencia 1
+					option(value="Dep2") Dependencia 2
+				a#2.btn.flat-btn Siguiente
+			.tab-pane#pane2
+				.group
+					input(type="text" required)
+					span.highlight
+					span.bar
+					label e-mail
+				a#3.btn.flat-btn Siguiente
+			.tab-pane#pane3
+				.group
+					input(type="text" required)
+					span.highlight
+					span.bar
+					label e-mail
+				a#4.btn.flat-btn Siguiente
+			.tab-pane#pane4
+				.group
+					input(type="text" required)
+					span.highlight
+					span.bar
+					label 4
+				button.btn.flat-btn.pull-right(type="submit") Agregar
+	script(src="/javascripts/select2.js")
+	script(src="/javascripts/form.js")
