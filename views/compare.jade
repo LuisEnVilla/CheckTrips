@@ -6,49 +6,63 @@ block content
 	.container-fluid
 		.row
 			.col-md-6.tripdesc.col-xs-6
-				h2.hidden-xs DF  -  TIJ
-				h3 Por Juan Pérez
+				h2.hidden-xs: a(href="/funcionario/"+datos1[0].Funcionario_id._id) #{datos1[0].Funcionario_id.Nombre.Nombres}
+				h3 #{datos1[0].Funcionario_id.Nombre.ApellidoP + datos1[0].Funcionario_id.Nombre.ApellidoM}
 			.col-md-6.tripdesc.col-xs-6
-				h2.hidden-xs HGO  -  SON
-				h3 Por Gabriela Castillo
+				h2.hidden-xs: a(href="/funcionario/"+datos1[0].Funcionario_id._id) #{datos2[0].Funcionario_id.Nombre.Nombres}
+				h3 #{datos2[0].Funcionario_id.Nombre.ApellidoP + datos2[0].Funcionario_id.Nombre.ApellidoM}
 	.container.main
 		.row
 			.col-md-8.col-md-offset-2.card
 				.chart#chart1
-				h2 Total  $
 		.row
 			.col-md-8.col-md-offset-2.card
 				.chart#chart2
-				h2 Total  $
 		.row
 			.col-md-8.col-md-offset-2.card
 				table.table.table-responsive.table-striped
 					thead
 						tr
-							th Titulo
-							th Viaje 1
-							th Viaje 2
+							th Datos
+							th #{datos1[0].Funcionario_id.Nombre.Nombres}
+							th #{datos2[0].Funcionario_id.Nombre.Nombres}
 					tbody
 						tr
-							td Duración de viaje
-							td 2 días
-							td 5 días
+							td Viajes
+							td #{count1}
+							td #{count2}
+						tr
+							td Gasto en pasaje
+							td $ #{totales.totalpasajes1}
+							td $ #{totales.totalpasajes2}
+						tr
+							td Gasto en hospedaje
+							td $ #{totales.toatlhospedaje1}
+							td $ #{totales.toatlhospedaje2}
+						tr
+							td Gasto en viaticos
+							td $ #{totales.totalviaticos1}
+							td $ #{totales.totalviaticos2}
 						tr
 							td Aclaraciones solicitadas
-							td 5
-							td 0
+							td #{datos1[0].Funcionario_id.Aclaraciones}
+							td #{datos2[0].Funcionario_id.Aclaraciones}
 						tr
-							td Aclaraciones solicitadas
-							td 5
-							td 0
+							td Puesto
+							td #{datos1[0].Funcionario_id.Trabajo.Puesto}
+							td #{datos2[0].Funcionario_id.Trabajo.Puesto}
 						tr
-							td Aclaraciones solicitadas
-							td 5
-							td 0
+							td Cargo
+							td #{datos1[0].Funcionario_id.Trabajo.Cargo}
+							td #{datos2[0].Funcionario_id.Trabajo.Cargo}
 						tr
-							td Aclaraciones solicitadas
-							td 5
-							td 0
+							td Unidad Administrativa
+							td #{datos1[0].Funcionario_id.Trabajo.UnidadAdministrativa}
+							td #{datos2[0].Funcionario_id.Trabajo.UnidadAdministrativa}
 	script(src="/javascripts/highcharts.js")
-	script(src="/javascripts/charts.js")
+	script.
+		$(function () {
+			$('#chart1').highcharts(#{grafica1});
+			$('#chart2').highcharts(#{grafica2});
+			});
 	include footer

@@ -16,7 +16,8 @@ module.exports = function(mongoose) {
 		Institucion : String,
 		Puesto : String,
 		Clave : String,
-		UnidadAdministrativa : String
+		UnidadAdministrativa : String,
+		Aclaraciones : Number
 	}
   });
   SchemaFuncionario.set('collection','Funcionario');
