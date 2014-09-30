@@ -115,6 +115,10 @@ input:focus ~ .highlight {
 		padding: 1.6em;
 }
 
+.card-control {
+	
+}
+
 /*---BUTTONS---*/
 
 .flat-btn {

@@ -17,88 +17,104 @@ block content
 						p: a(href="#1") 
 							span.glyphicon.glyphicon-chevron-down
 			.row
-			h2.top-title Viajes más recientes
-		.row
-			each viaje, i in fecha
-				.col-md-4
-					.card
-						.card-img
-							if viaje.Tipo == "Nacional"
-								h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
-							else
-								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
-						.card-content
-							dl.dl-horizontal
-								dt: span.glyphicon.glyphicon-bookmark 
-								dd #{viaje.Tema}
-								dt: span.glyphicon.glyphicon-user
-								dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								dt: span.glyphicon.glyphicon-briefcase
-								dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-								dt: span.glyphicon.glyphicon-calendar
-								dd #{viaje.FechaInicio}
-							hr.divider
-							a.flat-btn(href ="/profile/" + viaje._id) Ver más
-		.row
-			h2.top-title Viajes más costosos en traslado
-		.row
-			each viaje, i in viajes
-				.col-md-4
-					.card
-						.card-img
-							if viaje.Tipo == "Nacional"
-								h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
-							else
-								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
-						.card-content
-							dl.dl-horizontal
-								dt: span.glyphicon.glyphicon-bookmark 
-								dd #{viaje.Tema}
-								dt: span.glyphicon.glyphicon-user
-								dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								dt: span.glyphicon.glyphicon-briefcase
-								dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-								dt: span.glyphicon.glyphicon-usd
-								dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
-							hr.divider
-							a.flat-btn(href ="/profile/" + viaje._id) Ver más
-		.row
-			h2.top-title Viajes más costosos en viaticos
-		.row
-			each viaje, i in viajes2
-				.col-md-4
-					.card
-						.card-img
-							if viaje.Tipo == "Nacional"
-								h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
-							else
-								h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
-						.card-content
-							dl.dl-horizontal
-								dt: span.glyphicon.glyphicon-bookmark 
-								dd #{viaje.Tema}
-								dt: span.glyphicon.glyphicon-user
-								dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								dt: span.glyphicon.glyphicon-briefcase
-								dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-								dt: span.glyphicon.glyphicon-usd
-								dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
-							hr.divider
-							a.flat-btn(href ="/profile/" + viaje._id) Ver más
-		.row
-			h2.top-title Unidades que mas han viajado
-		.row
-			each viaje, i in unidades
-				.col-md-4
-					.card
-						.card-img
-							h5 #{viaje.Nombre}
-						.card-content
-							dl.dl-horizontal
-								dt: span.glyphicon.glyphicon-send
-								dd  #{viaje.CounViajes } Viajes
-								dt: span.glyphicon.glyphicon-user
-								dd  #{viaje.CountFuncionarios} Funcionarios
-							hr.divider
-							a.flat-btn Ver más
+				h2.top-title Viajes más recientes
+			.row
+				each viaje, i in fecha
+					.col-md-4
+						.card
+							.card-img
+								if viaje.Tipo == "Nacional"
+									h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+								else
+									h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+							.card-content
+								dl.dl-horizontal
+									dt: span.glyphicon.glyphicon-bookmark 
+									dd #{viaje.Tema}
+									dt: span.glyphicon.glyphicon-user
+									dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+									dt: span.glyphicon.glyphicon-briefcase
+									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+									dt: span.glyphicon.glyphicon-calendar
+									dd #{viaje.FechaInicio}
+							.card-control
+								span.glyphicon.glyphicon-eye-open
+									span.badge 20
+								span.glyphicon.glyphicon-comment
+									span.badge 0
+								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
+			.row
+				h2.top-title Viajes más costosos en traslado
+			.row
+				each viaje, i in viajes
+					.col-md-4
+						.card
+							.card-img
+								if viaje.Tipo == "Nacional"
+									h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+								else
+									h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+							.card-content
+								dl.dl-horizontal
+									dt: span.glyphicon.glyphicon-bookmark 
+									dd #{viaje.Tema}
+									dt: span.glyphicon.glyphicon-user
+									dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+									dt: span.glyphicon.glyphicon-briefcase
+									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+									dt: span.glyphicon.glyphicon-usd
+									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+							.card-control
+								span.glyphicon.glyphicon-eye-open
+									span.badge 20
+								span.glyphicon.glyphicon-comment
+									span.badge 0
+								a.flat-btn(href ="/profile/" + viaje._id) Ver más
+			.row
+				h2.top-title Viajes más costosos en viaticos
+			.row
+				each viaje, i in viajes2
+					.col-md-4
+						.card
+							.card-img
+								if viaje.Tipo == "Nacional"
+									h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+								else
+									h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+							.card-content
+								dl.dl-horizontal
+									dt: span.glyphicon.glyphicon-bookmark 
+									dd #{viaje.Tema}
+									dt: span.glyphicon.glyphicon-user
+									dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+									dt: span.glyphicon.glyphicon-briefcase
+									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+									dt: span.glyphicon.glyphicon-usd
+									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+							.card-control
+								span.glyphicon.glyphicon-eye-open
+									span.badge 20
+								span.glyphicon.glyphicon-comment
+									span.badge 0
+								a.flat-btn(href ="/profile/" + viaje._id) Ver más
+			.row
+				h2.top-title Unidades que mas han viajado
+			.row
+				each viaje, i in unidades
+					.col-md-4
+						.card
+							.card-img
+								h5 #{viaje.Nombre}
+							.card-content
+								dl.dl-horizontal
+									dt: span.glyphicon.glyphicon-send
+									dd  #{viaje.CounViajes } Viajes
+									dt: span.glyphicon.glyphicon-user
+									dd  #{viaje.CountFuncionarios} Funcionarios
+							.card-control
+								span.glyphicon.glyphicon-eye-open
+									span.badge 20
+								span.glyphicon.glyphicon-comment
+									span.badge 0
+								a.flat-btn Ver más
 	include ./footer
