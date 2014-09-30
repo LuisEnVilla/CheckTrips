@@ -8,7 +8,8 @@ mongoose: mongoose,
 //models
 funcionario: require('./Funcionario')(mongoose),
 viaje : require('./modelViaje')(mongoose),
-unidad : require('./modelUnidad')(mongoose)
+unidad : require('./modelUnidad')(mongoose),
+aclaracion : require('./modelAclaracion')(mongoose)
 // agregar más modelos aquí en caso de haberlos
 };
 module.exports = global.db;

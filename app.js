@@ -32,7 +32,7 @@ app.use('/', index);
 app.use('/log',log);
 app.use('/top', top);
 app.use('/profile', profile);
-app.use('/fun',Funcionarios);
+app.use('/funcionario',Funcionarios);
 app.use('/compare', compare);
 
 // catch 404 and forward to error handler
