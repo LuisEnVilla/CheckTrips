@@ -118,16 +118,20 @@ block content
               dt  Acuerdo:
               dd  #{viajedate.Acuerdo}
         dl.dl
-          dt  Actividad Realizada:
-          dd  #{viajedate.Actividad}
+          dt  Nombre del evento:
+          dd  #{viajedate.DatosEvento.Nombre}
+          dt: span.glyphicon.glyphicon-calendar  #{viajedate.DatosEvento.FechaInicioPart} - #{viajedate.DatosEvento.FechaFinPart}
+          dt: span.glyphicon.glyphicon-link  #{viajedate.DatosEvento.URL}
           dt  Motivo de Comision:
           dd  #{viajedate.MotivoComision}
+          dt  Actividad Realizada:
+          dd  #{viajedate.Actividad}
           dt  Contribucion:
           dd  #{viajedate.Contribucion}
           dt  Resultado Obtenido:
           dd  #{viajedate.Resultado}
-          dt  URL del evento:
-          dd  #{viajedate.DatosEvento.URL}
+          dt  URL Comunicado:
+          dd  #{viajedate.URLComunicado}
           dt  Antecedentes:
           dd  #{viajedate.Antecedentes}
           dt  Observaciones:
