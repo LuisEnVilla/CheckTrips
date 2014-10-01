@@ -1,3 +1,16 @@
+mixin sumas(viaje,viaticos,hospedaje)
+  -var sum = 0
+  -var items = [viaje,viaticos,hospedaje]
+  each i in items
+    if !isNaN(i)
+      - sum += i
+  | #{sum}
+mixin nan(opt)
+  if !isNaN(opt)
+    | $ #{opt}
+  else
+    | No Disponible
+
 extends layout
 
 block content
@@ -32,7 +45,8 @@ block content
               dd #{viajedate.FechaInicio} -  #{viajedate.FechaFin}
               dt: h3 
                 span.glyphicon.glyphicon-usd
-              dd: h3 #{viajedate.GastoPasaje + viajedate.GastosViaticos + viajedate.CostoHospedaje}
+              dd: h3
+                +sumas(viajedate.GastoPasaje,viajedate.GastosViaticos,viajedate.CostoHospedaje)
     .row
       .col-md-8.col-md-offset-2.card
         .row.details-title  Origen - Destino
@@ -79,25 +93,33 @@ block content
             tbody
               tr
                 td Pasaje
-                td $ #{viajedate.GastoPasaje}
+                td
+                  +nan(viajedate.GastoPasaje)
               tr
                 td  Hospedaje
-                td $ #{viajedate.CostoHospedaje}
+                td
+                  +nan(viajedate.CostoHospedaje)
               tr
                 td Viaticos
-                td $ #{viajedate.GastosViaticos}
+                td
+                  +nan(viajedate.GastosViaticos)
               tr
                 td Tarifa Diaria
-                td $ #{viajedate.TarifaDiaria} #{viajedate.Moneda}
+                td
+                  +nan(viajedate.TarifaDiaria)
+                  |  #{viajedate.Moneda}
               tr
                 td Viaticos Comprobados
-                td $ #{viajedate.ViaticosComp}
+                td
+                  +nan(viajedate.ViaticosComp)
               tr
                 td Viaticos No Comprobados
-                td $ #{viajedate.ViaticosNoComp}
+                td
+                  +nan(viajedate.ViaticosNoComp)
               tr
                 td Viaticos Devueltos
-                td $ #{viajedate.ViaticosDevueltos}
+                td
+                  +nan(viajedate.ViaticosDevueltos)
     .row
       .col-md-8.col-md-offset-2.card
         .row.details-title  Respaldo del Viaje

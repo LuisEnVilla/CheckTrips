@@ -71,14 +71,24 @@ router.get('/:id', function(req, res) {
 	  		var sumaviaticos = 0;
 	  		for (var x in viajes){
 	  			categorias.push("'"+viajes[x].FechaInicio +" - "+viajes[x].FechaFin+"'");
-	  			serie[0].data.push(viajes[x].GastoPasaje);
-	  			serie[1].data.push(viajes[x].CostoHospedaje);
-	  			serie[2].data.push(viajes[x].GastosViaticos);
-	  			serie[3].data.push(viajes[x].GastoPasaje + viajes[x].CostoHospedaje + viajes[x].GastosViaticos);
-	  			suma += viajes[x].GastoPasaje + viajes[x].CostoHospedaje + viajes[x].GastosViaticos;
-	  			sumapasaje += viajes[x].GastoPasaje;
-	  			sumahospedaje += viajes[x].CostoHospedaje;
-	  			sumaviaticos += viajes[x].GastosViaticos;
+	  			if (!isNaN(viajes[x].GastoPasaje)) {
+	  				serie[0].data.push(viajes[x].GastoPasaje);
+	  				sumapasaje += viajes[x].GastoPasaje;
+	  			}
+	  			else serie[0].data.push(0);
+	  			if (!isNaN(viajes[x].CostoHospedaje)) {
+	  				serie[1].data.push(viajes[x].CostoHospedaje);
+	  				sumahospedaje += viajes[x].CostoHospedaje;
+	  			}
+	  			else serie[1].data.push(0);
+	  			if (!isNaN(viajes[x].GastosViaticos)) {
+	  				serie[2].data.push(viajes[x].GastosViaticos);
+		  			sumaviaticos += viajes[x].GastosViaticos;
+	  			}
+	  			else serie[2].data.push(0);
+	  			
+	  			serie[3].data.push(serie[0].data[x] + serie[1].data[x] + serie[2].data[x]);
+	  			suma += serie[0].data[x] + serie[1].data[x] + serie[2].data[x];
 
 	  		}
 	  		serie[4].data[0].y = sumapasaje;
