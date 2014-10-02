@@ -62,7 +62,8 @@ module.exports = function(mongoose) {
     Moneda : String,
     Contribucion : String,
     URLComunicado : String,
-    ViaticosNoComp : Number
+    ViaticosNoComp : Number,
+    Aclaraciones : Number
   });
   SchemaViaje.set('collection','Viaje');
   return mongoose.model('Viaje', SchemaViaje);

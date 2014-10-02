@@ -1,3 +1,16 @@
+mixin sumas(viaje,viaticos,hospedaje)
+  -var sum = 0
+  -var items = [viaje,viaticos,hospedaje]
+  each i in items
+    if !isNaN(i)
+      - sum += i
+  | #{sum}
+mixin nan(opt)
+  if !isNaN(opt)
+    | $ #{opt}
+  else
+    | No Disponible
+
 extends layout
 
 block content
@@ -34,7 +47,8 @@ block content
                   dd #{viajedate.FechaInicio} -  #{viajedate.FechaFin}
                   dt: h3 
                     span.glyphicon.glyphicon-usd
-                  dd: h3 #{viajedate.GastoPasaje + viajedate.GastosViaticos + viajedate.CostoHospedaje}
+                  dd: h3 
+                    +sumas(viajedate.GastoPasaje,viajedate.GastosViaticos,viajedate.CostoHospedaje)
           .card-control
             .col-md-12
               .flat-btn.pull-right Solicitar  Aclaración
@@ -87,27 +101,35 @@ block content
           .card-content
             table.table-responsive.table-striped.table
               tbody
-                tr
-                  td Pasaje
-                  td $ #{viajedate.GastoPasaje}
-                tr
-                  td  Hospedaje
-                  td $ #{viajedate.CostoHospedaje}
-                tr
-                  td Viaticos
-                  td $ #{viajedate.GastosViaticos}
-                tr
-                  td Tarifa Diaria
-                  td $ #{viajedate.TarifaDiaria} #{viajedate.Moneda}
-                tr
-                  td Viaticos Comprobados
-                  td $ #{viajedate.ViaticosComp}
-                tr
-                  td Viaticos No Comprobados
-                  td $ #{viajedate.ViaticosNoComp}
-                tr
-                  td Viaticos Devueltos
-                  td $ #{viajedate.ViaticosDevueltos}
+              tr
+                td Pasaje
+                td
+                  +nan(viajedate.GastoPasaje)
+              tr
+                td  Hospedaje
+                td
+                  +nan(viajedate.CostoHospedaje)
+              tr
+                td Viaticos
+                td
+                  +nan(viajedate.GastosViaticos)
+              tr
+                td Tarifa Diaria
+                td
+                  +nan(viajedate.TarifaDiaria)
+                  |  #{viajedate.Moneda}
+              tr
+                td Viaticos Comprobados
+                td
+                  +nan(viajedate.ViaticosComp)
+              tr
+                td Viaticos No Comprobados
+                td
+                  +nan(viajedate.ViaticosNoComp)
+              tr
+                td Viaticos Devueltos
+                td
+                  +nan(viajedate.ViaticosDevueltos)
     .row
       .col-md-8.col-md-offset-2
         .card

@@ -1,3 +1,16 @@
+mixin sumas(viaje,viaticos,hospedaje)
+  -var sum = 0
+  -var items = [viaje,viaticos,hospedaje]
+  each i in items
+    if !isNaN(i)
+      - sum += i
+  | #{sum}
+mixin nan(opt)
+  if !isNaN(opt)
+    | $ #{opt}
+  else
+    | No Disponible
+
 extends layout
 
 block content
@@ -40,22 +53,26 @@ block content
             .col-md-12
               table.table-responsive.table-striped.table
                 thead
+                tr
+                  th Fecha del Viaje
+                  th Destino
+                  th Pasaje
+                  th Hospedaje
+                  th Viaticos
+                  th Total
+              tbody
+                each val in viajes
                   tr
-                    th Fecha Viaje
-                    th Destino
-                    th Pasaje
-                    th Hospedaje
-                    th Viaticos
-                    th Total
-                tbody
-                  each val in viajes
-                    tr
-                      td: a(href = "/profile/" + val._id) #{val.FechaInicio} - #{val.FechaFin}
-                      td #{val.Destino.Estado}
-                      td $ #{val.GastoPasaje}
-                      td $ #{val.CostoHospedaje}
-                      td $ #{val.GastosViaticos}
-                      td $ #{val.GastosViaticos + val.GastoPasaje + val.CostoHospedaje}
+                    td: a(href = "/profile/" + val._id) #{val.FechaInicio} - #{val.FechaFin}
+                    td #{val.Destino.Estado}
+                    td
+                      +nan(val.GastoPasaje)
+                    td
+                      +nan(val.CostoHospedaje)
+                    td
+                      +nan(val.GastosViaticos)
+                    td
+                      +sumas(val.GastosViaticos, val.GastoPasaje, val.CostoHospedaje)
     .row
       .col-md-8.col-md-offset-2
         .card
