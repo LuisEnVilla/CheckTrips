@@ -50,8 +50,8 @@ block content
                   dd: h3 
                     +sumas(viajedate.GastoPasaje,viajedate.GastosViaticos,viajedate.CostoHospedaje)
           .card-control
-            .col-md-12
-              .flat-btn.pull-right Solicitar  Aclaración
+              .flat-btn.pull-right(data-toggle="modal" data-target="#compartir") Solicitar  Aclaración
+              .flat-btn.pull-right.normal(data-toggle="modal" data-target="#compartir") Seguir
     .row
       .col-md-8.col-md-offset-2
         .card

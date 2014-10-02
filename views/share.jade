@@ -4,23 +4,33 @@
 			.modal-header
 				button.close(type="button" data-dismiss="modal")
 					span(aria-hidden="true") &times;
-				h4.modal-title
+				h4.modal-title Recibir notificaciones
 			.modal-body
-				p: span.glyphicon.glyphicon-link Enlace :
-				p
-				.group
-					input#mensaje(type="text")
-					span.highlight
-					span.bar
-					label Mensaje ...
-			.modal-footer
-				.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
-				.flat-btn(type="button") Compartir
+				p Ingresa tus datos para notificarte
+				form
+					.group
+						input(type="text" required)
+						span.highlight
+						span.bar
+						label Nombre
+					.group
+						input(type="tel" required)
+						span.highlight
+						span.bar
+						label Teléfono
+					.group
+						input(type="text" required)
+						span.highlight
+						span.bar
+						label E-mail
+					//.modal-footer
+					.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
+					button.flat-btn Aceptar
 .float-btn#trigger
 	span.glyphicon.glyphicon-send
-.float-btn.social#one(data-toggle="modal" data-target="#compartir")
+.float-btn.social#one(href='#')
 	i.fa.fa-facebook
-.float-btn.social#two(data-toggle="modal" data-target="#compartir")
+.float-btn.social#two(href='#')
 	i.fa.fa-twitter
-.float-btn.social#three(data-toggle="modal" data-target="#compartir")
+.float-btn.social#three(href='#')
 	i.fa.fa-google-plus
