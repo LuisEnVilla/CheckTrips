@@ -13,10 +13,10 @@ block content
 			if tipo == 1
 				.col-md-6.tripdesc.col-xs-6
 					h2.hidden-xs: a(href="/funcionario/"+datos1[0].Funcionario_id._id) #{datos1[0].Funcionario_id.Nombre.Nombres}
-					h3 #{datos1[0].Funcionario_id.Nombre.ApellidoP + datos1[0].Funcionario_id.Nombre.ApellidoM}
+					h3 #{datos1[0].Funcionario_id.Nombre.ApellidoP +" "+ datos1[0].Funcionario_id.Nombre.ApellidoM}
 				.col-md-6.tripdesc.col-xs-6
 					h2.hidden-xs: a(href="/funcionario/"+datos2[0].Funcionario_id._id) #{datos2[0].Funcionario_id.Nombre.Nombres}
-					h3 #{datos2[0].Funcionario_id.Nombre.ApellidoP + datos2[0].Funcionario_id.Nombre.ApellidoM}
+					h3 #{datos2[0].Funcionario_id.Nombre.ApellidoP +" "+ datos2[0].Funcionario_id.Nombre.ApellidoM}
 			else
 				.col-md-6.tripdesc.col-xs-6
 					h2.hidden-xs: a(href="/profile/"+datos1[0]._id) #{datos1[0].Consecutivo}
@@ -26,11 +26,10 @@ block content
 					h3 #{datos2[0].FechaInicio +" - "+ datos2[0].FechaFin}
 	.container.main
 		.row
-			.col-md-8.col-md-offset-2.card
-				if completa == true
-					.chart#chart1
-				else
-					h1 No hay datos suficientes para graficar.
+			.col-md-6.card
+				.chart#chart1
+			.col-md-6.card
+				.chart#chart1-2		
 		.row
 			.col-md-8.col-md-offset-2.card
 				.chart#chart2
@@ -141,9 +140,11 @@ block content
 							td #{datos2[0].Aclaraciones}
 
 	script(src="/javascripts/highcharts.js")
+	script(src ="/javascripts/exporting.js")
 	script.
 		$(function () {
 			$('#chart1').highcharts(#{grafica1});
+			$('#chart1-2').highcharts(#{grafica12});
 			$('#chart2').highcharts(#{grafica2});
 			});
 	include footer
