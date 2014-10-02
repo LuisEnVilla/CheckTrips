@@ -41,6 +41,8 @@ block content
 									dt: span.glyphicon.glyphicon-calendar
 									dd #{viaje.FechaInicio}
 							.card-control
+								a.compare-icon
+									span.glyphicon.glyphicon-stats.pull-left
 								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
 			.row
 				h2.top-title Viajes más costosos en traslado
@@ -64,6 +66,8 @@ block content
 									dt: span.glyphicon.glyphicon-usd
 									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							.card-control
+								a.compare-icon
+									span.glyphicon.glyphicon-stats.pull-left
 								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
 			.row
 				h2.top-title Viajes más costosos en viaticos
@@ -87,6 +91,8 @@ block content
 									dt: span.glyphicon.glyphicon-usd
 									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							.card-control
+								a.compare-icon
+									span.glyphicon.glyphicon-stats.pull-left
 								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
 			.row
 				h2.top-title Unidades que mas han viajado
@@ -103,5 +109,7 @@ block content
 									dt: span.glyphicon.glyphicon-user
 									dd  #{viaje.CountFuncionarios} Funcionarios
 							.card-control
+								a.compare-icon
+									span.glyphicon.glyphicon-stats.pull-left
 								a.flat-btn.pull-right Ver más
 		include ./footer

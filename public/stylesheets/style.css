@@ -43,6 +43,17 @@ h1 {
 	font-size: 2.5em;
 }
 
+#compare-card {
+	width: 200px;
+	position: fixed;
+	top:60px;
+	right: 10px;
+	display: none;
+	z-index: 1000;
+}
+
+
+
 /*---INDEX---*/
 
 .intro-header {
@@ -93,6 +104,15 @@ h1 {
 	font-size: 18px;
 	font-weight: 400;
 	text-align: justify;
+}
+
+.glyphicon-stats {
+	font-size: 1.5em;
+	color: gray;
+}
+
+.green {
+	color: green;
 }
 
 form {

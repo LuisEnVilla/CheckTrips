@@ -4,15 +4,20 @@
 			.modal-header
 				button.close(type="button" data-dismiss="modal")
 					span(aria-hidden="true") &times;
-				h4.modal-title Compartir &hellip;
+				h4.modal-title
 			.modal-body
-				p: span.glyphicon.glyphicon-link
-				p Mensaje Opcional
+				p: span.glyphicon.glyphicon-link Enlace :
+				p
+				.group
+					input#mensaje(type="text")
+					span.highlight
+					span.bar
+					label Mensaje ...
 			.modal-footer
 				.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
 				.flat-btn(type="button") Compartir
 .float-btn#trigger
-	span.glyphicon.glyphicon-link
+	span.glyphicon.glyphicon-send
 .float-btn.social#one(data-toggle="modal" data-target="#compartir")
 	i.fa.fa-facebook
 .float-btn.social#two(data-toggle="modal" data-target="#compartir")
