@@ -7,26 +7,29 @@ block content
 			.row
 				.col-lg-12
 					.intro-message
-						h1 
-							i.fa.fa-suitcase.fa-fw
-							|Check Trips
-						h3
-							kbd ¿Sabes a donde han viajado nuestros servidores públicos?
-						hr.intro-divider
-						a.btn.btn-lg.raised-btn(href="/top") Explorar
-						p: a(href="#1") 
-							span.glyphicon.glyphicon-chevron-down
-			.row
+						h1 Checkifai
+						h4: kbd Realiza una búsqueda o explora los viajes de los funcionarios
+						.row
+							.col-md-6.col-md-offset-3
+								form
+									.input-group
+										input.form-control(type="text" placeholder="Búsqueda")
+										span.input-group-btn
+											button.form-control.btn(type="submit" value="Buscar")
+												span.glyphicon.glyphicon-search
+						a.btn.btn-lg.raised-btn(href="#top") Explorar
+		.container
+			.row#top
 				h2.top-title Viajes más recientes
 			.row
 				each viaje, i in fecha
 					.col-md-4
-						.card
+						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
-									h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+									h4 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
 								else
-									h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+									h4 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 							.card-content
 								dl.dl-horizontal
 									dt: span.glyphicon.glyphicon-bookmark 
@@ -38,22 +41,18 @@ block content
 									dt: span.glyphicon.glyphicon-calendar
 									dd #{viaje.FechaInicio}
 							.card-control
-								span.glyphicon.glyphicon-eye-open
-									span.badge 20
-								span.glyphicon.glyphicon-comment
-									span.badge 0
 								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
 			.row
 				h2.top-title Viajes más costosos en traslado
 			.row
 				each viaje, i in viajes
 					.col-md-4
-						.card
+						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
-									h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+									h4 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
 								else
-									h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+									h4 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 							.card-content
 								dl.dl-horizontal
 									dt: span.glyphicon.glyphicon-bookmark 
@@ -65,22 +64,18 @@ block content
 									dt: span.glyphicon.glyphicon-usd
 									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							.card-control
-								span.glyphicon.glyphicon-eye-open
-									span.badge 20
-								span.glyphicon.glyphicon-comment
-									span.badge 0
-								a.flat-btn(href ="/profile/" + viaje._id) Ver más
+								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
 			.row
 				h2.top-title Viajes más costosos en viaticos
 			.row
 				each viaje, i in viajes2
 					.col-md-4
-						.card
+						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
-									h3 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
+									h4 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
 								else
-									h3 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
+									h4 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
 							.card-content
 								dl.dl-horizontal
 									dt: span.glyphicon.glyphicon-bookmark 
@@ -92,17 +87,13 @@ block content
 									dt: span.glyphicon.glyphicon-usd
 									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
 							.card-control
-								span.glyphicon.glyphicon-eye-open
-									span.badge 20
-								span.glyphicon.glyphicon-comment
-									span.badge 0
-								a.flat-btn(href ="/profile/" + viaje._id) Ver más
+								a.flat-btn.pull-right(href ="/profile/" + viaje._id) Ver más
 			.row
 				h2.top-title Unidades que mas han viajado
 			.row
 				each viaje, i in unidades
 					.col-md-4
-						.card
+						.card.micro
 							.card-img
 								h5 #{viaje.Nombre}
 							.card-content
@@ -112,9 +103,5 @@ block content
 									dt: span.glyphicon.glyphicon-user
 									dd  #{viaje.CountFuncionarios} Funcionarios
 							.card-control
-								span.glyphicon.glyphicon-eye-open
-									span.badge 20
-								span.glyphicon.glyphicon-comment
-									span.badge 0
-								a.flat-btn Ver más
-	include ./footer
+								a.flat-btn.pull-right Ver más
+		include ./footer

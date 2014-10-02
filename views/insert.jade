@@ -3,26 +3,40 @@ extends layout
 block content
 	include header
 	.container.tabbable.col-md-8.col-md-offset-2.card
-		ul#tabs.nav.nav-tabs.nav-justified(role="tablist")
-			li.active
-				a(href="#pane1" role="tab" data-toggle="tab") General
-			li: a(href="#pane2" role="tab" data-toggle="tab") Viaticos
-			li: a(href="#pane3" role="tab" data-toggle="tab") Hospedaje
-			li: a(href="#pane4" role="tab" data-toggle="tab") Respaldo
-		form(role="form")
-		.tab-content
-			.tab-pane.active#pane1
-				select
-					option(value="Dep") Juan Pérez
-					option(value="Dep2") Alberto López
+		.row
+			.col-md-12
+				ul#tabs.nav.nav-tabs.nav-justified(role="tablist")
+					li.active
+						a(href="#pane1" role="tab" data-toggle="tab") General
+					li: a(href="#pane2" role="tab" data-toggle="tab") Viaticos
+					li: a(href="#pane3" role="tab" data-toggle="tab") Hospedaje
+					li: a(href="#pane4" role="tab" data-toggle="tab") Respaldo
+		.row.tab-content
+			form(role="form")
+			.col-md-6
+				.tab-pane.active#pane1
+					select
+						option(value="Dep") Juan Pérez
+						option(value="Dep2") Alberto López
+					select
+						option(value="Dep") Juan Pérez
+						option(value="Dep2") Alberto López
+					select
+						option(value="Dep") Juan Pérez
+						option(value="Dep2") Alberto López
+			.col-md-6
 				.group
 					input(type="text" required)
 					span.highlight
 					span.bar
 					label e-mail
-				select#sel
-					option(value="Dep") Dependencia 1
-					option(value="Dep2") Dependencia 2
+				select
+					option Dependencia 1
+					option Dependencia 2
+				select
+					option(value="Dep") Juan Pérez
+					option(value="Dep2") Alberto López
+
 				a#2.btn.flat-btn Siguiente
 			.tab-pane#pane2
 				.group

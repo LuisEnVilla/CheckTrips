@@ -17,16 +17,12 @@ body,html {
 	max-height: 60px;
 }
 
-nav>.container {
-	max-height: 60px;
-	width: 100%;
-	margin: 0;
-	padding: 0 90px;
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+.nav>li>a{
+	color: white;
 }
 
-.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{
-	color: white;
+.nav li {
+	display: inline-block;
 }
 
 a.navbar-brand {
@@ -35,6 +31,7 @@ a.navbar-brand {
 	font-style: italic;
 	margin: 0;
 	font-size: 2.5em;
+	color: white;
 }
 
 h1 {
@@ -49,7 +46,7 @@ h1 {
 /*---INDEX---*/
 
 .intro-header {
-	padding-top: 70px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+	padding-top: 70px;
 	padding-bottom: 50px;
 	text-align: center;
 	background: url(../images/fondo1.jpg) no-repeat center center;
@@ -58,9 +55,13 @@ h1 {
 	height: 100%;
 }
 
+.intro-header span>.btn {
+	color: #FFC107;
+}
+
 .intro-message {
 	position: relative;
-	padding-top: 20%;
+	padding-top: 10%;
 	padding-bottom: 20%;
 }
 
@@ -80,14 +81,12 @@ h1 {
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
-.stats {
-	background-size: 100% 100%;
-	border-radius: 10%;
-	height: 263px;
+.col-md-4 {
+	padding: 0 0.4em;
 }
 
-#money {
-	background-image: url('../images/money.png');
+.form-control {
+	height: 50px;
 }
 
 .lead {
@@ -100,6 +99,12 @@ form {
 	margin-top: 3em;
 }
 
+.search-box {
+	background-color: white;
+	width: 500px;
+	margin:0 auto;
+}
+
 /*---TOP---*/
 
 #main {
@@ -110,7 +115,9 @@ form {
 .top-title {
 	text-transform: uppercase;
 	font-weight: 100;
-	margin-left: 0.5em;
+	margin: 2em 0.5em;
+	color: black;
+	text-align: left;
 }
 
 /*---PROFILE---*/
@@ -136,12 +143,14 @@ form {
 }
 
 .dl-horizontal dt {
-    width: auto;
+		width: auto;
     margin-right: 1em;
-    text-align: center;
+    margin-left: 1em;
+    text-align: left;
 }
 .dl-horizontal dd{
-    margin-left: 2em;
+		margin-left: 0.5em;
+		text-align: left;
     font-weight: bolder;
 }
 
@@ -180,25 +189,63 @@ form {
 	margin-top: 100px;
 }
 
+/*---SHARE---*/
+
+.social {
+	display: none;
+}
+
+#one {
+	bottom: 60px;
+	background-color:#1c2b49;
+}
+
+#two {
+	bottom: 120px;
+	background-color:#3b88c3;
+}
+
+#three {
+	bottom: 180px;
+	background-color:#d33f2a;
+}
 
 /*---MEDIA QUERIES---*/
 
 @media only screen and (max-width: 768px){
-	nav>.container {
-		width: 100%;
-		margin: 0;
-		padding: 0 20px;
-		box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	/*---HEADER---*/
+	.nav>li>a {
+		padding: 10px 3px;
 	}
+
+	/*---INDEX---*/
+
+	.intro-message {
+		padding-bottom: 100px;
+	}
+
 	h1 {
 		font-size: 20px;
 	}
-	h3{
+	h4{
 		font-size: 15px;
 	}
-	.card {
-		margin:1em;
-	}
+	.dl-horizontal dt {
+		width: 16px;
+    margin-right: 1em;
+    margin-left: 1em;
+    text-align: left;
+}
+.dl-horizontal dd{
+		margin-left: 0.5em;
+		text-align: left;
+    font-weight: bolder;
+}
+
+	.top-title {
+	margin: 0.5em 0.5em;
+}
+
 	.tripdesc {
 		font-size: 1.2em !important;
 		height: 150px;

@@ -5,19 +5,22 @@ block content
 	.intro-header#logeo
 		.container
 			.row
-				.col-sm-4.col-sm-offset-4.card
-					h3 Inicio de Sesión
-					form(role="form")
-						.group
-							input(type="text" required)
-							span.highlight
-							span.bar
-							label e-mail
-						.group
-							input(type="password" required)
-							span.highlight
-							span.bar
-							label contraseña
-						button.btn.flat-btn.pull-right(type="submit") Ingresar
-						a.btn.flat-btn.pull-right(style="background-color:white;color:black;margin-left:1em") Registrarse
+				.col-sm-4.col-sm-offset-4
+					.card.small
+						.card-content
+							h3 Inicio de Sesión
+							form(role="form")
+								.group
+									input(type="text" required)
+									span.highlight
+									span.bar
+									label e-mail
+								.group
+									input(type="password" required)
+									span.highlight
+									span.bar
+									label contraseña
+						.card-control
+							button.btn.flat-btn.pull-right(type="submit") Ingresar
+							a.btn.flat-btn.pull-right(style="background-color:white;color:black;margin-left:1em") Registrarse
 	include ./footer

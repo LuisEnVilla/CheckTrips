@@ -1,0 +1,21 @@
+.modal.fade#compartir
+	.modal-dialog
+		.modal-content
+			.modal-header
+				button.close(type="button" data-dismiss="modal")
+					span(aria-hidden="true") &times;
+				h4.modal-title Compartir &hellip;
+			.modal-body
+				p: span.glyphicon.glyphicon-link
+				p Mensaje Opcional
+			.modal-footer
+				.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
+				.flat-btn(type="button") Compartir
+.float-btn#trigger
+	span.glyphicon.glyphicon-link
+.float-btn.social#one(data-toggle="modal" data-target="#compartir")
+	i.fa.fa-facebook
+.float-btn.social#two(data-toggle="modal" data-target="#compartir")
+	i.fa.fa-twitter
+.float-btn.social#three(data-toggle="modal" data-target="#compartir")
+	i.fa.fa-google-plus

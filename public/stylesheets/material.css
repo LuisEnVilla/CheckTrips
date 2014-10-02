@@ -90,20 +90,22 @@ input:focus ~ .highlight {
 		color: black;
 		background-color: white !important;
 		border-radius: 3px;
-		padding: 1em;
+		padding: 0;
 		height: auto;
 		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 		margin-bottom: 0.8em;
 		z-index: 5;
+		position: relative;
 }
 
 .card-img {
 		width: 100%;
+		height: 70px;
 		background-image: url("../images/congruent_outline.png");
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
 		color: white;
-		font-size: 34px;
+		font-size: 20px;
 		padding: 10px;
 		text-align: center;
 }
@@ -112,11 +114,23 @@ input:focus ~ .highlight {
 		color: black;
 		font-weight: 200;
 		font-size: 14px;
-		padding: 1.6em;
+		padding: 0.8em;
 }
 
 .card-control {
-	
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	padding: 0em;
+}
+
+.small {
+	height: 300px
+}
+
+.micro {
+	height: 200px;
 }
 
 /*---BUTTONS---*/
@@ -127,7 +141,14 @@ input:focus ~ .highlight {
 		background-color: transparent;
 		text-transform: uppercase;
 		font-weight: 500;
-		padding: 0.5em;
+		padding: 10px;
+		font-size: 14px;
+		max-width: 200px;
+		display: inline-block;
+}
+
+.normal {
+	color: black;
 }
 
 .flat-btn:hover {
@@ -139,7 +160,7 @@ input:focus ~ .highlight {
 }
 
 .raised-btn {
-		background-color: #03a9f4;
+		background-color: rgba(0,0,0,0.6);
 		-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 		box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 		color: white;
@@ -157,11 +178,12 @@ input:focus ~ .highlight {
 		color: white;
 		background-color: #FFC107;
 		position: fixed;
-		font-size: 30px;
+		font-size: 20px;
 		text-align: center;
-		right: 265px;
-		top: 90%;
-		padding-top: 0.15em;
+		right: 280px;
+		bottom: 10px;
+		padding: 12px;
+		padding-left: 8px;
 		border-radius: 50%;
 		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 		cursor: pointer;
