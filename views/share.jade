@@ -1,21 +1,39 @@
-.modal.fade#compartir
+.modal.fade#seguir
 	.modal-dialog
 		.modal-content
 			.modal-header
 				button.close(type="button" data-dismiss="modal")
 					span(aria-hidden="true") &times;
-				h4.modal-title Compartir &hellip;
+				h4.modal-title Recibir notificaciones
 			.modal-body
-				p: span.glyphicon.glyphicon-link
-				p Mensaje Opcional
-			.modal-footer
-				.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
-				.flat-btn(type="button") Compartir
+				p Ingresa tus datos para notificarte sobre #{link.nombre}
+				form(method="post" action="/seguir")
+					.group
+						input(name="nombre" type="text" required)
+						span.highlight
+						span.bar
+						label Nombre
+					.group
+						input(name="telefono" type="tel" required)
+						span.highlight
+						span.bar
+						label Teléfono
+					.group
+						input(name="email" type="email" required)
+						span.highlight
+						span.bar
+						label E-mail
+					input(type="text" name = "id" value = link.id style = "display:none;")
+					input(type="text" name = "tipo" value = link.tipo style = "display:none;")
+					//.modal-footer
+					.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
+					button.flat-btn Aceptar
+.modal#compartir
 .float-btn#trigger
-	span.glyphicon.glyphicon-link
-.float-btn.social#one(data-toggle="modal" data-target="#compartir")
+	span.glyphicon.glyphicon-send
+.float-btn.social#one(data-toggle="modal" data-target="#compartir" onclick="window.open('http://www.facebook.com/sharer.php?u="+link.url+"','modal', 'toolbar=0, status=0, width=650, height=450');")
 	i.fa.fa-facebook
-.float-btn.social#two(data-toggle="modal" data-target="#compartir")
+.float-btn.social#two(data-toggle="modal" data-target="#compartir" onclick="window.open('http://twitter.com/home/?status= @CheckTrip "+link.url+"','modal', 'toolbar=0, status=0, width=650, height=450');")
 	i.fa.fa-twitter
-.float-btn.social#three(data-toggle="modal" data-target="#compartir")
+.float-btn.social#three(data-toggle="modal" data-target="#compartir" onclick="window.open('https://plus.google.com/share?url="+link.url+"','modal', 'toolbar=0, status=0, width=650, height=450');")
 	i.fa.fa-google-plus

@@ -4,10 +4,15 @@ nav.navbar.navbar-fixed-top
 		ul.nav.navbar-nav.navbar-right
 			li
 				a(href="/log")
-					i.fa.fa-user.fa-fw.fa-2x
+					i.fa.fa-user.fa-2x
 			li
 				a(href="#")
-					i.fa.fa-search.fa-fw.fa-2x
+					i.fa.fa-search.fa-2x
 			li
-				a(href="#")
-					i.fa.fa-pie-chart.fa-fw.fa-2x
+				a#compare-btn
+					span.glyphicon.glyphicon-stats
+.card.micro#compare-card
+	.card-content
+		p Funcionarios
+	.card-control
+		a.flat-btn.pull-right Comparar

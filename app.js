@@ -13,6 +13,7 @@ var top = require('./controllers/top');
 var profile = require('./controllers/profile');
 var compare = require('./controllers/compare');
 var Funcionarios = require('./controllers/funcionarios');
+var seguir = require('./controllers/agregarSeguir');
 var app = express();
 // Configuration
 
@@ -36,6 +37,7 @@ app.use('/profile', profile);
 app.use('/funcionario',Funcionarios);
 app.use('/compare', compare);
 app.use('/insert', insert);
+app.use('/seguir',seguir);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

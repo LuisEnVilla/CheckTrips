@@ -10,12 +10,12 @@ mixin nan(opt)
     | $ #{opt}
   else
     | No Disponible
-
 extends layout
 
 block content
   include header
   include share
+  img.img-circle.img-responsive(src="/images/user.jpg" style="position: absolute; left:40px;top:200px;border: 5px solid white;width:200px;height:200px;z-index:5;")
   #map(style='background-image: url(/images/fondo1.jpg)')
   .container#main
     .row
@@ -37,9 +37,13 @@ block content
                   dd  #{Funcionario.Trabajo.Cargo}
                   dt Cargo Superiro:
                   dd  #{Funcionario.Trabajo.CargoSuperior}
-                dl.dl-horizontal
-                  dt  Unidad Administrativa:
-                  dd  #{Funcionario.Trabajo.UnidadAdministrativa}
+              dl.dl-horizontal
+                dt  Unidad Administrativa:
+                dd  #{Funcionario.Trabajo.UnidadAdministrativa}
+              .card-control
+                .flat-btn.pull-right(data-toggle="modal" data-target="#seguir") Solicitar  Aclaración
+                .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
+
     .row
       .col-md-8.col-md-offset-2
         .card
@@ -53,26 +57,26 @@ block content
             .col-md-12
               table.table-responsive.table-striped.table
                 thead
-                tr
-                  th Fecha del Viaje
-                  th Destino
-                  th Pasaje
-                  th Hospedaje
-                  th Viaticos
-                  th Total
-              tbody
-                each val in viajes
                   tr
-                    td: a(href = "/profile/" + val._id) #{val.FechaInicio} - #{val.FechaFin}
-                    td #{val.Destino.Estado}
-                    td
-                      +nan(val.GastoPasaje)
-                    td
-                      +nan(val.CostoHospedaje)
-                    td
-                      +nan(val.GastosViaticos)
-                    td
-                      +sumas(val.GastosViaticos, val.GastoPasaje, val.CostoHospedaje)
+                    th Fecha del Viaje
+                    th Destino
+                    th Pasaje
+                    th Hospedaje
+                    th Viaticos
+                    th Total
+                tbody
+                  each val in viajes
+                    tr
+                      td: a(href = "/profile/" + val._id) #{val.FechaInicio} - #{val.FechaFin}
+                      td #{val.Destino.Estado}
+                      td
+                        +nan(val.GastoPasaje)
+                      td
+                        +nan(val.CostoHospedaje)
+                      td
+                        +nan(val.GastosViaticos)
+                      td
+                        +sumas(val.GastosViaticos, val.GastoPasaje, val.CostoHospedaje)
     .row
       .col-md-8.col-md-offset-2
         .card
@@ -89,6 +93,5 @@ block content
   script(src="/javascripts/highcharts.js")
   script(src ="/javascripts/exporting.js")
   script.
-    $(function () {$('#chartFuncionario').highcharts(#{grafica});});
-  script(src='/javascripts/button.js')
+    $(function () {$('#chartFuncionario').highcharts(#{grafica});})
   include ./footer

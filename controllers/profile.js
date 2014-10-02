@@ -7,7 +7,10 @@ router.get('/:id', function(req, res) {
 	  	if (err) res.render('error', {
 	        message: err.message,
 	        error: {}});
-	  	else res.render('profile',{viajedate:viajedate});
+	  	else {
+	  		var link = "http://localhost:3000/profile/" + viajedate._id
+	  		res.render('profile',{viajedate:viajedate, link:link});
+	  	}
 	});
 });
 
