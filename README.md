@@ -64,9 +64,8 @@ Linkedin:
 - [Ma. Sarahi Oyervides](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
  
 twitter:
-- [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
-- [Axel Ramiro Flores](https://github.com/AxelRamiro)
-- [Ma. Sarahi Oyervides](https://github.com/SaraOyervides)
+- [Luis E. Villa Trejo](@luisvillak)
+- [Ma. Sarahi Oyervides](@Sara_Oyervides)
 
 
 
