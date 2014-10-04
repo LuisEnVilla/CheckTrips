@@ -2,17 +2,18 @@
 README CheckTrip
 ============
 
-Este README es una plantilla y conjunto de recomendaciones que ayudan a estructurar un proyecto antes de enviarlo como propuesta al Reto.
+Hoy en día nosotros como sociedad necesitamos transparencia, manejo y gestión de la información que 
 
-Para seguir mejores prácticas de documentación de proyectos código abierto, puedes ver el [repo-guidelines](https://github.com/CodeandoMexico/repo-guidelines) de [Codeando México](https://github.com/CodeandoMexico/).
 
-Recuerda revisar la convocatoria completa del [RetoViajesTransparentes](http://ifai.codeandomexico.org).
+
 
 ##Dependencias
-Esta sección debe tener una lista completa de todas las dependencias necesarias para ejecutar el proyecto.
+- MongoDB ~ v2.6.4
+- NodeJS ~ v0.10.30
+- Phyton ~ v2.6
+- Express ~ v4.9.0
 
-- NodeJS v0.10.30
-- 
+
 
 ##Instalación / Configuración 
 Esta sección es una guía paso a paso para instalar el proyecto. Se recomienda una lista ordenada.
