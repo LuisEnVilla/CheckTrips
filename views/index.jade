@@ -30,7 +30,7 @@ block content
 				h2.top-title Viajes más recientes
 			.row
 				each viaje, i in fecha
-					.col-md-4(id = viaje.Consecutivo)
+					.col-md-4
 						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
@@ -50,14 +50,13 @@ block content
 									dt: span.glyphicon.glyphicon-calendar
 									dd #{viaje.FechaInicio}
 							.card-control
-								a.compare-icon
-									span.glyphicon.glyphicon-stats.pull-left
+								span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
 								a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
 			.row
 				h2.top-title Viajes más costosos en traslado
 			.row
 				each viaje, i in viajes
-					.col-md-4(id = viaje.Consecutivo)
+					.col-md-4
 						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
@@ -78,14 +77,13 @@ block content
 									dd
 										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 							.card-control
-								a.compare-icon
-									span.glyphicon.glyphicon-stats.pull-left
+								span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
 								a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
 			.row
 				h2.top-title Viajes más costosos en viaticos
 			.row
 				each viaje, i in viajes2
-					.col-md-4(id = viaje.Consecutivo)
+					.col-md-4
 						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
@@ -106,8 +104,7 @@ block content
 									dd
 										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 							.card-control
-								a.compare-icon
-									span.glyphicon.glyphicon-stats.pull-left
+								span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
 								a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
 			.row
 				h2.top-title Unidades que mas han viajado

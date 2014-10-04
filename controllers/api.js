@@ -31,9 +31,9 @@ router.get('/:dato1/:dato2/:dato3/:dato4', function(req, res) {
 			res.send(viajes);
 			});
 		}
-		else if{
+		/*else if(){
 			
-		}
+		}*/
 	}
 });
 
