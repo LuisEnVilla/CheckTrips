@@ -11,15 +11,15 @@ Checktrips es una plataforma especializada en la visita guiada de los viajes que
 - Difundir y dar uso a la información derivada de los trabajos realizados durante los viajes para asociar su costo a los resultados que producen a la luz de las tareas sustantivas y agenda estratégica de la institución.
 - Generar estadísticas y métricas sobre distintos aspectos de los viajes de trabajo, así como visualizaciones que permitan realizar comparaciones históricas, temáticas y por servidor público, y que faciliten el seguimiento y la evaluación.
 
-Este proyecto esta basado en la nueva tendencia que google trae para nosotros: [“Google Material Design”]( http://www.google.com/design/spec/material-design/introduction.html#) con su interfaz práctica y manejable. Esta gran empresa tiene un lema… “Concentrate en el usurio y todo lo demás seguirá.”(“Focus on the user and all else will follow.”) y decidimos realizar una amplia investigación para lograr asi una implementación de Software inteligente y amigable con la sociedad, sin dejar de un lado el gran impacto que se pretende con el manejo de información que el IFAI brindará al individuo mexicano. 
+Este proyecto esta basado en la nueva tendencia que google trae para nosotros: [“Google Material Design”]( http://www.google.com/design/spec/material-design/introduction.html#) con su interfaz práctica y manejable. Esta gran empresa tiene un lema… “Concentrate en el usurio y todo lo demás seguirá.”(“Focus on the user and all else will follow.”) por eso decidimos realizar una amplia investigación para lograr asi una implementación de Software inteligente y amigable con la sociedad, sin dejar de un lado el gran impacto que se pretende con el manejo de información que el IFAI brindará al individuo mexicano. 
 
 
 Por ser de uso General se podrá manipular por 3 tipos de individuos:
--Usuario: Se refiere a público en General. Contarán con el servicio de viajes realizados, perfiles de funcionarios, costos generales, detalles importantes como viáticos, hospedaje y  compartir esa información en redes sociales, comparar 2 perfiles y demostrar con su interfaz amigable una inconformidad de manera 
+- Usuario: Se refiere a público en General. Contarán con el servicio de viajes realizados, perfiles de funcionarios, costos generales, detalles importantes como viáticos, hospedaje y  compartir esa información en redes sociales, comparar 2 perfiles y demostrar con su visualización amigable una inconformidad de manera sencilla. Otra caracteristica de nuestro Proyecto es el uso de WhatsApp para el seguimiento de los funcionarios. Caundo este de de alta un nuevo viaje, aparecerá un mensaje de nuestra plataforma que avisara una actualización o aclaracion en proceso.
+- Funcionario: Son las personas que mostrarán el control de sus viajes, cuanto dinero manejan, sus gastos, cargos, dependencias a la que pertencen, relacion de costos y sus medios de contacto básico. Para ellos se ofrecen la edicion de viajes, notificaciones de inconformidad según la sociedad mexicana, si ya se ha actualizado ó aclarado algún proceso.
+- Administrador (ifai): Técnicos especializados en el manejo de la información; serán quienes gestionen las bases de datos y manejen la plataforma segun la encomienda que se tenga. Agregan funcionarios, viajes, temas, tipos de comision, representacion y demás datos adicionales que los funcionarios podrán escoger para sus perfiles.
 
-
-
-
+#API
 ##Dependencias
 - MongoDB ~ v2.6.4
 - NodeJS ~ v0.10.30
