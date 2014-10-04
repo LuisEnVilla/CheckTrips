@@ -1,3 +1,10 @@
+mixin sumas(viaje,viaticos,hospedaje)
+	-var sum = 0
+	-var items = [viaje,viaticos,hospedaje]
+	each i in items
+		if !isNaN(i)
+			- sum += i
+	| #{sum}
 extends layout
 
 block content
@@ -23,7 +30,7 @@ block content
 				h2.top-title Viajes más recientes
 			.row
 				each viaje, i in fecha
-					.col-md-4
+					.col-md-4(id = viaje.Consecutivo)
 						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
@@ -38,6 +45,8 @@ block content
 									dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
 									dt: span.glyphicon.glyphicon-briefcase
 									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+									dt: span.glyphicon.glyphicon-file
+									dd #{viaje.Consecutivo}
 									dt: span.glyphicon.glyphicon-calendar
 									dd #{viaje.FechaInicio}
 							.card-control
@@ -48,7 +57,7 @@ block content
 				h2.top-title Viajes más costosos en traslado
 			.row
 				each viaje, i in viajes
-					.col-md-4
+					.col-md-4(id = viaje.Consecutivo)
 						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
@@ -63,8 +72,11 @@ block content
 									dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
 									dt: span.glyphicon.glyphicon-briefcase
 									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+									dt: span.glyphicon.glyphicon-file
+									dd #{viaje.Consecutivo}
 									dt: span.glyphicon.glyphicon-usd
-									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+									dd
+										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 							.card-control
 								a.compare-icon
 									span.glyphicon.glyphicon-stats.pull-left
@@ -73,7 +85,7 @@ block content
 				h2.top-title Viajes más costosos en viaticos
 			.row
 				each viaje, i in viajes2
-					.col-md-4
+					.col-md-4(id = viaje.Consecutivo)
 						.card.small
 							.card-img
 								if viaje.Tipo == "Nacional"
@@ -88,8 +100,11 @@ block content
 									dd #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
 									dt: span.glyphicon.glyphicon-briefcase
 									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
+									dt: span.glyphicon.glyphicon-file
+									dd #{viaje.Consecutivo}
 									dt: span.glyphicon.glyphicon-usd
-									dd #{viaje.GastoPasaje + viaje.ViaticosComp + viaje.CostoHospedaje}
+									dd
+										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 							.card-control
 								a.compare-icon
 									span.glyphicon.glyphicon-stats.pull-left

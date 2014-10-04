@@ -8,7 +8,12 @@ router.get('/:id', function(req, res) {
 	        message: err.message,
 	        error: {}});
 	  	else {
-	  		var link = "http://localhost:3000/profile/" + viajedate._id
+	  		var link = {
+	  			url: "http://localhost:3000/profile/" + viajedate._id,
+	  			id : req.params.id,
+	  			tipo : "Viaje",
+	  			nombre : viajedate.Consecutivo
+	  		}
 	  		res.render('profile',{viajedate:viajedate, link:link});
 	  	}
 	});

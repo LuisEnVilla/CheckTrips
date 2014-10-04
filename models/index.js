@@ -10,7 +10,8 @@ funcionario: require('./Funcionario')(mongoose),
 viaje : require('./modelViaje')(mongoose),
 unidad : require('./modelUnidad')(mongoose),
 aclaracion : require('./modelAclaracion')(mongoose),
-users : require('./modelUsers')(mongoose)
+users : require('./modelUsers')(mongoose),
+mensaje : require('./modelMensaje')(mongoose),
 // agregar más modelos aquí en caso de haberlos
 };
 module.exports = global.db;

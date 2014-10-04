@@ -6,7 +6,10 @@
 					span(aria-hidden="true") &times;
 				h4.modal-title Recibir notificaciones
 			.modal-body
-				p Ingresa tus datos para notificarte sobre #{link.nombre}
+				if link.tipo == "Funcionario"
+					p Ingresa tus datos para notificarte sobre el funcionario #{link.nombre} 
+				else
+					p Ingresa tus datos para notificarte sobre el viaje con el numero de comision #{link.nombre}
 				form(method="post" action="/seguir")
 					.group
 						input(name="nombre" type="text" required)
@@ -25,6 +28,7 @@
 						label E-mail
 					input(type="text" name = "id" value = link.id style = "display:none;")
 					input(type="text" name = "tipo" value = link.tipo style = "display:none;")
+					input(type="text" name = "nombreSolicitud" value = link.nombre style = "display:none;")
 					//.modal-footer
 					.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
 					button.flat-btn Aceptar
