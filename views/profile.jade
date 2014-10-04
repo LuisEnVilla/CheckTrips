@@ -49,10 +49,14 @@ block content
                     span.glyphicon.glyphicon-usd
                   dd: h3 
                     +sumas(viajedate.GastoPasaje,viajedate.GastosViaticos,viajedate.CostoHospedaje)
+    .row
+      .col-md-8.col-md-offset-2
+        .card
           .card-control
-
             a.compare-icon
-                  span.glyphicon.glyphicon-stats.pull-left
+              span.glyphicon.glyphicon-stats.pull-left
+            span Aclaraciones:
+              span.badge#Aclaraciones 25
             .flat-btn.pull-right(data-toggle="modal" data-target="#Aclarar") Solicitar  Aclaración
             .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
     .row

@@ -52,6 +52,6 @@ $(function(){
 	});
 
 	$('#comparar').click(function(event) {
-		window.location.assign('/compare/'+'2013.I.0013'+'/'+'2013.N.0013')
+		window.location.assign('/compare/'+'2013.I.0013'+'/'+'2013.N.0013'+'/viaje')
 	});
 })
