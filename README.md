@@ -54,18 +54,18 @@ Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Uste
 Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
 
 Github: 
-- [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
-- [Axel Ramiro Flores](https://github.com/AxelRamiro)
-- [Ma. Sarahi Oyervides](https://github.com/SaraOyervides)
+- [Luis Enrique Villa Trejo](https://github.com/LuisEnVilla)
+- [Claudio Axel Ramiro Flores](https://github.com/AxelRamiro)
+- [María Sarahi Oyervides García](https://github.com/SaraOyervides)
 
 Linkedin:
-- [Luis E. Villa Trejo](https://mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
-- [Axel Ramiro Flores](https://mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
-- [Ma. Sarahi Oyervides](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
+- [Luis Enrique Villa Trejo](https://mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
+- [Claudio Axel Ramiro Flores](https://mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
+- [María Sarahi Oyervides García](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
  
 twitter:
-- Luis E. Villa Trejo(@luisvillak)
-- Ma. Sarahi Oyervides(@Sara_Oyervides)
+- Luis Enrique Villa Trejo (@luisvillak)
+- María Sarahi Oyervides García (@Sara_Oyervides)
 
 
 
