@@ -59,9 +59,9 @@ Github:
 - [Ma. Sarahi Oyervides](https://github.com/SaraOyervides)
 
 Linkedin:
-- [Luis E. Villa Trejo](mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
-- [Axel Ramiro Flores](mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
-- [Ma. Sarahi Oyervides](mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
+- [Luis E. Villa Trejo](https://mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
+- [Axel Ramiro Flores](https://mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
+- [Ma. Sarahi Oyervides](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
  
 twitter:
 - [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
