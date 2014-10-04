@@ -21,7 +21,7 @@ Por ser de uso General se podrá manipular por 3 tipos de individuos:
 
 API:
 - Permitir el intercambio de la información por medio de esta App.
-- Mostrar datos mostrando un TOP 3+, además de hacer consultas según funcionarios, viajes, instituciones y gastos de manera específica, delimitando las respuestas según los criterios de búsqueda realizados por el usuario.
+- Mostrar datos por medio de un TOP 3, además de hacer consultas según funcionarios, viajes, instituciones y gastos de manera específica, delimitando las respuestas según los criterios de búsqueda realizados por el usuario.
 
 ##Dependencias
 - MongoDB ~ v2.6.4
