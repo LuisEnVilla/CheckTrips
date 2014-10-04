@@ -55,11 +55,18 @@ Indique los miembros del equipo principal que son responsables del desarrollo y 
 
 Github: 
 - [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
-- [Axel Ramiro Flores]()
-- [Ma. Sarahi Oyervides]()
+- [Axel Ramiro Flores](https://github.com/AxelRamiro)
+- [Ma. Sarahi Oyervides](https://github.com/SaraOyervides)
+
+Linkedin:
+- [Luis E. Villa Trejo](mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
+- [Axel Ramiro Flores](mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
+- [Ma. Sarahi Oyervides](mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
  
-LINKEDIN:
--
+twitter:
+- [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
+- [Axel Ramiro Flores](https://github.com/AxelRamiro)
+- [Ma. Sarahi Oyervides](https://github.com/SaraOyervides)
 
 
 
