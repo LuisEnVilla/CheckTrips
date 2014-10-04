@@ -21,10 +21,7 @@ $(function(){
 
 	$('.compare-icon').click(function() {
 		 $( this ).toggleClass( "green" )
-		 console.log($(this).attr('class'))
-		 $( this ).toggleClass( "green" )
-		 console.log($(this).attr('class'))
-		var aidi = $(this).next('.flat-btn').attr('href').split('/')[2]
+		var aidi = $(this).attr('id')
 		console.log(aidi);
 
 		if (sessionStorage.data2) {
@@ -40,6 +37,7 @@ $(function(){
 			return
 			}else {
 				alert('El elemento a comparar es el mismo')
+				return
 			}
 		} 
 		sessionStorage.setItem("data1", aidi)
@@ -48,10 +46,9 @@ $(function(){
 
 	$('#limpiar').click(function(event) {
 		sessionStorage.clear()
-		cont.remove()
 	});
 
 	$('#comparar').click(function(event) {
-		window.location.assign('/compare/'+'2013.I.0013'+'/'+'2013.N.0013'+'/viaje')
+		window.location.assign('/compare/'+ sessionStorage.data1 +'/'+sessionStorage.data2+'/viaje')
 	});
 })

@@ -8,6 +8,7 @@ body,html {
 	font-weight: 300;
 	font-family: Roboto, sans-serif;
 	background-color: #ECF0F1;
+	font-size: 10px;
 }
 
 /*---HEADER---*/
@@ -142,6 +143,7 @@ form {
 
 .compare-icon {
 	cursor: pointer;
+	font-size: 2rem;
 }
 
 /*---PROFILE---*/
@@ -176,6 +178,10 @@ form {
 		margin-left: 0.5em;
 		text-align: left;
     font-weight: bolder;
+}
+
+dl dd {
+  text-align: justify;
 }
 
 /*---COMPARE---*/

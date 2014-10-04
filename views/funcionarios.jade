@@ -40,16 +40,19 @@ block content
               dl.dl-horizontal
                 dt  Unidad Administrativa:
                 dd  #{Funcionario.Trabajo.UnidadAdministrativa}
-              .card-control
-                a.compare-icon
-                  span.glyphicon.glyphicon-stats.pull-left
-                .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
     .row
       .col-md-8.col-md-offset-2
         .card
           .row
             .col-md-12
               .chart#chartFuncionario
+    .row
+      .col-md-8.col-md-offset-2
+        .card(style="height:70px")
+          .card-control
+            a.compare-icon
+              span.glyphicon.glyphicon-stats.pull-left
+            .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
     .row
       .col-md-8.col-md-offset-2
         .card

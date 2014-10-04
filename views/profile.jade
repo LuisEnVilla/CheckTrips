@@ -51,10 +51,9 @@ block content
                     +sumas(viajedate.GastoPasaje,viajedate.GastosViaticos,viajedate.CostoHospedaje)
     .row
       .col-md-8.col-md-offset-2
-        .card
+        .card(style="height:70px")
           .card-control
-            a.compare-icon
-              span.glyphicon.glyphicon-stats.pull-left
+            span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viajedate.Consecutivo)
             span Aclaraciones:
               span.badge#Aclaraciones 25
             .flat-btn.pull-right(data-toggle="modal" data-target="#Aclarar") Solicitar  Aclaración
