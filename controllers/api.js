@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/:dato1', function(req, res) {
+router.get('/:dato1/:dato2/:dato3/:dato4', function(req, res) {
 	var tipo = req.params.dato1;
 	//var dato2 = req.params.dato2;
 	if (tipo == "Top" || tipo == "top"){
@@ -22,13 +22,17 @@ router.get('/:dato1', function(req, res) {
 			});
 		});
 	}
-	else if(tipo == viaje){
+	else if(tipo == "viaje"){
 		var criterio = req.params.dato2;
 		var limite = req.params.dato4;
 		if (criterio == "consecutivo" || criterio == "Consecutivo"){
-			var consecutivo = req.params.dato5;
-			s = db.viaje.find({Consecutivo: {$regex :consecutivo}}).limit(limite).populate();
-			res.send(s);
+			var consecutivo = req.params.dato3;
+			db.viaje.find({Consecutivo: {$regex :consecutivo}}).limit(parseInt(limite)).populate('Funcionario_id').exec(function (err, viajes){
+			res.send(viajes);
+			});
+		}
+		else if{
+			
 		}
 	}
 });
