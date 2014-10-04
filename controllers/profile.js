@@ -2,15 +2,15 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/:id', function(req, res) {
-	db.viaje.findById(req.params.id).populate('Funcionario_id').exec(function (err, viajedate){
+router.get('/:consecutivo', function(req, res) {
+	db.viaje.findOne(req.params.consecutivo).populate('Funcionario_id').exec(function (err, viajedate){
 	  	if (err) res.render('error', {
 	        message: err.message,
 	        error: {}});
 	  	else {
 	  		var link = {
-	  			url: "http://localhost:3000/profile/" + viajedate._id,
-	  			id : req.params.id,
+	  			url: "http://localhost/profile/" + viajedate._id,
+	  			id : req.params.consecutivo,
 	  			tipo : "Viaje",
 	  			nombre : viajedate.Consecutivo
 	  		}
