@@ -7,9 +7,9 @@
 				h4.modal-title Recibir notificaciones
 			.modal-body
 				if link.tipo == "Funcionario"
-					p Ingresa tus datos para notificarte sobre el funcionario #{link.nombre} 
+					p Ingresa tus datos para notificarte sobre el funcionario #{link.nombre}, te notificaremos por medio de un mensaje en WhatsApp, inmediatamente resiviras una notificacion de seguimiento.
 				else
-					p Ingresa tus datos para notificarte sobre el viaje con el numero de comision #{link.nombre}
+					p Ingresa tus datos para notificarte sobre el viaje con el numero de comision #{link.nombre}, te notificaremos por medio de un mensaje en WhatsApp, inmediatamente resiviras una notificacion de seguimiento.
 				form(method="post" action="/seguir")
 					.group
 						input(name="nombre" type="text" required)
@@ -32,6 +32,24 @@
 					//.modal-footer
 					.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
 					button.flat-btn Aceptar
+.modal.fade#Aclarar
+	.modal-dialog
+		.modal-content
+			.modal-header
+				button.close(type="button" data-dismiss="modal")
+					span(aria-hidden="true") &times;
+				h4.modal-title Solicitud de Aclaracion
+			.modal-body
+				p Deseas solicitar una aclaracion sobre el viaje #{link.nombre}. Esto es en caso de que te encuentres inconforme con los datos proporcionados, al llegar a una cantidad condiderable, se solicitara al funcionario que realizo el viaje responder.
+				p * Si estas interesado en que te avizemos porfavor sigue al viaje, asi podras resibir un mensaje de WhatsApp cuando se aya aclarado los datos del viaje
+				
+				form(method="post" action="/aclarar" role="form")
+					input(type="text" name = "id" value = link.id style = "display:none;")
+					input(type="text" name = "nombreSolicitud" value = link.nombre style = "display:none;")
+					//.modal-footer
+					.flat-btn.normal(type="button" data-dismiss="modal") Cancelar
+					button.flat-btn Aceptar
+
 .modal#compartir
 .float-btn#trigger
 	span.glyphicon.glyphicon-send
