@@ -112,7 +112,7 @@ h1 {
 }
 
 .green {
-	color: green;
+	color: green !important;
 }
 
 form {
@@ -138,6 +138,10 @@ form {
 	margin: 2em 0.5em;
 	color: black;
 	text-align: left;
+}
+
+.compare-icon {
+	cursor: pointer;
 }
 
 /*---PROFILE---*/
