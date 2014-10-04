@@ -1,5 +1,5 @@
 
-README CheckTrip
+README CheckTrips
 ============
 
 Hoy en día nosotros como sociedad necesitamos transparencia, manejo y gestión de la información que se crea según los movimientos de quienes nos gobiernan; por eso nos damos a la encomienda de crear un Aplicación web que permita observar claramente y a detalle estas situaciones.
@@ -19,7 +19,10 @@ Por ser de uso General se podrá manipular por 3 tipos de individuos:
 - Funcionario: Son las personas que mostrarán el control de sus viajes, cuanto dinero manejan, sus gastos, cargos, dependencias a la que pertencen, relacion de costos y sus medios de contacto básico. Para ellos se ofrecen la edicion de viajes, notificaciones de inconformidad según la sociedad mexicana, si ya se ha actualizado ó aclarado algún proceso.
 - Administrador (ifai): Técnicos especializados en el manejo de la información; serán quienes gestionen las bases de datos y manejen la plataforma segun la encomienda que se tenga. Agregan funcionarios, viajes, temas, tipos de comision, representacion y demás datos adicionales que los funcionarios podrán escoger para sus perfiles.
 
-#API
+API:
+- Permitir el intercambio de la información por medio de esta App.
+- Mostrar datos mostrando un TOP 3+, además de hacer consultas según funcionarios, viajes, instituciones y gastos de manera específica, delimitando las respuestas según los criterios de búsqueda realizados por el usuario.
+
 ##Dependencias
 - MongoDB ~ v2.6.4
 - NodeJS ~ v0.10.30
