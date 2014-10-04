@@ -44,7 +44,7 @@ router.get('/:id/:id2/:tipo', function(req, res) {
 						  		var link = {
 						  			url:"http://localhost:3000/compare/" + req.params.id +"/"+req.params.id2 + "/"+req.params.tipo
 						  		}
-						  		res.render('compare',{count1:count1, count2:count2, datos1:datos1,datos2:datos2, totales:totales,grafica1:grafica1,grafica2:grafica2,grafica12:grafica12, tipo:1});
+						  		res.render('compare',{count1:count1, count2:count2, datos1:datos1,datos2:datos2, totales:totales,grafica1:grafica1,grafica2:grafica2,grafica12:grafica12, tipo:1,link:link});
 						});
 					});
 			  });
