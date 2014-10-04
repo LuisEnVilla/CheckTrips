@@ -64,8 +64,8 @@ Linkedin:
 - [Ma. Sarahi Oyervides](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
  
 twitter:
-- [Luis E. Villa Trejo](@luisvillak)
-- [Ma. Sarahi Oyervides](@Sara_Oyervides)
+- Luis E. Villa Trejo(@luisvillak)
+- Ma. Sarahi Oyervides(@Sara_Oyervides)
 
 
 
