@@ -67,7 +67,7 @@ block content
                 tbody
                   each val in viajes
                     tr
-                      td: a(href = "/profile/" + val._id) #{val.FechaInicio} - #{val.FechaFin}
+                      td: a(href = "/profile/" + val.Consecutivo) #{val.FechaInicio} - #{val.FechaFin}
                       td #{val.Destino.Estado}
                       td
                         +nan(val.GastoPasaje)

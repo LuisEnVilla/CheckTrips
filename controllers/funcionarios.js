@@ -7,7 +7,7 @@ router.get('/:id', function(req, res) {
 	  	if (err) res.render('error', {
 	        message: err.message,
 	        error: {}});
-	  	db.viaje.find({Funcionario_id : req.params.id},'_id GastoPasaje CostoHospedaje FechaInicio FechaFin GastosViaticos Tema Destino',function (err, viajes){
+	  	db.viaje.find({Funcionario_id : req.params.id},'_id Consecutivo GastoPasaje CostoHospedaje FechaInicio FechaFin GastosViaticos Tema Destino',function (err, viajes){
 	  		if (err) res.render('error', {
 	        message: err.message,
 	        error: {}});
@@ -104,7 +104,7 @@ router.get('/:id', function(req, res) {
 	  		//res.status(200).jsonp(grafica);
 	  		//res.status(200).jsonp({Funcionario:Funcionario, viajes:viajes});
 	  		var link = {
-	  			url : "http://localhost:3000/Funcionarios/" + req.params.id,
+	  			url : "http://localhost/Funcionarios/" + req.params.id,
 	  			id : req.params.id,
 	  			tipo : "Funcionario",
 	  			nombre : Funcionario.Nombre.Nombres +" "+ Funcionario.Nombre.ApellidoP
