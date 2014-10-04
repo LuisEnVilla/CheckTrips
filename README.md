@@ -15,9 +15,9 @@ Este proyecto esta basado en la nueva tendencia que google trae para nosotros: [
 
 
 Por ser de uso General se podrá manipular por 3 tipos de individuos:
-- Usuario: Se refiere a público en General. Contarán con el servicio de viajes realizados, perfiles de funcionarios, costos generales, detalles importantes como viáticos, hospedaje y  compartir esa información en redes sociales, comparar 2 perfiles y demostrar con su visualización amigable una inconformidad de manera sencilla. Otra caracteristica de nuestro Proyecto es el uso de WhatsApp para el seguimiento de los funcionarios. Caundo este de de alta un nuevo viaje, aparecerá un mensaje de nuestra plataforma que avisara una actualización o aclaracion en proceso.
+- Usuario: Se refiere a público en General. Contarán con el servicio de viajes realizados, perfiles de funcionarios, costos generales, detalles importantes como viáticos, hospedaje y  compartir esa información en redes sociales, comparar 2 perfiles y demostrar con su visualización amigable una inconformidad de manera sencilla. Otra caracteristica de nuestro Proyecto es el uso de WhatsApp para el seguimiento de los funcionarios. Cuando este de de alta un nuevo viaje, aparecerá un mensaje de nuestra plataforma que avisara una actualización o aclaracion en proceso.
 - Funcionario: Son las personas que mostrarán el control de sus viajes, cuanto dinero manejan, sus gastos, cargos, dependencias a la que pertencen, relacion de costos y sus medios de contacto básico. Para ellos se ofrecen la edicion de viajes, notificaciones de inconformidad según la sociedad mexicana, si ya se ha actualizado ó aclarado algún proceso.
-- Administrador (ifai): Técnicos especializados en el manejo de la información; serán quienes gestionen las bases de datos y manejen la plataforma segun la encomienda que se tenga. Agregan funcionarios, viajes, temas, tipos de comision, representacion y demás datos adicionales que los funcionarios podrán escoger para sus perfiles.
+- Administrador (ifai): Persona encargada del manejo de la información respectiva de cada área; serán quienes gestionen las bases de datos y manejen la plataforma segun la encomienda que se tenga. Agregan funcionarios, viajes, temas, tipos de comision, representacion y demás datos adicionales que los funcionarios podrán escoger para sus perfiles.
 
 API:
 - Permitir el intercambio de la información por medio de esta App.
@@ -53,7 +53,14 @@ Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Uste
 ##Equipo
 Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
 
+Github: 
 - [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
+- [Axel Ramiro Flores]()
+- [Ma. Sarahi Oyervides]()
+ 
+LINKEDIN:
+-
+
 
 
 ##Licencia
