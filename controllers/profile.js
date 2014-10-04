@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/:consecutivo', function(req, res) {
-	db.viaje.findOne(req.params.consecutivo).populate('Funcionario_id').exec(function (err, viajedate){
+	db.viaje.findOne({Consecutivo :req.params.consecutivo}).populate('Funcionario_id').exec(function (err, viajedate){
 	  	if (err) res.render('error', {
 	        message: err.message,
 	        error: {}});
