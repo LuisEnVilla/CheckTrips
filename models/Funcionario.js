@@ -18,7 +18,8 @@ module.exports = function(mongoose) {
 		Clave : String,
 		UnidadAdministrativa : String,
 		Aclaraciones : Number
-	}
+	},
+	Viajes : [{ type: Schema.ObjectId, ref: 'Viaje' }]
   });
   SchemaFuncionario.set('collection','Funcionario');
   return mongoose.model('Funcionario', SchemaFuncionario);

@@ -1,6 +1,6 @@
 //extends layout
 block content
-	h2 Alta de Viaje
+	h2 Datos Generales del viaje
 	form
 		label Nombre:
 		input(type = "text" value = usuario.Nombre.Nombres +" "+usuario.Nombre.ApellidoP +" "+usuario.Nombre.ApellidoM)
@@ -40,4 +40,13 @@ block content
 		input(type = "date")
 		label Nombre del evento o actividad principal a la que se asiste:
 		input(type = "text")
-
+		label URL del evento:
+		input(type = "text")
+		label participación en el evento o activida:
+		input(type="date"  placeholder = "Fecha de inicio")
+		input(type="date"  placeholder = "Fecha de fin")
+		//segundapestaña
+	h2 Datos de gastos.
+	form
+		h3 Origen
+		label  

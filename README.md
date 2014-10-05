@@ -32,64 +32,17 @@ API:
 
 
 ##Instalación / Configuración 
-Instrucciones
+Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas:
 
-PHYTON WINDOWS:
+- 1 Phyton
+- 1.1 Pymongo
 
-- 1.-Identifica la versión de Windows que se ejecuta en tu PC. Tendrás que saber si estás ejecutando Windows 95, 98, NT, 2000, ME, XP, Vista o Windows 7.
+- 2 Node JS
+- 2.2 Express
 
-- 2.-Decide si necesitarás el código fuente de Python. Instalar la fuente es opcional. Python es un software de código abierto, lo que significa que el código está disponible para los programadores para modificar o distribuir a su antojo.
+- 3 MongoDB
 
-
-- 3.-Dirígete a la página web Python.org. Todas las distribuciones oficiales del programa se pueden encontrar aquí, incluyendo un archivo. Msi instalador para Windows.
-
-- 4.-Haz clic en el enlace "Descargar". Una lista de archivos aparecerá. Cada archivo es una distribución de Python para una plataforma específica.
-
-- 5.-Encuentra el instalador para tu plataforma. Numerosas versiones de Python están disponibles para entornos Windows. Si eres incapaz de determinar la versión de Windows instalada en tu PC, descarga el instalador binario estándar.
-
-- 6.-Elige el enlace "Windows Installer Python" para un entorno estándar, el "instalador Python AMD64" para equipos que ejecuten Windows 64-bit o el "Python Itanium de Windows Installer" para las computadoras Intel Itanium.
-
-- 7.-Haz clic en el enlace de descarga. Puedes descargar el archivo y luego ejecutarlo, o bien puedes hacerlo automáticamente. Es recomendable descargarlo para que tengas una copia para su uso futuro.
-
-EJECUTA EL INSTALADOR:
-
-- 1.-Ejecuta el instalador, si no lo ejecutaste automáticamente desde el diálogo de descarga. Busca el archivo. Msi usando Windows explorer y ejecútalo. Un programa de instalación se abrirá. Haz clic en "Instalar para todos los usuarios" y luego en "Siguiente".
-
-- 2.-Escoge un directorio de instalación para Python. El valor por defecto, "C: \ Python25", se recomienda, ya que pueden darse situaciones en que será útil para que escribas la ruta completa al intérprete de Python desde la línea de comandos. Un nombre de directorio corto en la unidad C: \ es más fácil de escribir.
-
-- 3.-Elige las funciones que deseas instalar y haz clic en "Siguiente" para iniciar la instalación. Espera unos minutos para que el proceso se complete. Una vez que se haya instalado Python, haz clic en "Finalizar" para cerrar el instalador.
-
-- 4.-Haz clic en "Programas", "Python 2.5" y luego "Python" desde el menú Inicio de Windows para probarlo. Una ventana en negro y blanco se abrirá con un comando interactivo de Python del sistema. Una vez que hayas confirmado que el programa está instalado correctamente, cierra la ventana.
-
-- 5.-Abre un prompt de comando haciendo clic en "Inicio" y luego en "Ejecutar". Cuando el diálogo se abra, escribe "cmd" en el cuadro de búsqueda y presiona "Aceptar". Ejecutar los programas de Python desde la línea de comandos es una forma útil de ver el destino y pasar parámetros.
-
-- 6.-Cambia a tu directorio de Python. Si aceptas el directorio por defecto, escribe "cd C: \ Python25" en el prompt del comando y presiona "Enter". Si lo has instalado en otro lugar, cambia "C: \ Python25" a la carpeta de instalación. Escribe "python" y presiona "Enter" para iniciar la línea de comandos de Python del sistema.
-
-PHYTON LINUX:
-
-- Escribir el siguiente comando para instalar python en linux:
-
-$ sudo apt-get install python2.7
-
-- Una nota para los usuarios de Red Hat / RHEL / CentOS:
-Puede instalar python de la siguiente manera:
-
-$ sudo yum install python
-
-
-- O instalar python de esta otra manera:
-
-# yum install python
-
-PHYTON MAC OS X:
-
-Python viene pre-instalado en Mac OS X por lo que es fácil de comenzar a usar. Sin embargo, para tomar ventaja de las últimas versiones de Python, usted tendrá que descargar e instalar las nuevas versiones junto a los del sistema. La forma más fácil de hacerlo es instalar uno de los instaladores binarios para OS X desde la [página de descarga de Python](https://www.python.org/download/) . Los instaladores están disponibles para los últimos Python 3 y Python 2 versiones que funcionan en todos los equipos Mac que ejecutan Mac OS X 10.5 y posteriores.
-
-Versiones de Python incluyen IDLE , entorno de desarrollo interactivo integrado de Python. Si descarga e instala Python desde la página de la liberación, es posible que tenga que descargar e instalar una nueva versión de Tcl / Tk para OS X. Consulte la IDLE y Tkinter en la página OS X para obtener más información.
-
-Se puede ejecutar un intérprete de Python haciendo doble clic en Aplicaciones / Utilidades / Terminal y escribiendo python3 (si ha instalado una versión de Python 3) o python (para usar Python 2) en la ventana que se abre. También puede iniciar IDLE para la versión de Python que haya instalado haciendo doble clic en su icono en la carpeta de la versión de Python adecuado en la Aplicaciones carpeta o también puede simplemente escribir idle3 o inactivo en una ventana de terminal.
-
-Hay muchos miles de paquetes de software Python adicionales disponibles a través PyPI , el índice de paquetes de Python. Le recomendamos que utilice el pip herramienta para simplificar la instalación y gestión de paquetes adicionales. pip se incluye con Python 3.4 liberaciones; para versiones anteriores, siga el pip install instrucciones.
+Si necesitas mayor información visita nuestro [wiki.]()
 
 ##Screenshots
 Añadir algún screenshot interesante del proyecto. Muy recomendable.
