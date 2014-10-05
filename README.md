@@ -34,7 +34,7 @@ API:
 ##Instalación / Configuración 
 Instrucciones
 
-Escoge una instalación de Python
+PHYTON WINDOWS:
 
 - 1.-Identifica la versión de Windows que se ejecuta en tu PC. Tendrás que saber si estás ejecutando Windows 95, 98, NT, 2000, ME, XP, Vista o Windows 7.
 
@@ -64,6 +64,32 @@ EJECUTA EL INSTALADOR:
 - 5.-Abre un prompt de comando haciendo clic en "Inicio" y luego en "Ejecutar". Cuando el diálogo se abra, escribe "cmd" en el cuadro de búsqueda y presiona "Aceptar". Ejecutar los programas de Python desde la línea de comandos es una forma útil de ver el destino y pasar parámetros.
 
 - 6.-Cambia a tu directorio de Python. Si aceptas el directorio por defecto, escribe "cd C: \ Python25" en el prompt del comando y presiona "Enter". Si lo has instalado en otro lugar, cambia "C: \ Python25" a la carpeta de instalación. Escribe "python" y presiona "Enter" para iniciar la línea de comandos de Python del sistema.
+
+PHYTON LINUX:
+
+- Escribir el siguiente comando para instalar python en linux:
+
+$ sudo apt-get install python2.7
+
+- Una nota para los usuarios de Red Hat / RHEL / CentOS:
+Puede instalar python de la siguiente manera:
+
+$ sudo yum install python
+
+
+- O instalar python de esta otra manera:
+
+# yum install python
+
+PHYTON MAC OS X:
+
+Python viene pre-instalado en Mac OS X por lo que es fácil de comenzar a usar. Sin embargo, para tomar ventaja de las últimas versiones de Python, usted tendrá que descargar e instalar las nuevas versiones junto a los del sistema. La forma más fácil de hacerlo es instalar uno de los instaladores binarios para OS X desde la [página de descarga de Python](https://www.python.org/download/) . Los instaladores están disponibles para los últimos Python 3 y Python 2 versiones que funcionan en todos los equipos Mac que ejecutan Mac OS X 10.5 y posteriores.
+
+Versiones de Python incluyen IDLE , entorno de desarrollo interactivo integrado de Python. Si descarga e instala Python desde la página de la liberación, es posible que tenga que descargar e instalar una nueva versión de Tcl / Tk para OS X. Consulte la IDLE y Tkinter en la página OS X para obtener más información.
+
+Se puede ejecutar un intérprete de Python haciendo doble clic en Aplicaciones / Utilidades / Terminal y escribiendo python3 (si ha instalado una versión de Python 3) o python (para usar Python 2) en la ventana que se abre. También puede iniciar IDLE para la versión de Python que haya instalado haciendo doble clic en su icono en la carpeta de la versión de Python adecuado en la Aplicaciones carpeta o también puede simplemente escribir idle3 o inactivo en una ventana de terminal.
+
+Hay muchos miles de paquetes de software Python adicionales disponibles a través PyPI , el índice de paquetes de Python. Le recomendamos que utilice el pip herramienta para simplificar la instalación y gestión de paquetes adicionales. pip se incluye con Python 3.4 liberaciones; para versiones anteriores, siga el pip install instrucciones.
 
 ##Screenshots
 Añadir algún screenshot interesante del proyecto. Muy recomendable.
