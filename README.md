@@ -54,20 +54,32 @@ Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Uste
 Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
 
 Github: 
-- [Luis E. Villa Trejo](https://github.com/LuisEnVilla)
-- [Axel Ramiro Flores](https://github.com/AxelRamiro)
-- [Ma. Sarahi Oyervides](https://github.com/SaraOyervides)
+- [Luis Enrique Villa Trejo](https://github.com/LuisEnVilla)
+- [Claudio Axel Ramiro Flores](https://github.com/AxelRamiro)
+- [María Sarahi Oyervides García](https://github.com/SaraOyervides)
 
 Linkedin:
-- [Luis E. Villa Trejo](https://mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
-- [Axel Ramiro Flores](https://mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
-- [Ma. Sarahi Oyervides](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
+- [Luis Enrique Villa Trejo](https://mx.linkedin.com/pub/luis-enrique-villa/82/328/7aa)
+- [Claudio Axel Ramiro Flores](https://mx.linkedin.com/pub/axel-ramiro/a4/921/a2)
+- [María Sarahi Oyervides García](https://mx.linkedin.com/pub/sara-oyervides/a5/602/716/)
  
 twitter:
-- Luis E. Villa Trejo(@luisvillak)
-- Ma. Sarahi Oyervides(@Sara_Oyervides)
+- Luis Enrique Villa Trejo (@luisvillak)
+- María Sarahi Oyervides García (@Sara_Oyervides)
 
 
 
 ##Licencia
-Sección para agregar la licencia. Recuerda agregar el LICENSE.txt al repositorio.
+Copyright [2014] [CheckTrips]
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
