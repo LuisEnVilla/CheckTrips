@@ -6,8 +6,8 @@ module.exports = function(mongoose) {
     _id : Schema.Types.ObjectId,
     Descripcion : String,
     Nombre : String,
-    Viajes : [],
-    Funcionarios : [],
+    Viajes : [{ type: Schema.ObjectId, ref: 'Viaje' }],
+    Funcionarios : [{ type: Schema.ObjectId, ref: 'Funcionario' }],
     CounViajes :Number,
     CountFuncionarios: Number
   });
