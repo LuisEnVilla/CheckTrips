@@ -9,14 +9,14 @@ block content
 					.card.small
 						.card-content
 							h3 Inicio de Sesión
-							form
+							form(action = "/log" method="post")
 								.group
-									input(type="email" required)
+									input(type="email" name="mail" required)
 									span.highlight
 									span.bar
 									label e-mail
 								.group
-									input(type="password" required)
+									input(type="password" name="pass" required)
 									span.highlight
 									span.bar
 									label contraseña
