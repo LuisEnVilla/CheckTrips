@@ -50,8 +50,9 @@ block content
       .col-md-8.col-md-offset-2
         .card(style="height:70px")
           .card-control
-            a.compare-icon
-              span.glyphicon.glyphicon-stats.pull-left
+            - var name = Funcionario.Nombre.Nombres.split(' ')[0]+'-'+Funcionario.Nombre.ApellidoP.split(' ')[0]
+            - var ID = Funcionario.Funcionario_id
+            span.glyphicon.glyphicon-check.pull-left.compare-icon.f(id=name aidi=ID)
             .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
     .row
       .col-md-8.col-md-offset-2

@@ -68,6 +68,15 @@ $(function(){
 	});
 
 	$('#comparar').click(function(event) {
+		if (sessionStorage.data1 && sessionStorage.data2) {
 		window.location.assign('/compare/'+ sessionStorage.data1 +'/'+sessionStorage.data2+'/viaje')
+		}
+		if(!sessionStorage) {
+			alert('No hay elementos a comparar')
+		}
+		else if (sessionStorage.data1 && !sessionStorage.data2
+					 ||sessionStorage.data2 && !sessionStorage.data1) {
+			alert('Elija dos elementos a comparar')
+		}
 	})
 })
