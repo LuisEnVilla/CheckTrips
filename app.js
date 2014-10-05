@@ -16,6 +16,7 @@ var Funcionarios = require('./controllers/funcionarios');
 var seguir = require('./controllers/agregarSeguir');
 var aclaracion = require('./controllers/aclaraciones');
 var api = require('./controllers/api');
+var alta = require('./controllers/altaviaje');
 var app = express();
 // Configuration
 
@@ -42,6 +43,7 @@ app.use('/insert', insert);
 app.use('/seguir',seguir);
 app.use('/aclarar',aclaracion);
 app.use('/api',api);
+app.use('/alta',alta);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
