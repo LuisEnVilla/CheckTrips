@@ -34,13 +34,13 @@ API:
 ##Instalación / Configuración 
 Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas:
 
-- Phyton
-Pymongo
+- 1 Phyton
+- 1.1 Pymongo
 
-- Node JS
-Express
+- 2 Node JS
+- 2.2 Express
 
-- MongoDB
+- 3 MongoDB
 
 Si necesitas mayor información visita nuestro [wiki.]()
 
