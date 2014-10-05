@@ -15,8 +15,10 @@ extends layout
 block content
   include header
   include share
-  img.img-circle.img-responsive(src="/images/user.jpg" style="position: absolute; left:40px;top:200px;border: 5px solid white;width:200px;height:200px;z-index:5;")
-  #map(style='background-image: url(/images/fondo1.jpg)')
+  img.img-circle.img-responsive(src="/images/user.jpg" style="position: absolute; left:6.4rem;top:12.8rem;border: 5px solid white;width:12.8rem;height:12.8rem;z-index:5;")
+  //#map(style='background-image: url(/images/fondo1.jpg)')
+  //#map(style='background-color: #009688')
+  .container-fluid
   .container#main
     .row
       .col-md-8.col-md-offset-2
@@ -40,16 +42,20 @@ block content
               dl.dl-horizontal
                 dt  Unidad Administrativa:
                 dd  #{Funcionario.Trabajo.UnidadAdministrativa}
-              .card-control
-                a.compare-icon
-                  span.glyphicon.glyphicon-stats.pull-left
-                .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
     .row
       .col-md-8.col-md-offset-2
         .card
           .row
             .col-md-12
               .chart#chartFuncionario
+    .row
+      .col-md-8.col-md-offset-2
+        .card(style="height:70px")
+          .card-control
+            - var name = Funcionario.Nombre.Nombres.split(' ')[0]+'-'+Funcionario.Nombre.ApellidoP.split(' ')[0]
+            - var ID = Funcionario._id
+            span.glyphicon.glyphicon-check.pull-left.compare-icon.f(id=name aidi=ID)
+            .flat-btn.pull-right.normal(data-toggle="modal" data-target="#seguir") Seguir
     .row
       .col-md-8.col-md-offset-2
         .card

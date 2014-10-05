@@ -173,12 +173,12 @@ input:focus ~ .highlight {
 
 .float-btn {
 		z-index: 1050;
-		width: 50px;
-		height: 50px;
+		width: 5.6rem;
+		height: 5.6rem;
 		color: white;
-		background-color: #FFC107;
+		background-color: #009688;
 		position: fixed;
-		font-size: 20px;
+		font-size: 2.4rem;
 		text-align: center;
 		right: 280px;
 		bottom: 10px;
@@ -187,6 +187,7 @@ input:focus ~ .highlight {
 		border-radius: 50%;
 		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 		cursor: pointer;
+		opacity: 0.85;
 }
 
 /*---DROPDOWN---*/

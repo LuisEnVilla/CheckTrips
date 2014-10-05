@@ -1,0 +1,43 @@
+//extends layout
+block content
+	h2 Alta de Viaje
+	form
+		label Nombre:
+		input(type = "text" value = usuario.Nombre.Nombres +" "+usuario.Nombre.ApellidoP +" "+usuario.Nombre.ApellidoM)
+		label Cargo:
+		input(type = "text" value = usuario.Trabajo.Cargo)
+		label Clave:
+		input(type = "text" value = usuario.Trabajo.Clave)
+		label Unidad Responsable:
+		input(type = "text" value = usuario.Trabajo.UnidadAdministrativa)
+		label Mecanismo de generacion:
+		select
+			option Invitacion
+			option Requerimiento de UR
+		label Unidad Generadora:
+		input(type = "text" value = usuario.Trabajo.UnidadAdministrativa)
+		label Tipo de reprecentacion:
+		select
+			option Técnico
+			option Alto Nivel
+		label Tipo de comision:
+		select
+			each i in catalogoComisiones
+				option #{i.Tipo}
+		label Tema:
+		select
+			each i in catalogoTemas
+				option #{i.Tema}
+		label Numero de comision:
+		input(type='text')
+		label Tipo de Viaje:
+		select
+			option Nacional
+			option Internacional
+		label Fecha de inicio de la comisión:
+		input(type="date")
+		label Fecha de término de la comisión:
+		input(type = "date")
+		label Nombre del evento o actividad principal a la que se asiste:
+		input(type = "text")
+
