@@ -18,10 +18,15 @@ router.post('/', function(req, res) {
   		res.render('logeo');
   	}
   	else{
-  		db.catalogoComision.find({},(function(err, catalogoComisiones){	
+  		db.catalogoComision.find({},(function(err, catalogoComisiones){
   			db.catalogoTema.find({},(function(err, catalogoTemas){
-				res.render('alta',{usuario:usuario, catalogoComisiones:catalogoComisiones,catalogoTemas:catalogoTemas});
-  			}));	
+        db.catalogoEdos.find().distinct('NombreEntidad',(function(err, catalogoEdos){
+          db.catalogoEdos.find().distinct('NOmbreMunicipio',(function(err, catalogoMpios){
+				  res.render('insert',{usuario:usuario, catalogoComisiones:catalogoComisiones,catalogoTemas:catalogoTemas,
+           catalogoEdos:catalogoEdos, catalogoMpios: catalogoMpios})
+          }))
+        }))
+  			}));
   		}));
   	}
   });

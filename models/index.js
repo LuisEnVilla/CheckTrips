@@ -13,7 +13,8 @@ aclaracion : require('./modelAclaracion')(mongoose),
 users : require('./modelUsers')(mongoose),
 mensaje : require('./modelMensaje')(mongoose),
 catalogoComision :  require('./catalogoComision')(mongoose),
-catalogoTema : require('./CatalogoTema')(mongoose)
+catalogoTema : require('./CatalogoTema')(mongoose),
+catalogoEdos : require('./CatalogoEdos') (mongoose)
 // agregar más modelos aquí en caso de haberlos
 };
 module.exports = global.db;
