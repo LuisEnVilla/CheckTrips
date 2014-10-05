@@ -1,10 +1,3 @@
-mixin sumas(viaje,viaticos,hospedaje)
-	-var sum = 0
-	-var items = [viaje,viaticos,hospedaje]
-	each i in items
-		if !isNaN(i)
-			- sum += i
-	| #{sum}
 extends layout
 
 block content
@@ -24,86 +17,5 @@ block content
 										span.input-group-btn
 											button.form-control.btn(type="submit" value="Buscar")
 												span.glyphicon.glyphicon-search
-						a.btn.btn-lg.raised-btn(href="#top") Explorar
-		.container
-			.row#top
-				h2.top-title Viajes más recientes
-			.row
-				each viaje, i in fecha
-					.col-md-4
-						.card.small
-							.card-img
-								if viaje.Tipo == "Nacional"
-									h4 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
-								else
-									h4 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
-							.card-content
-								dl.dl-horizontal
-									dt: span.glyphicon.glyphicon-bookmark 
-									dd #{viaje.Tema}
-									dt: span.glyphicon.glyphicon-user
-									dd: a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-									dt: span.glyphicon.glyphicon-briefcase
-									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-									dt: span.glyphicon.glyphicon-file
-									dd #{viaje.Consecutivo}
-									dt: span.glyphicon.glyphicon-calendar
-									dd #{viaje.FechaInicio}
-							.card-control
-								span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-								a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
-			.row
-				h2.top-title Viajes más costosos en traslado
-			.row
-				each viaje, i in viajes
-					.col-md-4
-						.card.small
-							.card-img
-								if viaje.Tipo == "Nacional"
-									h4 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
-								else
-									h4 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
-							.card-content
-								dl.dl-horizontal
-									dt: span.glyphicon.glyphicon-bookmark 
-									dd #{viaje.Tema}
-									dt: span.glyphicon.glyphicon-user
-									dd: a(href="funcionario/" + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-									dt: span.glyphicon.glyphicon-briefcase
-									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-									dt: span.glyphicon.glyphicon-file
-									dd #{viaje.Consecutivo}
-									dt: span.glyphicon.glyphicon-usd
-									dd
-										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
-							.card-control
-								span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-								a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
-			.row
-				h2.top-title Viajes más costosos en viaticos
-			.row
-				each viaje, i in viajes2
-					.col-md-4
-						.card.small
-							.card-img
-								if viaje.Tipo == "Nacional"
-									h4 #{viaje.Origen.Estado} <i class="glyphicon glyphicon-chevron-right"></i>  #{viaje.Destino.Estado}
-								else
-									h4 #{viaje.Origen.Pais} <i class="glyphicon glyphicon-send"></i>  #{viaje.Destino.Pais}
-							.card-content
-								dl.dl-horizontal
-									dt: span.glyphicon.glyphicon-bookmark 
-									dd #{viaje.Tema}
-									dt: span.glyphicon.glyphicon-user
-									dd: a(href="funcionario/" + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-									dt: span.glyphicon.glyphicon-briefcase
-									dd #{viaje.Funcionario_id.Trabajo.UnidadAdministrativa}
-									dt: span.glyphicon.glyphicon-file
-									dd #{viaje.Consecutivo}
-									dt: span.glyphicon.glyphicon-usd
-									dd
-										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
-							.card-control
-								span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-								a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
+						a.btn.btn-lg.raised-btn(href="/search") Explorar
 		include ./footer

@@ -41,7 +41,7 @@ h1 {
 	font-weight: 400;
 	font-style: italic;
 	margin: 0;
-	font-size: 2.5em;
+	font-size: 2rem;
 }
 
 #compare-card {
@@ -204,7 +204,7 @@ dl dd {
 }
 
 .main {
-	margin-top: 200px;
+	margin-top: 19.2rem;
 }
 
 .chart {
@@ -243,6 +243,20 @@ dl dd {
 #three {
 	bottom: 190px;
 	background-color:#d33f2a;
+}
+
+/*---SEARCH---*/
+#tabs-wrapper {
+	margin-top: 12.8rem;
+}
+
+#tabs {
+	height: 4.8rem;
+	font-size: 1.4rem;
+	padding-top: 1.7rem;
+	padding-bottom: 2rem;
+	margin: 0;
+	text-transform: uppercase;
 }
 
 /*---MEDIA QUERIES---*/
