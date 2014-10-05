@@ -89,7 +89,7 @@ input:focus ~ .highlight {
 .card {
 		color: black;
 		background-color: white !important;
-		border-radius: 3px;
+		border-radius: 0.2rem;
 		padding: 0;
 		height: auto;
 		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
@@ -98,23 +98,30 @@ input:focus ~ .highlight {
 		position: relative;
 }
 
+.card-chip {
+	height: 7.2rem;
+	width: 100%;
+	padding: 1.6rem;
+	font-size: 1.6rem;
+}
+
+.img-chip {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	margin-right: 1.6rem;
+}
+
 .card-img {
 		width: 100%;
-		height: 70px;
-		background-image: url("../images/congruent_outline.png");
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-		color: white;
-		font-size: 20px;
-		padding: 10px;
-		text-align: center;
+		height: 18rem;
 }
 
 .card-content {
 		color: black;
 		font-weight: 200;
-		font-size: 14px;
-		padding: 0.8em;
+		font-size: 1.6rem;
+		padding: 1.6rem;
 }
 
 .card-control {
@@ -122,11 +129,11 @@ input:focus ~ .highlight {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	padding: 1rem 1.5rem;
+	padding: 1.6rem;
 }
 
 .small {
-	height: 300px
+	height: 46rem;
 }
 
 .micro {
@@ -141,8 +148,8 @@ input:focus ~ .highlight {
 		background-color: transparent;
 		text-transform: uppercase;
 		font-weight: 500;
-		padding: 10px;
-		font-size: 14px;
+		padding: 1rem;
+		font-size: 1.4rem;
 		max-width: 200px;
 		display: inline-block;
 }
