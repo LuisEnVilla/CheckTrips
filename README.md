@@ -32,7 +32,38 @@ API:
 
 
 ##Instalación / Configuración 
-Esta sección es una guía paso a paso para instalar el proyecto. Se recomienda una lista ordenada.
+Instrucciones
+
+Escoge una instalación de Python
+
+- 1.-Identifica la versión de Windows que se ejecuta en tu PC. Tendrás que saber si estás ejecutando Windows 95, 98, NT, 2000, ME, XP, Vista o Windows 7.
+
+- 2.-Decide si necesitarás el código fuente de Python. Instalar la fuente es opcional. Python es un software de código abierto, lo que significa que el código está disponible para los programadores para modificar o distribuir a su antojo.
+
+
+- 3.-Dirígete a la página web Python.org. Todas las distribuciones oficiales del programa se pueden encontrar aquí, incluyendo un archivo. Msi instalador para Windows.
+
+- 4.-Haz clic en el enlace "Descargar". Una lista de archivos aparecerá. Cada archivo es una distribución de Python para una plataforma específica.
+
+- 5.-Encuentra el instalador para tu plataforma. Numerosas versiones de Python están disponibles para entornos Windows. Si eres incapaz de determinar la versión de Windows instalada en tu PC, descarga el instalador binario estándar.
+
+- 6.-Elige el enlace "Windows Installer Python" para un entorno estándar, el "instalador Python AMD64" para equipos que ejecuten Windows 64-bit o el "Python Itanium de Windows Installer" para las computadoras Intel Itanium.
+
+- 7.-Haz clic en el enlace de descarga. Puedes descargar el archivo y luego ejecutarlo, o bien puedes hacerlo automáticamente. Es recomendable descargarlo para que tengas una copia para su uso futuro.
+
+EJECUTA EL INSTALADOR:
+
+- 1.-Ejecuta el instalador, si no lo ejecutaste automáticamente desde el diálogo de descarga. Busca el archivo. Msi usando Windows explorer y ejecútalo. Un programa de instalación se abrirá. Haz clic en "Instalar para todos los usuarios" y luego en "Siguiente".
+
+- 2.-Escoge un directorio de instalación para Python. El valor por defecto, "C: \ Python25", se recomienda, ya que pueden darse situaciones en que será útil para que escribas la ruta completa al intérprete de Python desde la línea de comandos. Un nombre de directorio corto en la unidad C: \ es más fácil de escribir.
+
+- 3.-Elige las funciones que deseas instalar y haz clic en "Siguiente" para iniciar la instalación. Espera unos minutos para que el proceso se complete. Una vez que se haya instalado Python, haz clic en "Finalizar" para cerrar el instalador.
+
+- 4.-Haz clic en "Programas", "Python 2.5" y luego "Python" desde el menú Inicio de Windows para probarlo. Una ventana en negro y blanco se abrirá con un comando interactivo de Python del sistema. Una vez que hayas confirmado que el programa está instalado correctamente, cierra la ventana.
+
+- 5.-Abre un prompt de comando haciendo clic en "Inicio" y luego en "Ejecutar". Cuando el diálogo se abra, escribe "cmd" en el cuadro de búsqueda y presiona "Aceptar". Ejecutar los programas de Python desde la línea de comandos es una forma útil de ver el destino y pasar parámetros.
+
+- 6.-Cambia a tu directorio de Python. Si aceptas el directorio por defecto, escribe "cd C: \ Python25" en el prompt del comando y presiona "Enter". Si lo has instalado en otro lugar, cambia "C: \ Python25" a la carpeta de instalación. Escribe "python" y presiona "Enter" para iniciar la línea de comandos de Python del sistema.
 
 ##Screenshots
 Añadir algún screenshot interesante del proyecto. Muy recomendable.
