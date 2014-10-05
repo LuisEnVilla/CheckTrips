@@ -9,28 +9,23 @@ extends layout
 
 block content
 	include header
-	.container-fluid
-		.row
-			.col-md-8.col-md-offset-2#tabs-wrapper
-				ul.nav.nav-tabs.nav-justified#tabs
-					li.active: a(href="#top" data-toggle="tab") Top
-					li: a(href="#trips" data-toggle="tab") Viajes
-					li: a(href="#people" data-toggle="tab") Funcionarios
-					li: a(href="#institutes" data-toggle="tab") Dependencias
+	include tabs
 	.container.tab-content.main
-		.row
-			.container.col-md-8.col-md-offset-2.tab-pane.active.fade.in#top
+		.row.tab-pane.active.fade.in#top
+			.container.col-md-8.col-md-offset-2
 				.row
 					h2.top-title Viajes más recientes
 				.row
 					each viaje in fecha
-						.col-md-4
+						.col-md-6
 							.card.small
 								.card-chip
 									img(src="/images/user.jpg" alt="User").img-chip
 									a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
+								a(href ="/profile/" + viaje.Consecutivo)
+									img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
 								.card-content
+									p #{viaje.Tema}
 									p.green $
 										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 									p #{viaje.Consecutivo}
@@ -42,13 +37,15 @@ block content
 					h2.top-title Viajes más costosos en traslado
 				.row
 					each viaje in viajes
-						.col-md-4
+						.col-md-6
 							.card.small
 								.card-chip
 									img(src="/images/user.jpg" alt="User").img-chip
 									a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
+								a(href ="/profile/" + viaje.Consecutivo)
+									img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
 								.card-content
+									p #{viaje.tema}
 									p.green $
 										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 									p #{viaje.Consecutivo}
@@ -60,69 +57,15 @@ block content
 					h2.top-title Viajes más costosos en viaticos
 				.row
 					each viaje, i in viajes2
-						.col-md-4
+						.col-md-6
 							.card.small
 								.card-chip
 									img(src="/images/user.jpg" alt="User").img-chip
 									a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
+								a(href ="/profile/" + viaje.Consecutivo)
+									img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
 								.card-content
-									p.green $
-										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
-									p #{viaje.Consecutivo}
-									p #{viaje.FechaInicio}
-								.card-control
-									span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-									a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
-			.row
-				.container.col-md-8.col-md-offset-2.tab-pane.fade#trips
-					.row
-					h2.top-title Viajes más recientes
-				.row
-					each viaje, i in fecha
-						.col-md-4
-							.card.small
-								.card-chip
-									img(src="/images/user.jpg" alt="User").img-chip
-									a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
-								.card-content
-									p.green $
-										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
-									p #{viaje.Consecutivo}
-									p #{viaje.FechaInicio}
-								.card-control
-									span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-									a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
-				.row
-					h2.top-title Viajes más costosos en traslado
-				.row
-					each viaje, i in viajes
-						.col-md-4
-							.card.small
-								.card-chip
-									img(src="/images/user.jpg" alt="User").img-chip
-									a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
-								.card-content
-									p.green $
-										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
-									p #{viaje.Consecutivo}
-									p #{viaje.FechaInicio}
-								.card-control
-									span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-									a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
-				.row
-					h2.top-title Viajes más costosos en viaticos
-				.row
-					each viaje, i in viajes2
-						.col-md-4
-							.card.small
-								.card-chip
-									img(src="/images/user.jpg" alt="User").img-chip
-									a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-								img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
-								.card-content
+									p #{viaje.Tema}
 									p.green $
 										+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
 									p #{viaje.Consecutivo}

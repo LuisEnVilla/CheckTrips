@@ -32,7 +32,17 @@ API:
 
 
 ##Instalación / Configuración 
-Esta sección es una guía paso a paso para instalar el proyecto. Se recomienda una lista ordenada.
+Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas:
+
+- 1 Phyton
+- 1.1 Pymongo
+
+- 2 Node JS
+- 2.2 Express
+
+- 3 MongoDB
+
+Si necesitas mayor información visita nuestro [wiki.]()
 
 ##Screenshots
 Añadir algún screenshot interesante del proyecto. Muy recomendable.
