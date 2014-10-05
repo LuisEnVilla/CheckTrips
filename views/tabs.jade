@@ -1,0 +1,13 @@
+.container-fluid
+	.row
+		.col-md-8.col-md-offset-2#tabs-wrapper
+			ul.nav.nav-tabs.nav-justified#tabs
+				li.active: a(href="/search") Top
+				li: a(href="/search/viajes") Viajes
+				li: a(href="/search/funcionarios") Funcionarios
+				li: a(href="/search/dependencias") Dependencias
+	.row
+		.col-md-8.col-md-offset-2
+			form(method="post" action="#").form-inline
+				input(type="text" placeholder="Buscar ...")
+				button(type="submit") Buscar
