@@ -69,7 +69,7 @@ Sección para explicar cómo contribuir a su proyecto. Debe añadir enlace al ar
 Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/CodeandoMexico/repo-guidelines/pulls), [ideas](https://github.com/CodeandoMexico/repo-guidelines/issues) and [bugs](https://github.com/CodeandoMexico/repo-guidelines/issues).
 
 ##Equipo
-Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
+Miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto:
 
 Github: 
 - [Luis Enrique Villa Trejo](https://github.com/LuisEnVilla)
@@ -88,7 +88,7 @@ twitter:
 
 
 ##Licencia
-Copyright [2014] [CheckTrips]
+Copyright 2014 IDE "Idea, Desarrolla y Emprende"
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
