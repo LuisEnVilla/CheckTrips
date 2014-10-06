@@ -195,11 +195,10 @@ dl dd {
 	top: 0;
 	left: 0;
 	right: 0;
-	padding-top: 12.8rem;
+	padding-top: 6.4rem;
 	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
 	margin-bottom: 1em;
-	/*background-image: url("../images/congruent_outline.png");*/
 	background-color: #009688;
 	height: 19.2rem;
 }
@@ -248,7 +247,6 @@ dl dd {
 
 /*---SEARCH---*/
 #tabs-wrapper {
-	margin-top: 12.8rem;
 }
 
 #tabs {

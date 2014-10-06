@@ -1,6 +1,10 @@
 extends layout
 
 block content
+	style.
+		.navbar {
+			background-color:transparent;
+		}
 	include ./header
 	.intro-header
 		.container
@@ -9,13 +13,5 @@ block content
 					.intro-message
 						h1 Check Trips
 						h4: kbd Realiza una búsqueda o explora los viajes de los funcionarios
-						.row
-							.col-md-6.col-md-offset-3
-								form
-									.input-group
-										input.form-control(type="text" placeholder="Búsqueda")
-										span.input-group-btn
-											button.form-control.btn(type="submit" value="Buscar")
-												span.glyphicon.glyphicon-search
-						a.btn.btn-lg.raised-btn(href="/search") Explorar
+						a.btn.btn-lg.raised-btn(href="/search/top") Explorar
 		include ./footer

@@ -10,7 +10,7 @@ input {
 	font-size:18px;
 	padding:10px 10px 10px 5px;
 	display:block;
-	width:300px;
+	width:100%;
 	border:none;
 	border-bottom:1px solid #757575;
 	background-color: transparent;
@@ -40,7 +40,7 @@ input:focus ~ label, input:valid ~ label {
 .bar {
 	position:relative;
 	display:block;
-	width:300px;
+	width:100%;
 }
 
 .bar:before, .bar:after {
@@ -87,7 +87,7 @@ input:focus ~ .highlight {
 /*---CARD---*/
 
 .card {
-		color: black;
+		color: black !important;
 		background-color: white !important;
 		border-radius: 0.2rem;
 		padding: 0;
@@ -118,7 +118,7 @@ input:focus ~ .highlight {
 }
 
 .card-content {
-		color: black;
+		color: black !important;
 		font-weight: 200;
 		font-size: 1.6rem;
 		padding: 1.6rem;
