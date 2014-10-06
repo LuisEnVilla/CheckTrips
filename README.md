@@ -25,7 +25,7 @@ API:
 - Ademas con consultas predetermindadas, como los viajes mas costosos en viaticos, hospedaje y pasajes.
 - Con una sconsulta simple, la aplicacion te devolvera un JSon con todos los datos que necesitas.
 
-para saber como utilizarla porfavor consulta la [wiki]()
+para saber como utilizarla por favor consulta la [wiki](https://github.com/LuisEnVilla/CheckTrips/wiki/Introducci%C3%B3n:)
 
 ##Dependencias
 - MongoDB ~ v2.6.4
@@ -48,10 +48,17 @@ Para lograr el buen funcionamiento de esta App Web se necesita instalar las Depe
 
 Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
 Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la BD 
-Si necesitas mayor información visita nuestro [wiki.]()
+Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
 ##Screenshots
-Añadir algún screenshot interesante del proyecto. Muy recomendable.
+
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69dmhidUdWNXFLYzA&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69UUlsM0ZXcGxkbjQ&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69LU1YZG4tTVg0UnM&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69bDA2YkloQVphUUk&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69bmRYYWh1bnlWSlU&authuser=0)
+
+
 
 ##Demo
 En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](checktrips.mx)
@@ -69,7 +76,7 @@ Sección para explicar cómo contribuir a su proyecto. Debe añadir enlace al ar
 Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/CodeandoMexico/repo-guidelines/pulls), [ideas](https://github.com/CodeandoMexico/repo-guidelines/issues) and [bugs](https://github.com/CodeandoMexico/repo-guidelines/issues).
 
 ##Equipo
-Indique los miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto. Añadir una referencia a sus perfiles de GitHub/Twitter/LinkedIn. Ejemplo:
+Miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto:
 
 Github: 
 - [Luis Enrique Villa Trejo](https://github.com/LuisEnVilla)
@@ -88,7 +95,7 @@ twitter:
 
 
 ##Licencia
-Copyright [2014] [CheckTrips]
+Copyright 2014 IDE "Idea, Desarrolla y Emprende"
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
