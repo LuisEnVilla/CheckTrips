@@ -47,26 +47,35 @@ Para lograr el buen funcionamiento de esta App Web se necesita instalar las Depe
 - 3 MongoDB
 
 Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
-Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la BD 
+Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la base de datos que esta en la carpeta BD del proyecto.
+Una vez agregada diriguete a la rais del proyecto y ejecuta desde la terminal npm install, para instalar todas las dependencias necesarias del proyecto.
+Sin dejar de ejecutar el servidor mongod, ejecuta como administrador npm start, lo que hara que inicie el servidor NodeJs, con todo lo necesario. 
+Ahora solo rediriguete en tu navegador a localhost y podras vizualizar la app funcionando.
 Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
 ##Screenshots
+**Pantalla de inicio "CheckTrips"**
+![Alt text](https://lh5.googleusercontent.com/eaxwuCJd_cI5XwZWUQM1PwzZMcJr78Ou8eTh03RwMTpOQWLBR4g9Oe6ISLZmouv328aSes8o11g=w1342-h533)
+![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
+![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
+![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
+![Alt text](https://lh6.googleusercontent.com/sMCVhCemXNLYXw4_W-GTLt1YiWvqf66ItD5DfGakELLZYR9RJ3wkzpEPDL_nAFOPb3MezY0YkqI=w649-h469)
+![Alt text](https://lh5.googleusercontent.com/JCAHr60cJfi-n_jCYYdyQNh1lHMxiTqWkBO4uBhSFB-IQp9hwh4G6uV-eVH3xwc4jZEIK12cdSs=w1342-h490)
+![Alt text](https://lh6.googleusercontent.com/slwTeEtFRzevIP4Eb1h1q2d99Yd8qbwoTdTqEnZO5Kl923nraPYEBDPWxrzIwZzFyB3koYaaKes=w1342-h560)
 
-![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69dmhidUdWNXFLYzA&authuser=0)
-![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69UUlsM0ZXcGxkbjQ&authuser=0)
-![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69LU1YZG4tTVg0UnM&authuser=0)
-![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69bDA2YkloQVphUUk&authuser=0)
-![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69bmRYYWh1bnlWSlU&authuser=0)
+![Alt](https://lh5.googleusercontent.com/K3v4zwBrteC5o2FhS6vIf4eElq9F8E7cn-iiJKHTZINM1coEhfLcOq_vPvzyfwclGPdTbt4dqHk=w1342-h560)
+![Alt](https://lh5.googleusercontent.com/9Uy6t5JzyGu_SJ59F5XiX5CIv7Z-lSWdToeg0ivYmaolSR_LOK2OOmQNDufqAf2caRdj0DapLQE=w1342-h560)
+![Alt](https://lh4.googleusercontent.com/isZ_xBOa7R0o0ZeObw6X9pinc5r6pF6rpt-xvOA3M-SGgyw1hDyweTSWBTXTa6hHH0h4YF9XOGA=w1342-h560)
 
 
 
 ##Demo
-En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](checktrips.mx)
+En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](http://checktrips.mx/)
+
+Pueden visualizar [ScreenCast]( http://youtu.be/gL7IANu46Ps)
 
 ##¿Preguntas o problemas? 
-Esta sección describe cómo otros desarrolladores y los usuarios deben interactuar con su proyecto. Aquí un ejemplo:
-
-Mantenemos la conversación del proyecto en nuestra página de problemas [issues] (https://github.com/CodeandoMexico/repo-guidelines/issues). Si usted tiene cualquier otra pregunta, nos puede contactar por correo <retos@codeandomexico.org>.
+Cual quier problema favor de contactar con cualquier integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
 
 ##Contribuye
 
@@ -92,6 +101,11 @@ twitter:
 - Luis Enrique Villa Trejo (@luisvillak)
 - María Sarahi Oyervides García (@Sara_Oyervides)
 
+
+Carta Protesta:
+-[Claudio Axel Ramiro Flores](https://drive.google.com/file/d/0B8ggoF5KLg2bVG52OXQzckhEN2M/view?usp=sharing)
+-[Luis Enrique Villa Trejo](https://drive.google.com/file/d/0B8ggoF5KLg2bd0V4LWNHWEFLaWM/view?usp=sharing)
+-[María Sarahi Oyervides García](https://drive.google.com/file/d/0B8ggoF5KLg2bLTI1WDR5WWw0NEU/view?usp=sharing)
 
 
 ##Licencia
