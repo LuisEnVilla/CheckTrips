@@ -68,6 +68,8 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 ##Demo
 En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](checktrips.mx)
 
+Pueden visualizar [ScreenCast]( http://youtu.be/gL7IANu46Ps)
+
 ##¿Preguntas o problemas? 
 Cual quier problema favor de contactar con cualquier integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
 
