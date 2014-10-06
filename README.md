@@ -2,6 +2,9 @@
 README CheckTrips
 ============
 
+[Slide CheckTrips](http://slides.com/luisenriquevilla/checktrips)
+
+
 Hoy en día nosotros como sociedad necesitamos transparencia, manejo y gestión de la información que se crea según los movimientos de quienes nos gobiernan; por eso nos damos a la encomienda de crear un Aplicación web que permita observar claramente y a detalle estas situaciones.
 
 Checktrips es una plataforma especializada en la visita guiada de los viajes que realizan servidores públicos tanto en la república mexicana, asi como al extranjero. Es dinámica, de fácil uso y  orientada al público en general que busca respuestas, cumpliendo asi con los objetivos de este reto:
