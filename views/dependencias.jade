@@ -10,26 +10,32 @@ extends layout
 block content
 	include header
 	include tabs
+	.row
+		.col-md-8.col-md-offset-2
+			form(method="post" action="/search/dependencias").form-inline
+				input(type="text" name = "buscar" placeholder="Buscar ...")
+				button(type="submit") Buscar
 	.container.tab-content.main
 		.row.tab-pane.active.fade.in#top
 			.container.col-md-8.col-md-offset-2
 				.row
 					each dep in dependencias
-						h2 #{dep.Nombre}
-						each viaje in dep.viajes
-							.col-md-6
-								.card.small
-									.card-chip
-										img(src="/images/user.jpg" alt="User").img-chip
-										a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
-									a(href ="/profile/" + viaje.Consecutivo)
-										img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
-									.card-content
-										p #{viaje.tema}
-										p.green $
-											+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
-										p #{viaje.Consecutivo}
-										p #{viaje.FechaInicio}
-									.card-control
-										span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
-										a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
+						if dep.Viajes != ""
+							h2 #{dep.Nombre}
+							each viaje in dep.Viajes
+								.col-md-6
+									.card.small
+										.card-chip
+											//img(src="/images/user.jpg" alt="User").img-chip
+											//a(href='funcionario/' + viaje.Funcionario_id._id) #{viaje.Funcionario_id.Nombre.Nombres} #{viaje.Funcionario_id.Nombre.ApellidoP }
+										a(href ="/profile/" + viaje.Consecutivo)
+											img(src='http://maps.googleapis.com/maps/api/staticmap?center='+viaje.Destino.Ciudad+'&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE' alt="Mapa").card-img
+										.card-content
+											p #{viaje.tema}
+											p.green $
+												+sumas(viaje.GastoPasaje,viaje.GastosViaticos,viaje.CostoHospedaje)
+											p #{viaje.Consecutivo}
+											p #{viaje.FechaInicio}
+										.card-control
+											span.compare-icon.glyphicon.glyphicon-check.pull-left(id=viaje.Consecutivo)
+											a.flat-btn.pull-right(href ="/profile/" + viaje.Consecutivo) Ver más
