@@ -51,12 +51,13 @@ Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la BD
 Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
 ##Screenshots
-**
+**Pantalla de inicio "CheckTrips"**
 ![Alt text](https://lh5.googleusercontent.com/eaxwuCJd_cI5XwZWUQM1PwzZMcJr78Ou8eTh03RwMTpOQWLBR4g9Oe6ISLZmouv328aSes8o11g=w1342-h533)
+
 ![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
-![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
+![Alt text](https://lh6.googleusercontent.com/sMCVhCemXNLYXw4_W-GTLt1YiWvqf66ItD5DfGakELLZYR9RJ3wkzpEPDL_nAFOPb3MezY0YkqI=w649-h469)
 ![Alt text](https://lh5.googleusercontent.com/JCAHr60cJfi-n_jCYYdyQNh1lHMxiTqWkBO4uBhSFB-IQp9hwh4G6uV-eVH3xwc4jZEIK12cdSs=w1342-h490)
 ![Alt text](https://lh4.googleusercontent.com/Sd_WQpE8WoQAchYlRHkrEoLR0K11QslwtZo9DpRV2ZGwUIlkdn3II2hOLgU-K7ovvPUMnxumy84=w1342-h490)
 
