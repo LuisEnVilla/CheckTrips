@@ -2,13 +2,13 @@ nav.navbar.navbar-fixed-top
 	.container
 		a.navbar-brand(href='/') CheckTrips
 		ul.nav.navbar-nav.navbar-right
-			li
+			li(data-toggle="tooltip" data-placement="bottom" title="Login")
 				a(href="/log")
 					i.fa.fa-user.fa-2x
-			li
+			li(data-toggle="tooltip" data-placement="bottom" title="Search")
 				a(href="/search/top")
 					i.fa.fa-search.fa-2x
-			li
+			li(data-toggle="tooltip" data-placement="bottom" title="Comparar")
 				a#compare-btn
 					span.glyphicon.glyphicon-check(style="font-size:2rem")
 .card.micro#compare-card
