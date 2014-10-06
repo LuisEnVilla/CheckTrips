@@ -1,6 +1,10 @@
 extends layout
 
 block content
+	style.
+		.navbar {
+			background-color: transparent;
+		}
 	include ./header
 	.intro-header#logeo
 		.container
@@ -20,7 +24,7 @@ block content
 									span.highlight
 									span.bar
 									label contraseña
-								//.card-control
-								button.btn.flat-btn.pull-right(type="submit") Ingresar
-								a.btn.flat-btn.pull-right(style="background-color:white;color:black;margin-left:1em") Registrarse
+								.card-control
+									button.btn.flat-btn.pull-right(type="submit") Ingresar
+									a.btn.flat-btn.pull-right(style="background-color:white;color:black;margin-left:1em") Registrarse
 	include ./footer
