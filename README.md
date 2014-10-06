@@ -53,10 +53,10 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 ##Screenshots
 
 ![Alt text](https://lh5.googleusercontent.com/eaxwuCJd_cI5XwZWUQM1PwzZMcJr78Ou8eTh03RwMTpOQWLBR4g9Oe6ISLZmouv328aSes8o11g=w1342-h533)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69UUlsM0ZXcGxkbjQ&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69LU1YZG4tTVg0UnM&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69bDA2YkloQVphUUk&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69bmRYYWh1bnlWSlU&authuser=0)
+![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
+![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
+![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
+![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
 
 
 
