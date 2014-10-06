@@ -26,7 +26,7 @@ router.get('/viajes', function(req, res) {
 });
 
 router.post('/viajes',(function(req,res){
-	db.viaje.find({Consecutivo : req.body.buscar},'Consecutivo Aclaraciones _id Tema  GastoPasaje FechaInicio Origen Destino Funcionario_id')
+	db.viaje.find({Consecutivo: {$regex:req.body.buscar}},'Consecutivo Aclaraciones _id Tema  GastoPasaje FechaInicio Origen Destino Funcionario_id')
 	.populate('Funcionario_id').exec(function (err, viajes){
 			if (err) res.send(500, err.message);
 			res.render('viajes',{viajes:viajes});			

@@ -21,7 +21,11 @@ Por ser de uso General se podrá manipular por 3 tipos de individuos:
 
 API:
 - Permitir el intercambio de la información por medio de esta App.
-- Mostrar datos por medio de un TOP 3, además de hacer consultas según funcionarios, viajes, instituciones y gastos de manera específica, delimitando las respuestas según los criterios de búsqueda realizados por el usuario.
+- Mostrar datos por medio de un TOP 4, además de hacer consultas según funcionarios, viajes, instituciones y gastos de manera específica, delimitando las respuestas según los criterios de búsqueda realizados por el usuario.
+- Ademas con consultas predetermindadas, como los viajes mas costosos en viaticos, hospedaje y pasajes.
+- Con una sconsulta simple, la aplicacion te devolvera un JSon con todos los datos que necesitas.
+
+para saber como utilizarla porfavor consulta la [wiki]()
 
 ##Dependencias
 - MongoDB ~ v2.6.4
@@ -42,13 +46,15 @@ Para lograr el buen funcionamiento de esta App Web se necesita instalar las Depe
 
 - 3 MongoDB
 
+Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
+Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la BD 
 Si necesitas mayor información visita nuestro [wiki.]()
 
 ##Screenshots
 Añadir algún screenshot interesante del proyecto. Muy recomendable.
 
 ##Demo
-Un enlace a una demostración en línea de su proyecto, así como un link a un screencast de máximo 4 minutos.
+En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](checktrips.mx)
 
 ##¿Preguntas o problemas? 
 Esta sección describe cómo otros desarrolladores y los usuarios deben interactuar con su proyecto. Aquí un ejemplo:
@@ -56,6 +62,8 @@ Esta sección describe cómo otros desarrolladores y los usuarios deben interact
 Mantenemos la conversación del proyecto en nuestra página de problemas [issues] (https://github.com/CodeandoMexico/repo-guidelines/issues). Si usted tiene cualquier otra pregunta, nos puede contactar por correo <retos@codeandomexico.org>.
 
 ##Contribuye
+
+
 Sección para explicar cómo contribuir a su proyecto. Debe añadir enlace al archivo CONTRIBUTING.md. Ejemplo:
 
 Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/CodeandoMexico/repo-guidelines/pulls), [ideas](https://github.com/CodeandoMexico/repo-guidelines/issues) and [bugs](https://github.com/CodeandoMexico/repo-guidelines/issues).
