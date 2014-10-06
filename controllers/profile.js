@@ -9,7 +9,7 @@ router.get('/:consecutivo', function(req, res) {
 	        error: {}});
 	  	else {
 	  		var link = {
-	  			url: "http://localhost/profile/" + viajedate._id,
+	  			url: "http://checktrips.mx/profile/" + viajedate._id,
 	  			id : req.params.consecutivo,
 	  			tipo : "Viaje",
 	  			nombre : viajedate.Consecutivo

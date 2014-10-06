@@ -104,7 +104,7 @@ router.get('/:id', function(req, res) {
 	  		//res.status(200).jsonp(grafica);
 	  		//res.status(200).jsonp({Funcionario:Funcionario, viajes:viajes});
 	  		var link = {
-	  			url : "http://localhost/Funcionarios/" + req.params.id,
+	  			url : "http://checktrips.mx/Funcionarios/" + req.params.id,
 	  			id : req.params.id,
 	  			tipo : "Funcionario",
 	  			nombre : Funcionario.Nombre.Nombres +" "+ Funcionario.Nombre.ApellidoP
