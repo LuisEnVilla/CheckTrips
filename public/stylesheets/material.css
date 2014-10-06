@@ -119,7 +119,7 @@ input:focus ~ .highlight {
 
 .card-content {
 		color: black !important;
-		font-weight: 200;
+		font-weight: 400;
 		font-size: 1.6rem;
 		padding: 1.6rem;
 }

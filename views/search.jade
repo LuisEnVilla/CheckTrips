@@ -11,14 +11,9 @@ block content
 	include header
 	.container-fluid
 		.row
-			.col-md-8.col-md-offset-2
-				form(method="post" action="/search/dependencias").form-inline
-					input(type="text" name = "buscar" placeholder="Buscar ...")
-					button(type="submit") Buscar
-		.row
 			.col-md-8.col-md-offset-2#tabs-wrapper
 				ul.nav.nav-tabs.nav-justified#tabs
-					li: a(href="/search") Top
+					li: a(href="/search/top") Top
 					li: a(href="/search/viajes") Viajes
 					li: a(href="/search/funcionarios") Funcionarios
 					li: a(href="/search/dependencias") Dependencias
