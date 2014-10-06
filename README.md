@@ -32,7 +32,7 @@ API:
 
 
 ##Instalación / Configuración 
-Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas:
+Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas de esta forma:
 
 - 1 Phyton
 - 1.1 Pymongo
