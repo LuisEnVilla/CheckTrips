@@ -61,7 +61,7 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 ![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
 ![Alt text](https://lh6.googleusercontent.com/sMCVhCemXNLYXw4_W-GTLt1YiWvqf66ItD5DfGakELLZYR9RJ3wkzpEPDL_nAFOPb3MezY0YkqI=w649-h469)
 ![Alt text](https://lh5.googleusercontent.com/JCAHr60cJfi-n_jCYYdyQNh1lHMxiTqWkBO4uBhSFB-IQp9hwh4G6uV-eVH3xwc4jZEIK12cdSs=w1342-h490)
-![Alt text](https://lh4.googleusercontent.com/Sd_WQpE8WoQAchYlRHkrEoLR0K11QslwtZo9DpRV2ZGwUIlkdn3II2hOLgU-K7ovvPUMnxumy84=w1342-h490)
+![Alt text](https://lh5.googleusercontent.com/idS1TBz5tpR3nDnn20Gc54yFTqkI4iuA9VaSaScFc8UeGqsUEuHBhvp6_viKNOQWTarOjy1CpPw=w1342-h560)
 
 
 
