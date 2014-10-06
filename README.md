@@ -52,11 +52,11 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 
 ##Screenshots
 
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69dmhidUdWNXFLYzA&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69UUlsM0ZXcGxkbjQ&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69LU1YZG4tTVg0UnM&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69bDA2YkloQVphUUk&authuser=0)
-![Alt text](/https://drive.google.com/open?id=0B76Ee8xiPP69bmRYYWh1bnlWSlU&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69dmhidUdWNXFLYzA&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69UUlsM0ZXcGxkbjQ&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69LU1YZG4tTVg0UnM&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69bDA2YkloQVphUUk&authuser=0)
+![Alt text](https://drive.google.com/open?id=0B76Ee8xiPP69bmRYYWh1bnlWSlU&authuser=0)
 
 
 
