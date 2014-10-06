@@ -36,7 +36,7 @@ router.post('/', function(req, res) {
 					user.save();
 					var mensajes = new db.mensaje({
 						Destino : req.body.telefono,
-    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrip, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde checktrip.mx, ahora podrás recibir las notificaciones correspondientes al funcionario "+req.body.nombreSolicitud+" , además de las aclaraciones que dicho funcionario proporcione.",
+    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrips, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde checktrips.mx, ahora podrás recibir las notificaciones correspondientes al funcionario "+req.body.nombreSolicitud+" , además de las aclaraciones que dicho funcionario proporcione.",
 					});
 					mensajes.save();
 					res.redirect("/funcionario/"+req.body.id);
@@ -53,7 +53,7 @@ router.post('/', function(req, res) {
 					user.save();
 					var mensajes = new db.mensaje({
 						Destino : req.body.telefono,
-    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrip, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde checktrip.mx, ahora podrás recibir las notificaciones correspondientes al viaje con el numero de comision "+req.body.nombreSolicitud+" , además de las aclaraciones correspondientes de dicho viaje.",
+    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrips, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde checktrips.smx, ahora podrás recibir las notificaciones correspondientes al viaje con el numero de comision "+req.body.nombreSolicitud+" , además de las aclaraciones correspondientes de dicho viaje.",
 					});
 					mensajes.save();
 					res.redirect("/profile/"+req.body.id);
