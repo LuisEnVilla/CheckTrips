@@ -47,7 +47,10 @@ Para lograr el buen funcionamiento de esta App Web se necesita instalar las Depe
 - 3 MongoDB
 
 Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
-Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la BD 
+Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la base de datos que esta en la carpeta BD del proyecto.
+Una vez agregada diriguete a la rais del proyecto y ejecuta desde la terminal npm install, para instalar todas las dependencias necesarias del proyecto.
+Sin dejar de ejecutar el servidor mongod, ejecuta como administrador npm start, lo que hara que inicie el servidor NodeJs, con todo lo necesario. 
+Ahora solo rediriguete en tu navegador a localhost y podras vizualizar la app funcionando.
 Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
 ##Screenshots
@@ -66,9 +69,7 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](checktrips.mx)
 
 ##¿Preguntas o problemas? 
-Esta sección describe cómo otros desarrolladores y los usuarios deben interactuar con su proyecto. Aquí un ejemplo:
-
-Mantenemos la conversación del proyecto en nuestra página de problemas [issues] (https://github.com/CodeandoMexico/repo-guidelines/issues). Si usted tiene cualquier otra pregunta, nos puede contactar por correo <retos@codeandomexico.org>.
+Cual quier problema favor de contactar con cualquier integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
 
 ##Contribuye
 
