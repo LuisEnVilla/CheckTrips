@@ -2,6 +2,9 @@
 README CheckTrips
 ============
 
+[Slide CheckTrips](http://slides.com/luisenriquevilla/checktrips)
+
+
 Hoy en día nosotros como sociedad necesitamos transparencia, manejo y gestión de la información que se crea según los movimientos de quienes nos gobiernan; por eso nos damos a la encomienda de crear un Aplicación web que permita observar claramente y a detalle estas situaciones.
 
 Checktrips es una plataforma especializada en la visita guiada de los viajes que realizan servidores públicos tanto en la república mexicana, asi como al extranjero. Es dinámica, de fácil uso y  orientada al público en general que busca respuestas, cumpliendo asi con los objetivos de este reto:
@@ -73,6 +76,13 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](http://checktrips.mx/)
 
 Pueden visualizar [ScreenCast]( http://youtu.be/gL7IANu46Ps)
+
+###API demo
+
+[Consulta viajes mas caros por viaticos](http://checktrips.mx/api/viaje/maxViaticos/1)
+
+
+[Consulta 4Top](http://checktrips.mx/api/top)
 
 ##¿Preguntas o problemas? 
 Cual quier problema favor de contactar con cualquier integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
