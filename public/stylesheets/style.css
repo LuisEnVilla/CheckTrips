@@ -262,6 +262,10 @@ dl dd {
 	text-transform: uppercase;
 }
 
+.inicio{
+	margin-left: 10px;
+}
+
 /*---MEDIA QUERIES---*/
 
 @media only screen and (max-width: 768px){

@@ -8,7 +8,7 @@ module.exports = function(mongoose) {
     Name : String,
     Email : String,
     FuncionariosSeguidos : [Schema.Types.ObjectId],
-    ViajeSeguidos : [Schema.Types.ObjectId]
+    ViajeSeguidos : [String]
   });
   SchemaUsers.set('collection','Users');
   return mongoose.model('Users', SchemaUsers);
