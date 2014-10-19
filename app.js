@@ -5,47 +5,25 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
-var index = require('./controllers/index');
-var insert = require('./controllers/insert');
-var log = require('./controllers/logeo');
-var top = require('./controllers/top');
-var profile = require('./controllers/profile');
-var compare = require('./controllers/compare');
-var Funcionarios = require('./controllers/funcionarios');
-var seguir = require('./controllers/agregarSeguir');
-var aclaracion = require('./controllers/aclaraciones');
-var api = require('./controllers/api');
-var alta = require('./controllers/altaviaje');
-var search = require('./controllers/search');
+var index = require('./routes/index');
 var app = express();
-// Configuration
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
+app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//Controllers
+//Routes
 app.use('/', index);
-app.use('/log',log);
-app.use('/top', top);
-app.use('/profile', profile);
-app.use('/funcionario',Funcionarios);
-app.use('/compare', compare);
-app.use('/insert', insert);
-app.use('/seguir',seguir);
-app.use('/aclarar',aclaracion);
-app.use('/api',api);
-app.use('/alta',alta);
-app.use('/search', search);
+/*
+app.use('/api',api);*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
