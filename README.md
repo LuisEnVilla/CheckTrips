@@ -58,7 +58,7 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 
 ##Screenshots
 **Pantalla de inicio "CheckTrips"**
-![Alt text](https://lh5.googleusercontent.com/eaxwuCJd_cI5XwZWUQM1PwzZMcJr78Ou8eTh03RwMTpOQWLBR4g9Oe6ISLZmouv328aSes8o11g=w1342-h533)
+![Alt text](https://app.box.com/s/65d1wj0mrvtrhehwflso)
 ![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
@@ -66,9 +66,9 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 ![Alt text](https://lh5.googleusercontent.com/JCAHr60cJfi-n_jCYYdyQNh1lHMxiTqWkBO4uBhSFB-IQp9hwh4G6uV-eVH3xwc4jZEIK12cdSs=w1342-h490)
 ![Alt text](https://lh6.googleusercontent.com/slwTeEtFRzevIP4Eb1h1q2d99Yd8qbwoTdTqEnZO5Kl923nraPYEBDPWxrzIwZzFyB3koYaaKes=w1342-h560)
 
-![Alt](https://lh5.googleusercontent.com/K3v4zwBrteC5o2FhS6vIf4eElq9F8E7cn-iiJKHTZINM1coEhfLcOq_vPvzyfwclGPdTbt4dqHk=w1342-h560)
-![Alt](https://lh5.googleusercontent.com/9Uy6t5JzyGu_SJ59F5XiX5CIv7Z-lSWdToeg0ivYmaolSR_LOK2OOmQNDufqAf2caRdj0DapLQE=w1342-h560)
-![Alt](https://lh4.googleusercontent.com/isZ_xBOa7R0o0ZeObw6X9pinc5r6pF6rpt-xvOA3M-SGgyw1hDyweTSWBTXTa6hHH0h4YF9XOGA=w1342-h560)
+![Alt text](https://lh5.googleusercontent.com/K3v4zwBrteC5o2FhS6vIf4eElq9F8E7cn-iiJKHTZINM1coEhfLcOq_vPvzyfwclGPdTbt4dqHk=w1342-h560)
+![Alt text](https://lh5.googleusercontent.com/9Uy6t5JzyGu_SJ59F5XiX5CIv7Z-lSWdToeg0ivYmaolSR_LOK2OOmQNDufqAf2caRdj0DapLQE=w1342-h560)
+![Alt text](https://lh4.googleusercontent.com/isZ_xBOa7R0o0ZeObw6X9pinc5r6pF6rpt-xvOA3M-SGgyw1hDyweTSWBTXTa6hHH0h4YF9XOGA=w1342-h560)
 
 
 
