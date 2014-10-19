@@ -19,7 +19,8 @@ module.exports = function(mongoose) {
 		UnidadAdministrativa : String,
 		Aclaraciones : Number
 	},
-	Viajes : [{ type: Schema.ObjectId, ref: 'Viaje' }]
+	Viajes : [{ type: Schema.ObjectId, ref: 'Viaje' }],
+	Vistas : Number
   });
   SchemaFuncionario.set('collection','Funcionario');
   return mongoose.model('Funcionario', SchemaFuncionario);
