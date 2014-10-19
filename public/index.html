@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular Trips</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="javascripts/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/material.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body ng-app="main">
+	<div class="container-fluid" ng-controller="tabsCtrl">
+		<ul class="nav nav-pills">
+	<li ng-class="{active: isSelected(1)}">
+		<a href ng-click="selectTab(1)"> Viajes</a>
+	</li>
+	<li ng-class="{active: isSelected(2)}">
+		<a href ng-click="selectTab(2)"> Funcionarios</a>
+	</li>
+</ul>
+	</div>
+
+	<div class="container" ng-controller="tripsCtrl" ng-show="isSelected(1)">
+	<input ng-model="query.Funcionario_id.Nombre.Nombres">
+	<div class="col-md-4" ng-repeat="trip in trips | filter : query | orderBy : '+Funcionario_id.Nombre.Nombres' | limitTo : 10">
+	<trip-cards>
+	</trip-cards>
+	</div>
+	</div>
+	<div class="container" ng-controller="funcCtrl" ng-show="isSelected(2)">
+		<input ng-model="query.Nombre.Nombres">
+		<div class="col-md-4" ng-repeat="f in func | filter : query">
+			<func-card>
+			</func-card>
+		</div>
+	</div>
+</body>
+</html>

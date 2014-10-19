@@ -1,0 +1,19 @@
+<div class="card small">
+	<div class="card-chip">
+		<img class="img-chip" ng-src="/images/user.jpg" alt="Usuario">
+		<a ng-href="/funcionario/{{trip.Funcionario_id.id._id}}">{{trip.Funcionario_id.Nombre.Nombres}} {{trip.Funcionario_id.Nombre.ApellidoP}}</a>
+		<a ng-href="/profile/{{trip.Consecutivo}}">
+			<img class="card-img" ng-src="http://maps.googleapis.com/maps/api/staticmap?center={{trip.Destino.Ciudad}}&zoom=10&size=400x250&maptype=roadmap&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE">
+		</a>
+		<div class="card-content">
+			<p>{{trip.Tema}}</p>
+			<p class="green">{{trip.GastoPasaje | currency}}</p>
+			<p>{{trip.Consecutivo}}</p>
+			<p>{{trip.FechaInicio}}</p>
+		</div>
+		<div class="card-control">
+			<span class="compare-icon glyphicon glyphicon-check pull-left" id="{{trip.Consecutivo}}"></span>
+			<a class="flat-btn pull-right" href="/profile/{{trip.Consecutivo}}">Ver más</a>
+		</div>
+	</div>
+</div>
