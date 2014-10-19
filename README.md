@@ -59,7 +59,7 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 ##Screenshots
 **Pantalla de inicio "CheckTrips"**
 ![Alt text](https://lh5.googleusercontent.com/NBAQGzTfgLPLZaBvJIUSwfZuPmp7OjsJ70xqBrvS-4vKteVEKxQi14o2-rmM5nm8FcwkwBdAoQM=w1342-h490)
-![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
+![Alt text](https://lh6.googleusercontent.com/p2Ojgy9uEAExawwiyQvPDfuYhA7p7hXzu2rnhp7YrUPKe1p6i7yFyLUEkIhTsjotCR6s01bd_kc=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
 ![Alt text](https://lh6.googleusercontent.com/sMCVhCemXNLYXw4_W-GTLt1YiWvqf66ItD5DfGakELLZYR9RJ3wkzpEPDL_nAFOPb3MezY0YkqI=w649-h469)
