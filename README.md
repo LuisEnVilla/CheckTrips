@@ -58,7 +58,7 @@ Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEn
 
 ##Screenshots
 **Pantalla de inicio "CheckTrips"**
-![Alt text](https://app.box.com/embed_widget/s/65d1wj0mrvtrhehwflso?theme=blue)
+![Alt text](https://app.box.com/Checktrips7)
 ![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
