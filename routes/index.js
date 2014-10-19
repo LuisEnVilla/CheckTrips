@@ -23,4 +23,11 @@ router.post('/viajes',(function(req,res){
 		});
 }));
 
+router.get('/funcionario',function(req, res){
+	db.funcionario.find({},function (err, funcionarios){
+			if (err) res.send(500, err.message);
+			res.json(funcionarios);			
+		});
+});
+
 module.exports = router;
