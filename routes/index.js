@@ -10,8 +10,8 @@ router.get('/viajes',function(req, res){
 		});
 });
 
-router.post('/viajes',(function(req,res){
-	db.viaje.findById(req.body.id)
+router.get('/viajes/:id',(function(req,res){
+	db.viaje.findById(req.params.id)
 	.populate('Funcionario_id').exec(function (err, viaje){
 			if (err) res.send(500, err.message);
 			res.json(viaje);			
