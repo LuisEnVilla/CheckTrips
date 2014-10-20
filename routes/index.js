@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+// Todos los Viajes
 router.get('/viajes',function(req, res){
 	db.viaje.find({},
 		' Vistas Ranking GastoTotal Consecutivo Aclaraciones _id Tema  GastoPasaje FechaInicio Origen Destino Funcionario_id')
@@ -10,6 +11,7 @@ router.get('/viajes',function(req, res){
 		});
 });
 
+// Viaje por id
 router.get('/viajes/:id',(function(req,res){
 	db.viaje.findById(req.params.id)
 	.populate('Funcionario_id').exec(function (err, viaje){
@@ -18,6 +20,7 @@ router.get('/viajes/:id',(function(req,res){
 		});
 }));
 
+// Todos los Funcionarios
 router.get('/funcionario',function(req, res){
 	db.funcionario.find({},function (err, funcionarios){
 			if (err) res.send(500, err.message);
@@ -25,6 +28,7 @@ router.get('/funcionario',function(req, res){
 		});
 });
 
+// Funcionarios por id
 router.get('/funcionario/:id',function(req, res){
 	db.funcionario.findById(req.params.id).exec(function (err, funcionario){
 			if (err) res.send(500, err.message);
@@ -164,6 +168,17 @@ router.get('/funcionario/:id',function(req, res){
 			);
 	});
 });
+
+//Viajes del funcionario
+router.get('/funcionario/viajes/:id',function(req, res){
+	db.viaje.find({Funcionario_id : req.params.id},' Vistas Ranking GastoTotal Consecutivo Aclaraciones _id Tema  GastoPasaje FechaInicio Origen Destino Funcionario_id',
+		function (err, viajes){
+		if (err) res.send(500, err.message);
+		res.json(viajes)
+	});
+});
+
+
 
 //Comparar
 router.get('/comparar/:id/:id2/:tipo', function(req, res) {
@@ -549,5 +564,6 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 router.get('*', function(req, res) {
 	res.sendfile('./public/index.html');
 });
+
 
 module.exports = router;
