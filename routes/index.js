@@ -223,7 +223,7 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 								 		 enabled: true, 
 								 		 distance: -50, 
 								 		 style: { 
-								 		 	color: 'black', 
+								 		 	color: 'white', 
 								 		 	textShadow: '0px 1px 2px black' } 
 								 		 }, 
 								 		startAngle: -90, 
@@ -234,10 +234,12 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 								 			name: 'Porcentaje',
 								 			innerSize: '50%',
 								 			data: [{
-								 				name: datos1[0].Funcionario_id.Nombre.Nombres+" $"+total1,
-								 				y: total1,color: '#FFD54F'},
-								 				{name: datos2[0].Funcionario_id.Nombre.Nombres+" $"+total2,
-								 				y: total2
+								 				name: datos1[0].Funcionario_id.Nombre.Nombres+"<br>"+" $"+total1,
+								 				y: total1,
+								 				color: '#80cbc4'},
+								 				{name: datos2[0].Funcionario_id.Nombre.Nombres+"<br>"+" $"+total2,
+								 				y: total2, 
+								 				color:'#4db6ac'
 								 			}
 								 			]
 								 		}
@@ -257,7 +259,7 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 										tooltip: { 
 											pointFormat: '{series.name}:{point.percentage:.1f}%' }, 
 											plotOptions: { pie: { dataLabels: { enabled: true, distance: -50, 
-											style: { color: 'black', textShadow: '0px 1px 2px black' } }, 
+											style: { color: 'white', textShadow: '0px 1px 2px black' } }, 
 											startAngle: -90, endAngle: 90,center: ['50%', '75%']}},
 									series: [{
 										type: 'pie',
@@ -266,10 +268,10 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 										data: [
 											{
 												name: datos1[0].Funcionario_id.Nombre.Nombres+" "+count1,
-												y: count1,color: '#FFD54F'},
+												y: count1,color: '#80cbc4'},
 											{
 												name: datos2[0].Funcionario_id.Nombre.Nombres+" "+count2,
-												y: count2}]}]
+												y: count2, color : '#4db6ac'}]}]
 											};
 								var grafica2 = {
 									chart: {
@@ -320,15 +322,15 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 												},
 												series: [{
 													name: 'Gastos en Hospedaje',
-													color: '#03a9f4',
+													color: '#b2dfdb',
 													data: [toatlhospedaje1 , toatlhospedaje2]
 													}, {
 													name: 'Gastos en Viaticos',
-													color:'rgba(0,0,0,0.6)',
+													color:'#80cbc4',
 													data: [totalviaticos1 , totalviaticos2]
 													}, {
 													name: 'Gastos en Pasaje',
-													color: 'orange',
+													color: '#26a69a',
 													data: [totalpasajes1 , totalpasajes2]
 													}]
 												};
@@ -395,7 +397,7 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 										enabled: true, 
 										distance: -50, 
 										style: { 
-											color: 'black', 
+											color: 'white', 
 											textShadow: '0px 1px 2px black' 
 										} 
 									}, 
@@ -409,12 +411,13 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 								name: '$',
 								innerSize: '50%',
 								data: [{
-									name: datos1[0].Consecutivo+" $"+total1,
+									name: datos1[0].Consecutivo+" <br>$"+total1,
 									y: total1,
-									color: '#FFD54F'
+									color: '#80cbc4'
 								},{
-									name: datos2[0].Consecutivo+" $"+total2,
-									y: total2
+									name: datos2[0].Consecutivo+" <br>$"+total2,
+									y: total2,
+									color: '#4db6ac'
 								}]
 							}
 							]
@@ -442,7 +445,7 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 										enabled: true, 
 										distance: -50, 
 										style: { 
-											color: 'black', 
+											color: 'white', 
 											textShadow: '0px 1px 2px black' 
 										} 
 									}, 
@@ -458,10 +461,11 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 							data: [{
 								name: datos1[0].Consecutivo+" "+datos1[0].Aclaraciones,
 								y: datos1[0].Aclaraciones,
-								color: '#FFD54F'
+								color: '#80cbc4'
 							},{
 								name: datos2[0].Consecutivo+" "+datos2[0].Aclaraciones,
-								y: datos2[0].Aclaraciones
+								y: datos2[0].Aclaraciones,
+								color: '#4db6ac'
 							}]
 						}]
 					};
@@ -516,15 +520,15 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 							},
 							series: [{
 								name: 'Gastos en Hospedaje',
-								color: '#03a9f4',
+								color: '#b2dfdb',
 								data: [toatlhospedaje1, toatlhospedaje2]
 								}, {
 								name: 'Gastos en Viaticos',
-								color:'rgba(0,0,0,0.6)',
+								color:'#80cbc4',
 								data: [totalviaticos1, totalviaticos2]
 								}, {
 								name: 'Gastos en Pasaje',
-								color: 'orange',
+								color: '#26a69a',
 								data: [totalpasajes1, totalpasajes2]
 							}
 							]
