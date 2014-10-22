@@ -1,26 +1,171 @@
 var express = require('express');
 var router = express.Router();
-
-// Todos los Viajes
+/*	Todos los Viajes  
+	Retorna un arreglo de viajes en JSON, solo datos usados en las targetas de precentación de viajes.
+	Json ejemplo:
+	viajes : [
+		{
+			"_id":"54264475f1e8c5127ca5e9b6",
+			"Funcionario_id":{
+				"_id":"54261c6ef1e8c5112edf7441",
+				"Nombre":{
+					"Nombres":"Mario Ernesto",
+					"ApellidoP":"Mejía",
+					"ApellidoM":"Pachón"
+				}
+			},
+			"GastoPasaje":6444,
+			"Tema":"VINCLACION CON ESTADOS Y MUNICIPIOS",
+			"FechaInicio":"31/01/2013",
+			"Consecutivo":"2013.N.0006",
+			"Aclaraciones":4,
+			"Vistas":0,
+			"GastoTotal":10984,
+			"Ranking":9,
+			"Destino":{
+				"Pais":"México",
+				"Ciudad":"Tijuana",
+				"Estado":"Baja California",
+				"Zona":"No Aplica"
+			},
+			"Origen":{
+				"Pais":"México",
+				"Ciudad":"Ciudad de México",
+				"Estado":"Distrito Federal"
+			}
+		},
+		...]
+*/
 router.get('/viajes',function(req, res){
 	db.viaje.find({},
 		' Vistas Ranking GastoTotal Consecutivo Aclaraciones _id Tema  GastoPasaje FechaInicio Origen Destino Funcionario_id')
-		.populate('Funcionario_id').exec(function (err, viajes){
+		.populate({ path: 'Funcionario_id', select: 'Nombre' }).exec(function (err, viajes){
 			if (err) res.send(500, err.message);
-			res.json(viajes);			
+			res.jsonp(viajes);			
 		});
 });
 
-// Viaje por id
+/*
+	Viaje por id
+	Retorna toa la información del viaje indicado mediante id, incluye datos del funcionario (id, Nombre y Trabajo),
+	con una petición get. chektrips.mx/viajes/[_id viaje]
+	JSON ejemplo:
+	viaje : {
+		"_id":"54264475f1e8c5127ca5e9b6",
+		"Funcionario_id":{
+			"_id":"54261c6ef1e8c5112edf7441",
+			"Trabajo":{
+				"Cargo":"Subdirección de OSOS",
+				"CargoSuperior":" Dirección de Relaciones Interinstitucionales y Públicas",
+				"Institucion":"INSTITUTO FEDERAL DE ACCESO A LA INFORMACIÓN Y PROTECCIÓN DE DATOS ORGANISMO AUTÓNOMO en proceso de reestructuración",
+				"Puesto":"SUBDIRECTOR DE AREA",
+				"Clave":"NC3",
+				"UnidadAdministrativa":"DIRECCIÓN GENERAL DE CAPACITACIÓN  PROMOCIÓN Y RELACIONES INSTITUCIONALES"
+			},
+			"Nombre":{
+				"Nombres":"Mario Ernesto",
+				"ApellidoP":"Mejía",
+				"ApellidoM":"Pachón"
+			}
+		},
+		"Resultado":"Se renovaron los coordinadores de la Región Norte de la COMAIP",
+		"Tipo":"Nacional",
+		"GastoPasaje":6444,
+		"Actividad":"Se participo en la Reunión de la Región Norte de la COMAIP; Reunión de la Gestión Documental; Tecnologías de la Información y Gobierno Abierto de la COMAIP",
+		"CostoHospedaje":2040,
+		"TipoRepresentacion":"Técnico",
+		"Tema":"VINCLACION CON ESTADOS Y MUNICIPIOS",
+		"FechaInicio":"31/01/2013",
+		"Consecutivo":"2013.N.0006",
+		"TarifaDiaria":1250,
+		"Acuerdo":"No disponible",
+		"MecanismoOrigen":"Requerimiento de UR",
+		"Antecedentes":"No disponible",
+		"ViaticosComp":2500,
+		"FechaFin":"02/02/2013",
+		"TipoComision":"Participación en evento público",
+		"Oficio":"IFAI/SG/DGCPRI/045/2013",
+		"Observaciones":"No aplica",
+		"GastosViaticos":2500,
+		"MotivoComision":"...",
+		"UnidadResponsable":"No disponible",
+		"InstitutoGenera":"DIRECCIÓN GENERAL DE CAPACITACIÓN; PROMOCIÓN Y RELACIONES INSTITUCIONALES",
+		"Moneda":"MXP",
+		"Contribucion":"Se cumplió con las atribuciones del IFAI.",
+		"URLComunicado":"No disponible",
+		"Aclaraciones":4,
+		"Vistas":0,
+		"GastoTotal":10984,
+		"Ranking":9,
+		"Pasaje":{
+			"LineaOrigen":"Aeroméxico",
+			"LineaRegreso":"Aeroméxico",
+			"VueloOrigen":"AM 170",
+			"TipoPasaje":"Aéreo",
+			"CubrePasaje":"IFAI",
+			"VueloRegreso":"AM 177"
+		},
+		"DatosEvento":{
+			"URL":"No disponible",
+			"Nombre":"REUNION DE LA REGION NORTE DE LA COMAIP; REUNION DE LA COMISION DE GESTION DOCUMENTAL; TECNOLOGIAS DE LA INFORMACION Y GOBIERNO ABIERTO DE LA COMAIP Y EN EL PRIMER FORO NACIONAL DE ANALISIS Y REFLEXION SOBRE LA REFORMA CONSTITUCIONAL EN MATERIA DE TRANSPARENCIA Y ACCESO A LA INFORMACION PUBLICA EN MEXICO",
+			"FechaFinPart":"02/02/2013",
+			"FechaInicioPart":"31/01/2013"
+		},
+		"Destino":{
+			"Pais":"México",
+			"Ciudad":"Tijuana",
+			"Estado":"Baja California",
+			"Zona":"No Aplica"
+		},
+		"Origen":{
+			"Pais":"México",
+			"Ciudad":"Ciudad de México",
+			"Estado":"Distrito Federal"
+		},
+		"Hospedaje":{
+			"FechaEntrada":"31/01/2013",
+			"NombreHotel":"Grand Hotel Tijuana",
+			"CubreHospedaje":"IFAI",
+			"FechaSalida":"02/02/2013"
+		}
+	}
+*/
 router.get('/viajes/:id',(function(req,res){
 	db.viaje.findById(req.params.id)
-	.populate('Funcionario_id').exec(function (err, viaje){
+	.populate({ path: 'Funcionario_id', select: 'Nombre Trabajo' }).exec(function (err, viaje){
 			if (err) res.send(500, err.message);
 			res.json(viaje);			
 		});
 }));
 
-// Todos los Funcionarios
+/*
+	Todos los funcionarios.
+	Regresa un JSON con la información de cada funcionario.
+	JSON ejemplo:
+	funcionarios : [
+	{
+		"_id":"54261c6ef1e8c5112edf7381",
+		"Correo":"liliana.herrera@ifai.org.mx",
+		"Aclaraciones":0,
+		"Vistas":0,
+		"Viajes":[],
+		"Trabajo":{
+			"Cargo":"Secretaría Particular",
+			"CargoSuperior":"Comisionado",
+			"Institucion":"INSTITUTO FEDERAL DE ACCESO A LA INFORMACIÓN Y PROTECCIÓN DE DATOS ORGANISMO AUTÓNOMO en proceso de reestructuración",
+			"Puesto":"SECRETARIO PARTICULAR DE PONENCIA",
+			"Clave":"MC03",
+			"UnidadAdministrativa":"Comisionado"
+		},
+		"Nombre":{
+			"Nombres":"Liliana",
+			"ApellidoP":"Herrera",
+			"ApellidoM":"Martín"
+		}
+	},
+	...
+	]
+*/
 router.get('/funcionario',function(req, res){
 	db.funcionario.find({},function (err, funcionarios){
 			if (err) res.send(500, err.message);
@@ -28,141 +173,146 @@ router.get('/funcionario',function(req, res){
 		});
 });
 
-// Funcionarios por id
+/*
+	Funcionario por id
+	Retorna un JSON, todos los datos del funcionario, un arreglo de todos sus viajes realizados 
+	y el objeto JSON requerido para graficar con http://www.highcharts.com/demo/combo, que muestra la comparacion de los gastos de los viajes.
+
+*/
 router.get('/funcionario/:id',function(req, res){
 	db.funcionario.findById(req.params.id).exec(function (err, funcionario){
 			if (err) res.send(500, err.message);
-			db.viaje.find({Funcionario_id : req.params.id},'_id Consecutivo GastoPasaje CostoHospedaje FechaInicio FechaFin GastosViaticos Tema Destino',
+			db.viaje.find({Funcionario_id : req.params.id},'_id GastoTotal Consecutivo GastoPasaje CostoHospedaje FechaInicio FechaFin GastosViaticos Tema Destino',
 				function (err, viajes){
 		  		if (err) res.send(500, err.message);
 		  		var categorias = [];
-	  		var serie = [{
-		  			type : 'column',
-		  			name : 'Pasaje',
-		  			data :[],
-		  			color:'#03a9f4'
-	  			},
-	  			{
-		  			type :'column',
-		  			name : 'Hospedaje',
-		  			data : [],
-		  			color: '#FFC107'
-		  		},
-	  			{
-	  				type : 'column',
-	  				name : 'Viaticos',
-	  				data : [],
-	  				color : 'rgba(0,0,0,0.6)'
-	  			},
-	  			{
-	  				type : 'spline',
-	  				name : 'Total por Viaje',
-	  				data : [],
-	  				marker: {
-		                lineWidth: 2,
-		                lineColor: 'orange',
-		                fillColor: 'white'
-		            }
-	  			},
-	  			{
-	  				type : 'pie',
-	  				name : 'Gasto total',
-	  				data : [{
-	  					name : 'Pasaje',
-	  					y : 0,
-	  					color: '#03a9f4'
-	  				},
-	  				{
-	  					name : 'Hospedaje',
-	  					y : 0,
-	  					color: '#FFC107'
-	  				},{
-	  					name : 'Viaticos',
-	  					y : 0,
-	  					color: 'rgba(0,0,0,0.6)'
-	  				}],
-	  				center : [100,80],
-	  				size : 100,
-	  				showInLegend: false,
-		            dataLabels: {
-		                enabled: false
-		            }
-	  			}
-	  		];
-	  		var suma = 0;
-	  		var sumapasaje = 0;
-	  		var sumahospedaje = 0;
-	  		var sumaviaticos = 0;
-	  		for (var x in viajes){
-	  			categorias.push("'"+viajes[x].FechaInicio +" - "+viajes[x].FechaFin+"'");
-	  			if (!isNaN(viajes[x].GastoPasaje)) {
-	  				serie[0].data.push(viajes[x].GastoPasaje);
-	  				sumapasaje += viajes[x].GastoPasaje;
-	  			}
-	  			else serie[0].data.push(0);
-	  			if (!isNaN(viajes[x].CostoHospedaje)) {
-	  				serie[1].data.push(viajes[x].CostoHospedaje);
-	  				sumahospedaje += viajes[x].CostoHospedaje;
-	  			}
-	  			else serie[1].data.push(0);
-	  			if (!isNaN(viajes[x].GastosViaticos)) {
-	  				serie[2].data.push(viajes[x].GastosViaticos);
-		  			sumaviaticos += viajes[x].GastosViaticos;
-	  			}
-	  			else serie[2].data.push(0);
-	  			serie[3].data.push(serie[0].data[x] + serie[1].data[x] + serie[2].data[x]);
-	  			suma += serie[0].data[x] + serie[1].data[x] + serie[2].data[x];
+		  		var serie = [{
+			  			type : 'column',
+			  			name : 'Pasaje',
+			  			data :[],
+			  			color:'#b2dfdb'
+		  			},
+		  			{
+			  			type :'column',
+			  			name : 'Hospedaje',
+			  			data : [],
+			  			color: '#FFC107'
+			  		},
+		  			{
+		  				type : 'column',
+		  				name : 'Viaticos',
+		  				data : [],
+		  				color : 'rgba(0,0,0,0.6)'
+		  			},
+		  			{
+		  				type : 'spline',
+		  				name : 'Total por Viaje',
+		  				data : [],
+		  				marker: {
+			                lineWidth: 2,
+			                lineColor: 'orange',
+			                fillColor: 'white'
+			            }
+		  			},
+		  			{
+		  				type : 'pie',
+		  				name : 'Gasto total',
+		  				data : [{
+		  					name : 'Pasaje',
+		  					y : 0,
+		  					color: '#03a9f4'
+		  				},
+		  				{
+		  					name : 'Hospedaje',
+		  					y : 0,
+		  					color: '#FFC107'
+		  				},{
+		  					name : 'Viaticos',
+		  					y : 0,
+		  					color: 'rgba(0,0,0,0.6)'
+		  				}],
+		  				center : [100,80],
+		  				size : 100,
+		  				showInLegend: false,
+			            dataLabels: {
+			                enabled: false
+			            }
+		  			}
+		  		];
+		  		var suma = 0;
+		  		var sumapasaje = 0;
+		  		var sumahospedaje = 0;
+		  		var sumaviaticos = 0;
+		  		for (var x in viajes){
+		  			categorias.push(viajes[x].FechaInicio +" - "+viajes[x].FechaFin);
+		  			if (!isNaN(viajes[x].GastoPasaje)) {
+		  				serie[0].data.push(viajes[x].GastoPasaje);
+		  				sumapasaje += viajes[x].GastoPasaje;
+		  			}
+		  			else serie[0].data.push(0);
+		  			if (!isNaN(viajes[x].CostoHospedaje)) {
+		  				serie[1].data.push(viajes[x].CostoHospedaje);
+		  				sumahospedaje += viajes[x].CostoHospedaje;
+		  			}
+		  			else serie[1].data.push(0);
+		  			if (!isNaN(viajes[x].GastosViaticos)) {
+		  				serie[2].data.push(viajes[x].GastosViaticos);
+			  			sumaviaticos += viajes[x].GastosViaticos;
+		  			}
+		  			else serie[2].data.push(0);
+		  			serie[3].data.push(serie[0].data[x] + serie[1].data[x] + serie[2].data[x]);
+		  			suma += serie[0].data[x] + serie[1].data[x] + serie[2].data[x];
 
-	  		}
-	  		serie[4].data[0].y = sumapasaje;
-	  		serie[4].data[1].y = sumahospedaje;
-	  		serie[4].data[2].y = sumahospedaje;
-	  		var highcharts = {
-	  			title :{ text : 'Gastos de viajes'},
-	  			xAxis: { categories: categorias },
-	  			labels: { items: [{ html: '$'+suma ,style: { left: '50px',top: '18px', color: 'black'}}]},
-	  			series: serie
-	  		};
-	  		var grafica = {
-	  			title :{ text : 'Gastos de viajes'},
-	  			xAxis: { categories: [categorias.toString()] },
-	  			labels: { items: [{ html: highcharts.labels.items[0].html ,style: { left: '100px',top: '18px', color: 'black'}}]},
-	  			series: [{
-	  				type : 'column',
-	  				name : 'Pasaje',
-	  				data :[serie[0].data.toString()],
-	  				color:'#03a9f4'},
-	  				{type :'column',
-	  				name : 'Hospedaje',
-	  				data : [serie[1].data.toString()],
-	  				color: '#FFC107'},
-	  				{type : 'column',
-	  				name : 'Viaticos',
-	  				data : [serie[2].data.toString()],
-	  				color : 'rgba(0,0,0,0.6)'},
-	  				{type : 'spline',
-	  				name : 'Total por Viaje',
-	  				data : [serie[3].data.toString()],
-	  				marker: {lineWidth: 2,lineColor: 'orange',fillColor: 'white'}},
-	  				{type : 'pie',
-	  				name : 'Gasto total',
-	  				data : [{
-	  					name : 'Pasaje',y : 
-	  					serie[4].data[0].y.toString(),
-	  					color: '#03a9f4'},
-	  					{name : 'Hospedaje',y : 
-	  					serie[4].data[1].y.toString(),
-	  					color: '#FFC107'},
-	  					{name : 'Viaticos',
-	  					y : serie[4].data[2].y.toString(),
-	  					color: 'rgba(0,0,0,0.6)'}],
-	  					center : [20,0],size : 100,showInLegend: false,dataLabels: {enabled: false}}]};
-	  		var link = {
-	  			url : "http://checktrips.mx/Funcionarios/" + req.params.id,
-	  			id : req.params.id,
-	  			tipo : "Funcionario",
-	  			nombre : funcionario.Nombre.Nombres +" "+ funcionario.Nombre.ApellidoP
-	  		}
+		  		}
+		  		serie[4].data[0].y = sumapasaje;
+		  		serie[4].data[1].y = sumahospedaje;
+		  		serie[4].data[2].y = sumahospedaje;
+		  		var highcharts = {
+		  			title :{ text : 'Gastos de viajes'},
+		  			xAxis: { categories: categorias },
+		  			labels: { items: [{ html: '$'+suma ,style: { left: '50px',top: '18px', color: 'black'}}]},
+		  			series: serie
+		  		};
+		  		var grafica = {
+		  			title :{ text : 'Gastos de viajes'},
+		  			xAxis: { categories: categorias },
+		  			labels: { items: [{ html: highcharts.labels.items[0].html ,style: { left: '100px',top: '18px', color: 'black'}}]},
+		  			series: [{
+		  				type : 'column',
+		  				name : 'Pasaje',
+		  				data :serie[0].data,
+		  				color:'#b2dfdb'},
+		  				{type :'column',
+		  				name : 'Hospedaje',
+		  				data : serie[1].data,
+		  				color: '#80cbc4'},
+		  				{type : 'column',
+		  				name : 'Viaticos',
+		  				data : serie[2].data,
+		  				color : '#26a69a'},
+		  				{type : 'spline',
+		  				name : 'Total por Viaje',
+		  				data : serie[3].data,
+		  				marker: {lineWidth: 3,lineColor: '#26a69a',fillColor: '#b2dfdb'}},
+		  				{type : 'pie',
+		  				name : 'Gasto total',
+		  				data : [{
+		  					name : 'Pasaje',y : 
+		  					serie[4].data[0].y,
+		  					color: '#b2dfdb'},
+		  					{name : 'Hospedaje',y : 
+		  					serie[4].data[1].y,
+		  					color: '#80cbc4'},
+		  					{name : 'Viaticos',
+		  					y : serie[4].data[2].y,
+		  					color: '#26a69a'}],
+		  					center : [20,0],size : 100,showInLegend: false,dataLabels: {enabled: false}}]};
+		  		var link = {
+		  			url : "http://checktrips.mx/Funcionarios/" + req.params.id,
+		  			id : req.params.id,
+		  			tipo : "Funcionario",
+		  			nombre : funcionario.Nombre.Nombres +" "+ funcionario.Nombre.ApellidoP
+		  		}
 				res.json({Funcionario : funcionario, Viajes:viajes, grafica:grafica, link:link});			
 				}
 			);
@@ -178,7 +328,37 @@ router.get('/funcionario/viajes/:id',function(req, res){
 	});
 });
 
+//Actualizar Funcionario
+router.put('/funcionario/:id',function(req, res){
+	db.funcionario.findById(req.params.id).exec(function (err, funcionario){
+			if (err) res.send(500, err.message);
+			else{
+				funcionario.correo = req.body.email;
+				funcionario.Nombre.Nombres = req.body.nombre;
+				funcionario.Nombre.ApellidoP = req.body.apellidoPaterno;
+				funcionario.Nombre.ApellidoM = req.body.apellidoMaterno;
+				funcionario.Trabajo.Cargo = req.body.cargo;
+				funcionario.Trabajo.CargoSuperior = req.body.cargoSuperior;
+				funcionario.Tabajo.Institucion = req.body.institucion;
+				funcionario.Tabajo.Puesto = req.body.puesto;
+				funcionario.Tabajo.Clave = req.body.clave;
+				funcionario.Tabajo.UnidadAdministrativa = req.body.unidadAdministrativa;
+				funcionario.save();
+			}
+		}
+	);
+});
 
+//insertar Funcionario
+router.post('/funcionario/:id',function(req, res){
+	db.funcionario.findById(req.params.id).exec(function (err, funcionario){
+			if (err) res.send(500, err.message);
+			else{
+
+			}
+		}
+		);
+});
 
 //Comparar
 router.get('/comparar/:id/:id2/:tipo', function(req, res) {
@@ -561,9 +741,9 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 });
 
 /* GET home page. */
-router.get('*', function(req, res) {
-	res.sendfile('./public/index.html');
-});
+//router.get('*', function(req, res) {
+//	res.sendfile('./public/index.html');
+//});
 
 
 module.exports = router;

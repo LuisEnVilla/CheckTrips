@@ -2,7 +2,36 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/top', function(req, res) {
+router.get('/users/:email/:password', function(req, res) {
+	db.funcionario.findOne({Correo : req.params.email},function(err, usuario){
+			if (err) res.send(500, err.message);
+			if (req.params.password === usuario.Trabajo.Clave){
+				res.json({
+					id : usuario._id,
+					Nombre : usuario.Nombre.Nombres +" "+ usuario.Nombre.ApellidoP +" "+ usuario.Nombre.ApellidoM,
+					Correo : usuario.Correo
+				});
+			}	
+			else {
+				res.json({
+					id : "none",
+					Nombre : "none",
+					Correo : "none"
+				});
+			}
+		}
+	);
+});
+
+router.get('/users/viajes/:id',function(req, res){
+	db.viaje.find({Funcionario_id : req.params.id},'GastoTotal Consecutivo Aclaraciones Tema FechaInicio Destino DatosEvento ',
+		function (err, viajes){
+		if (err) res.send(500, err.message);
+		res.status(200).jsonp(viajes)
+	});
+});
+
+/*router.get('/top', function(req, res) {
 		db.viaje.find({FechaInicio:{$regex:"08/"}}
 		,'Consecutivo Aclaraciones _id Tema Tipo GastoPasaje FechaInicio Origen Destino Funcionario_id')
 		.limit(3).populate('Funcionario_id').exec(function (err, fecha){
@@ -79,6 +108,6 @@ router.get('/funcionario/:dato2/:dato3', function(req, res) {
 			res.send(funcionarios);
 			});
 		}
-});
+});*/
 
 module.exports = router;

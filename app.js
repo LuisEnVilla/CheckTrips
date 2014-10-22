@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 var index = require('./routes/index');
+var api = require('./routes/api');
 var app = express();
 
 // uncomment after placing your favicon in /public
@@ -22,8 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
 app.use('/', index);
-/*
-app.use('/api',api);*/
+app.use('/api',api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
