@@ -17,10 +17,10 @@ module.exports = function(mongoose) {
 		Puesto : String,
 		Clave : String,
 		UnidadAdministrativa : String,
-		Aclaraciones : Number
 	},
 	Viajes : [{ type: Schema.ObjectId, ref: 'Viaje' }],
-	Vistas : Number
+	Vistas : Number,
+	Aclaraciones : Number
   });
   SchemaFuncionario.set('collection','Funcionario');
   return mongoose.model('Funcionario', SchemaFuncionario);

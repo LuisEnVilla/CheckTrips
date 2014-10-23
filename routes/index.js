@@ -499,7 +499,37 @@ router.get('/funcionario/:id',function(req, res){
 	});
 });
 
-//Viajes del funcionario
+/*
+	Viajes del funcionario
+	Retorna un arreglo con todos los viajes del funcionario indicado mediante su id, para ser mostrado en tarjetas de viajes
+	JSON ejemplo:
+	[
+	  {
+	    "_id": "54264475f1e8c5127ca5e9b7",
+	    "Funcionario_id": "54261c6ef1e8c5112edf7445",
+	    "GastoPasaje": 8031,
+	    "Tema": "POL\u00cdTICAS DE ACCESO A LA INFORMACI\u00d3N",
+	    "FechaInicio": "28\/02\/2013",
+	    "Consecutivo": "2013.N.0013",
+	    "Aclaraciones": 1,
+	    "Vistas": 0,
+	    "GastoTotal": 8656,
+	    "Ranking": 11,
+	    "Destino": {
+	      "Pais": "M\u00e9xico",
+	      "Ciudad": "Durango",
+	      "Estado": "Durango",
+	      "Zona": "No Aplica"
+	    },
+	    "Origen": {
+	      "Pais": "M\u00e9xico",
+	      "Ciudad": "Ciudad de M\u00e9xico",
+	      "Estado": "Distrito Federal"
+	    }
+	  },
+	  ...
+	 ]
+*/
 router.get('/funcionario/viajes/:id',function(req, res){
 	db.viaje.find({Funcionario_id : req.params.id},' Vistas Ranking GastoTotal Consecutivo Aclaraciones _id Tema  GastoPasaje FechaInicio Origen Destino Funcionario_id',
 		function (err, viajes){
@@ -523,21 +553,40 @@ router.put('/funcionario/:id',function(req, res){
 				funcionario.Tabajo.Puesto = req.body.puesto;
 				funcionario.Tabajo.Clave = req.body.clave;
 				funcionario.Tabajo.UnidadAdministrativa = req.body.unidadAdministrativa;
-				funcionario.save();
+				funcionario.save(function(err, funcionario) {
+			        if(err) return res.send(500, err.message);
+			    	res.status(200).jsonp(funcionario);
+			    });
 			}
 		}
 	);
 });
 
 //insertar Funcionario
-router.post('/funcionario/:id',function(req, res){
-	db.funcionario.findById(req.params.id).exec(function (err, funcionario){
-			if (err) res.send(500, err.message);
-			else{
-
-			}
-		}
-		);
+router.post('/funcionario',function(req, res){
+	var funcionario = new db.funcionario ({
+		Correo: req.body.correo,
+		Nombre: { 
+			Nombres : req.body.Nombres,
+			ApellidoP : req.body.ApellidoP,
+			ApellidoM : req.body.ApellidoM
+		 },
+		Trabajo: {
+			Cargo : req.body.Cargo,
+			CargoSuperior : req.body.CargoSuperior,
+			Institucion : req.body.Institucion,
+			Puesto : req.body.Puesto,
+			Clave : req.body.Clave,
+			UnidadAdministrativa : req.body.UnidadAdministrativa,
+		},
+		Aclaraciones : 0,
+		Viajes : [],
+		Vistas : 0
+	});
+	funcionario.save(function(err, fun) {
+        if(err) return res.send(500, err.message);
+    	res.status(200).jsonp(fun);
+    });
 });
 
 //Comparar
