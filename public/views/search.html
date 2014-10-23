@@ -1,0 +1,15 @@
+<div class="container-fluid" ng-controller="tabsCtrl">
+		<tabs></tabs>
+</div>
+<div class="container" ng-controller="tripsCtrl" ng-show="isSelected(1)">
+	<input ng-model="query.Funcionario_id.Nombre.Nombres">
+	<div class="col-md-4" ng-repeat="trip in trips | filter : query | orderBy : '+Funcionario_id.Nombre.Nombres' | limitTo : 10">
+		<trip-cards></trip-cards>
+	</div>
+</div>
+<div class="container" ng-controller="funcCtrl" ng-show="isSelected(2)">
+	<input ng-model="query.Nombre.Nombres">
+	<div class="col-md-4" ng-repeat="f in func | filter : query">
+		<func-card></func-card>
+	</div>
+</div>
