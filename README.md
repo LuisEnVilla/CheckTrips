@@ -65,7 +65,7 @@ Ahora solo rediriguete en tu navegador a "localhost" y podras vizualizar la apli
 
 Si necesitas mayor información visita nuestra [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
-#Nota: Lo unico que no funcionaria es el motor de WhatsApp. Si quieres ver como instalarlo y arrancarlo, por favor visita nuestra gia paso a paso en la  [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki)
+###Nota: Lo unico que no funcionaria es el motor de WhatsApp. Si quieres ver como instalarlo y arrancarlo, por favor visita nuestra gia paso a paso en la  [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki)
 
 ##Screenshots
 **Pantalla de inicio "CheckTrips"**
