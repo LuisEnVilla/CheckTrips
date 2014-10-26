@@ -52,19 +52,29 @@ Para lograr el buen funcionamiento de esta App Web se necesita instalar las Depe
 
 Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
 
-'''
+´´´
 git clone git://github.com/LuisEnVilla/CheckTrips.git
-'''
+´´´
 
 Asegurate que se esta ejecutando el servidor mongod, que se instala junto con MongoDB. Ejecuta mongorestore para importar la base de datos que esta en la carpeta BD del proyecto.
 
-'''
+´´´
 mongorestore CheckTrips/BD/CheckTrip
-'''
+´´´
 
-Una vez agregada diriguete a la rais del proyecto y ejecuta desde la terminal npm install, para instalar todas las dependencias necesarias del proyecto.
-Sin dejar de ejecutar el servidor mongod, ejecuta como administrador npm start, lo que hara que inicie el servidor NodeJs, con todo lo necesario. 
-Ahora solo rediriguete en tu navegador a localhost y podras vizualizar la app funcionando.
+Una vez agregada la BD diriguete a la rais del proyecto  e instala las dependencias necesarias con npm.
+
+`npm install`
+
+
+Sin dejar de ejecutar el servidor mongod, ejecuta como administrador o super usuario, el servidor NodeJs. Esto es debido a que esta pogramado en ejecutarce en el puerto 80, pero lo puedes configurar en "CheckTrips/bin/www".
+
+`npm start`
+
+
+Ahora solo rediriguete en tu navegador a "localhost" y podras vizualizar la aplicación web funcionando.
+
+
 Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
 ##Screenshots
