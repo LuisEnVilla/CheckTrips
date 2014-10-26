@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/users/:email/:password', function(req, res) {
+/*router.get('/users/:email/:password', function(req, res) {
 	db.funcionario.findOne({Correo : req.params.email},function(err, usuario){
 			if (err) res.send(500, err.message);
 			if (req.params.password === usuario.Trabajo.Clave){
@@ -21,7 +21,7 @@ router.get('/users/:email/:password', function(req, res) {
 			}
 		}
 	);
-});
+});*/
 
 router.get('/users/viajes/:id',function(req, res){
 	db.viaje.find({Funcionario_id : req.params.id},'GastoTotal Consecutivo Aclaraciones Tema FechaInicio Destino DatosEvento ',
