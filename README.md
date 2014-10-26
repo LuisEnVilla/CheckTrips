@@ -39,35 +39,24 @@ para saber como utilizarla por favor consulta la [wiki](https://github.com/LuisE
 
 
 
-##Instalación / Configuración 
-Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas de esta forma:
+##Instalación Rapida
+Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas.
 
-- 1 Phyton
-- 1.1 Pymongo
+Despues de haber instalado las dependencias, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
 
-- 2 Node JS
-- 2.2 Express
-
-- 3 MongoDB
-
-Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
-
-´´´
-git clone git://github.com/LuisEnVilla/CheckTrips.git
-´´´
+`git clone git://github.com/LuisEnVilla/CheckTrips.git`
 
 Asegurate que se esta ejecutando el servidor mongod, que se instala junto con MongoDB. Ejecuta mongorestore para importar la base de datos que esta en la carpeta BD del proyecto.
 
-´´´
-mongorestore CheckTrips/BD/CheckTrip
-´´´
 
-Una vez agregada la BD diriguete a la rais del proyecto  e instala las dependencias necesarias con npm.
+`mongorestore CheckTrips/BD/CheckTrip`
+
+Una vez agregada la BD diriguete a la raíz del proyecto  e instala las dependencias necesarias con npm.
 
 `npm install`
 
 
-Sin dejar de ejecutar el servidor mongod, ejecuta como administrador o super usuario, el servidor NodeJs. Esto es debido a que esta pogramado en ejecutarce en el puerto 80, pero lo puedes configurar en "CheckTrips/bin/www".
+Sin dejar de ejecutar el servidor mongod, ejecuta como administrador o super usuario, el servidor NodeJs. Debido a que esta pogramado a ejecutarce en el puerto 80, pero lo puedes configurar en "CheckTrips/bin/www".
 
 `npm start`
 
@@ -75,7 +64,7 @@ Sin dejar de ejecutar el servidor mongod, ejecuta como administrador o super usu
 Ahora solo rediriguete en tu navegador a "localhost" y podras vizualizar la aplicación web funcionando.
 
 
-Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
+Si necesitas mayor información visita nuestra [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
 
 ##Screenshots
 **Pantalla de inicio "CheckTrips"**
@@ -98,6 +87,8 @@ En esta pagina estara el primer prototipo de la aplicacion funcionando con algun
 
 Pueden visualizar [ScreenCast]( http://youtu.be/gL7IANu46Ps)
 
+[Slide CheckTrips](http://slides.com/luisenriquevilla/checktrips)
+
 ###API demo
 
 [Consulta viajes mas caros por viaticos](http://checktrips.jit.su/api/viaje/maxViaticos/1)
@@ -106,14 +97,14 @@ Pueden visualizar [ScreenCast]( http://youtu.be/gL7IANu46Ps)
 [Consulta 4Top](http://checktrips.jit.su/api/top)
 
 ##¿Preguntas o problemas? 
-Cual quier problema favor de contactar con cualquier integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
+Cual quier problema favor de contactar con algun integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
+
+Comenta en los commit, o en los codigos, revisaremos constantemente esos comentarios.
 
 ##Contribuye
 
+Se tomaran en cuenta cualquier idea que pueda aportar una mejora a esta aplicación, puedes comentar en [CONTRIBUTING](https://github.com/LuisEnVilla/CheckTrips/blob/master/CONTRIBUTING.md), si vemos que tu idea es buena y aporta mucho al proyecto, nos comunicaremos para que contribuyas directamente con el equipo.
 
-Sección para explicar cómo contribuir a su proyecto. Debe añadir enlace al archivo CONTRIBUTING.md. Ejemplo:
-
-Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/CodeandoMexico/repo-guidelines/pulls), [ideas](https://github.com/CodeandoMexico/repo-guidelines/issues) and [bugs](https://github.com/CodeandoMexico/repo-guidelines/issues).
 
 ##Equipo
 Miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto:
