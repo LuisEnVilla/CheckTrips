@@ -1,18 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Angular Trips</title>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="javascripts/app.js"></script>
+	<script type="text/javascript" src="javascripts/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="javascripts/directives.js"></script>
+	<script type="text/javascript" src="javascripts/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheets/material.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/mobile.css">
 </head>
 <body ng-app="main">
-	<app-header></app-header>
+	<div ng-controller="sidebarCtrl" ng-include="'views/sidebar.html'"></div>
+	<app-bar></app-bar>
 	<div ng-view>
 	</div>
 </body>

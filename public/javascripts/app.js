@@ -1,10 +1,15 @@
 (function(){
-var app = angular.module("main", ['ngRoute']);
+var app = angular.module("main", ['ngRoute', 'directives']);
 	app.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/details/:id', {
         templateUrl: '../views/details.html',
+        controller : 'detailsCtrl'
+      }).
+      when('/funcionario/:id', {
+        templateUrl: '../views/trip-list.html',
+        controller : 'fTripsCtrl'
       }).
       when('/search', {
         templateUrl: '../views/search.html'
@@ -29,17 +34,35 @@ var app = angular.module("main", ['ngRoute']);
 			}
 		}
 	})
-	app.factory('tripService', ['$http', function($http){
+	app.factory('sidebarService', function(){
+		var open = false;
 		return {
-			trip : function(id){
-				$http.get('/viajes/' + id ).success(function(data){
-					return data
-				})
+			toggle : function(){
+				open = !open;
+				console.log(open);
+			},
+			state : function(){
+				return open
 			}
 		}
+	})
+	app.controller('sidebarCtrl', ['$scope','sidebarService', function($scope, sidebarService){
+		$scope.state = function(){
+			return sidebarService.state()
+		}
+		$scope.toggle = function(){
+			sidebarService.toggle()
+		}
 	}])
-	app.controller('detailsCtrl', ['$scope','$routeParams','tripService', function($scope,$routeParams,tripService){
-		$scope.trip = tripService.trip($routeParams.id);
+	app.controller('appBarCtrl', ['$scope','sidebarService', function($scope, sidebarService){
+		$scope.toggle = function(){
+			sidebarService.toggle()
+		}
+	}])
+	app.controller('detailsCtrl', ['$scope', '$http','$routeParams', function($scope,$http,$routeParams){
+		$http.get('/viajes/' + $routeParams.id).success(function(data){
+			$scope.trip = data
+		})
 	}])
 	app.controller("tripsCtrl", ['$http', '$scope', 'tabService' , (function($http, $scope, tabService){
 		$scope.isSelected = function(checkTab){
@@ -66,28 +89,12 @@ var app = angular.module("main", ['ngRoute']);
 			$scope.func = data;
 		})
 	}])
-	app.directive('tripCards', function(){
-		return {
-			restrict: 'E',
-			templateUrl: '../views/trip-cards.html'
-		};
-	});
-	app.directive('funcCard', function(){
-		return {
-			restrict: 'E',
-			templateUrl : '../views/func-card.html'
-		}
-	});
-	app.directive('appHeader', function(){
-		return {
-			restrict : 'E',
-			templateUrl : '../views/app-header.html'
-		}
-	});
-	app.directive('tabs', function(){
-		return {
-			restrict : 'E',
-			templateUrl : '../views/tabs.html'
-		}
+	app.controller('fTripsCtrl', ['$scope','$http', '$routeParams',function($scope, $http, $routeParams){
+		$http.get('/funcionario/viajes/'+$routeParams.id).success(function(data){
+			$scope.trips = data
+		})
+	}])
+	app.filter('fLetter', function(word) {
+		return word[0]
 	});
 })();
