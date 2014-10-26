@@ -1,9 +1,9 @@
-
 README CheckTrips
 ============
 
 [Slide CheckTrips](http://slides.com/luisenriquevilla/checktrips)
 
+[Demo en linea](http://checktrips.jit.su)
 
 Hoy en día nosotros como sociedad necesitamos transparencia, manejo y gestión de la información que se crea según los movimientos de quienes nos gobiernan; por eso nos damos a la encomienda de crear un Aplicación web que permita observar claramente y a detalle estas situaciones.
 
@@ -38,61 +38,74 @@ para saber como utilizarla por favor consulta la [wiki](https://github.com/LuisE
 
 
 
-##Instalación / Configuración 
-Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas de esta forma:
+##Instalación Rapida
+Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas.
 
-- 1 Phyton
-- 1.1 Pymongo
+Despues de haber instalado las dependencias, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
 
-- 2 Node JS
-- 2.2 Express
+`git clone git://github.com/LuisEnVilla/CheckTrips.git`
 
-- 3 MongoDB
+Asegurate que se esta ejecutando el servidor mongod, que se instala junto con MongoDB. Ejecuta mongorestore para importar la base de datos que esta en la carpeta BD del proyecto.
 
-Despues de haber instalado las dependencias mencionadas anteriormente, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
-Ejecuta el servidor mongod, que se instala junto con MongoDB. Para agregar la base de datos que esta en la carpeta BD del proyecto.
-Una vez agregada diriguete a la rais del proyecto y ejecuta desde la terminal npm install, para instalar todas las dependencias necesarias del proyecto.
-Sin dejar de ejecutar el servidor mongod, ejecuta como administrador npm start, lo que hara que inicie el servidor NodeJs, con todo lo necesario. 
-Ahora solo rediriguete en tu navegador a localhost y podras vizualizar la app funcionando.
-Si necesitas mayor información visita nuestro [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
+
+`mongorestore CheckTrips/BD/CheckTrip`
+
+Una vez agregada la BD diriguete a la raíz del proyecto  e instala las dependencias necesarias con npm.
+
+`npm install`
+
+
+Sin dejar de ejecutar el servidor mongod, ejecuta como administrador o super usuario, el servidor NodeJs. Debido a que esta pogramado a ejecutarce en el puerto 80, pero lo puedes configurar en "CheckTrips/bin/www".
+
+`npm start`
+
+
+Ahora solo rediriguete en tu navegador a "localhost" y podras vizualizar la aplicación web funcionando.
+
+
+Si necesitas mayor información visita nuestra [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki/Instalaci%C3%B3n-de-Dependencias:)
+
+###Nota: Lo unico que no funcionaria es el motor de WhatsApp. Si quieres ver como instalarlo y arrancarlo, por favor visita nuestra gia paso a paso en la  [wiki.](https://github.com/LuisEnVilla/CheckTrips/wiki)
 
 ##Screenshots
 **Pantalla de inicio "CheckTrips"**
-![Alt text](https://lh5.googleusercontent.com/eaxwuCJd_cI5XwZWUQM1PwzZMcJr78Ou8eTh03RwMTpOQWLBR4g9Oe6ISLZmouv328aSes8o11g=w1342-h533)
-![Alt text](https://lh3.googleusercontent.com/Yu-8hHlgBTZYxB2nXRBDTGcQrxQZ-7qejkAwCJWuSSegIWSpCsiWn1EwVnOUlIE-b1j-mlU_jlU=w1342-h490)
+![Alt text](https://lh5.googleusercontent.com/NBAQGzTfgLPLZaBvJIUSwfZuPmp7OjsJ70xqBrvS-4vKteVEKxQi14o2-rmM5nm8FcwkwBdAoQM=w1342-h490)
+![Alt text](https://lh6.googleusercontent.com/p2Ojgy9uEAExawwiyQvPDfuYhA7p7hXzu2rnhp7YrUPKe1p6i7yFyLUEkIhTsjotCR6s01bd_kc=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/6W9qR1ESHTEC6OV79g5gIue8KHcGDcwnf3vA4tZ2BmSDgAiXSs2yy5yWf40SD7W7LqFMHYQehJ4=w1342-h490)
 ![Alt text](https://lh5.googleusercontent.com/BL2UQj6oyNZPbcVhdVu4HHTxOpOcPBFlkgaaWlnJbJmw_NaGzvIFAdfVc8HeCnrMvFExjifyAZw=w1342-h490)
 ![Alt text](https://lh6.googleusercontent.com/sMCVhCemXNLYXw4_W-GTLt1YiWvqf66ItD5DfGakELLZYR9RJ3wkzpEPDL_nAFOPb3MezY0YkqI=w649-h469)
 ![Alt text](https://lh5.googleusercontent.com/JCAHr60cJfi-n_jCYYdyQNh1lHMxiTqWkBO4uBhSFB-IQp9hwh4G6uV-eVH3xwc4jZEIK12cdSs=w1342-h490)
 ![Alt text](https://lh6.googleusercontent.com/slwTeEtFRzevIP4Eb1h1q2d99Yd8qbwoTdTqEnZO5Kl923nraPYEBDPWxrzIwZzFyB3koYaaKes=w1342-h560)
 
-![Alt](https://lh5.googleusercontent.com/K3v4zwBrteC5o2FhS6vIf4eElq9F8E7cn-iiJKHTZINM1coEhfLcOq_vPvzyfwclGPdTbt4dqHk=w1342-h560)
-![Alt](https://lh5.googleusercontent.com/9Uy6t5JzyGu_SJ59F5XiX5CIv7Z-lSWdToeg0ivYmaolSR_LOK2OOmQNDufqAf2caRdj0DapLQE=w1342-h560)
-![Alt](https://lh4.googleusercontent.com/isZ_xBOa7R0o0ZeObw6X9pinc5r6pF6rpt-xvOA3M-SGgyw1hDyweTSWBTXTa6hHH0h4YF9XOGA=w1342-h560)
+![Alt text](https://lh5.googleusercontent.com/K3v4zwBrteC5o2FhS6vIf4eElq9F8E7cn-iiJKHTZINM1coEhfLcOq_vPvzyfwclGPdTbt4dqHk=w1342-h560)
+![Alt text](https://lh5.googleusercontent.com/9Uy6t5JzyGu_SJ59F5XiX5CIv7Z-lSWdToeg0ivYmaolSR_LOK2OOmQNDufqAf2caRdj0DapLQE=w1342-h560)
+![Alt text](https://lh4.googleusercontent.com/isZ_xBOa7R0o0ZeObw6X9pinc5r6pF6rpt-xvOA3M-SGgyw1hDyweTSWBTXTa6hHH0h4YF9XOGA=w1342-h560)
 
 
 
 ##Demo
-En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](http://checktrips.mx/)
+En esta pagina estara el primer prototipo de la aplicacion funcionando con algunas limitantes. [CheckTrips](http://checktrips.jit.su)
 
 Pueden visualizar [ScreenCast]( http://youtu.be/gL7IANu46Ps)
 
+[Slide CheckTrips](http://slides.com/luisenriquevilla/checktrips)
+
 ###API demo
 
-[Consulta viajes mas caros por viaticos](http://checktrips.mx/api/viaje/maxViaticos/1)
+[Consulta viajes mas caros por viaticos](http://checktrips.jit.su/api/viaje/maxViaticos/1)
 
 
-[Consulta 4Top](http://checktrips.mx/api/top)
+[Consulta 4Top](http://checktrips.jit.su/api/top)
 
 ##¿Preguntas o problemas? 
-Cual quier problema favor de contactar con cualquier integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
+Cual quier problema favor de contactar con algun integrante del equipo, al final se agregan algunos contactos en redes sociales. Al igual que se tomaran en cuenta sugerencias, la app es libre y lo es para mejorar.
+
+Comenta en los commit, o en los codigos, revisaremos constantemente esos comentarios.
 
 ##Contribuye
 
+Se tomaran en cuenta cualquier idea que pueda aportar una mejora a esta aplicación, puedes comentar en [CONTRIBUTING](https://github.com/LuisEnVilla/CheckTrips/blob/master/CONTRIBUTING.md), si vemos que tu idea es buena y aporta mucho al proyecto, nos comunicaremos para que contribuyas directamente con el equipo.
 
-Sección para explicar cómo contribuir a su proyecto. Debe añadir enlace al archivo CONTRIBUTING.md. Ejemplo:
-
-Queremos que este proyecto sea el resultado de un esfuerzo de la comunidad. Usted puede colaborar con [código](https://github.com/CodeandoMexico/repo-guidelines/pulls), [ideas](https://github.com/CodeandoMexico/repo-guidelines/issues) and [bugs](https://github.com/CodeandoMexico/repo-guidelines/issues).
 
 ##Equipo
 Miembros del equipo principal que son responsables del desarrollo y mantenimiento de este proyecto:
