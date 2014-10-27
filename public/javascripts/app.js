@@ -13,18 +13,19 @@ var app = angular.module("main", ['directives', 'filters']);
 		}
 	})
 	app.factory('compareService', function(){
-		var trips2 = ['123'];
+		var trips2 = [];
 		return {
 		ctrips : trips2,
 		toggle : function(id) {
-			if(trips2.indexOf(id)){
-				trips2.splice(trips2.indexOf(id), 1)
+			if(trips2.lastIndexOf(id)){
+				trips2.splice(trips2.lastIndexOf(id), 1)
 				return
 			} 
 			trips2.push(id)
 		},
 		isIn : function(id){
-			if(trips2.indexOf('123')){
+			if(trips2.lastIndexOf(id)){
+				console.log(trips2.lastIndexOf(id));
 				return true
 			}
 			else{
@@ -134,8 +135,7 @@ var app = angular.module("main", ['directives', 'filters']);
 			compareService.toggle(id)
 		}
 		$scope.isIn = function(id){
-			console.log(compareService.isIn(id));
-			return compareService.isIn(id)
+			compareService.isIn(id)
 		}
 	}])
 

@@ -148,9 +148,9 @@ $(function(){
 	})
 	var overlay = $('.sidebar-overlay');
 
-    $('.sidebar-toggle').on('click', function() {
+    $('#compare-btn').on('click', function() {
     	console.log('clicki');
-        var sidebar = $('#sidebar');
+        var sidebar = $('#sideRight');
         sidebar.toggleClass('open');
         if ((sidebar.hasClass('sidebar-fixed-left') || sidebar.hasClass('sidebar-fixed-right')) && sidebar.hasClass('open')) {
             overlay.addClass('active');
@@ -161,7 +161,7 @@ $(function(){
 
     overlay.on('click', function() {
         $(this).removeClass('active');
-        $('#sidebar').removeClass('open');
+        $('#sideRight').removeClass('open');
     });
     console.log(overlay);
 

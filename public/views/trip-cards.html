@@ -2,7 +2,7 @@
 	<div class="card-chip">
 		<img class="img-chip" ng-src="/images/user.jpg" alt="Usuario">
 		<a ng-href="/funcionario/{{trip.Funcionario_id._id}}">{{trip.Funcionario_id.Nombre.Nombres}} {{trip.Funcionario_id.Nombre.ApellidoP}}</a>
-		<a ng-href="/funcionario/{{trip.Funcionario_id._id}}">
+		<a ng-href="/profile/{{trip.Consecutivo}}">
 	</div>
 			<img class="card-img" ng-src="https://maps.googleapis.com/maps/api/staticmap?zoom=8&size=400x250&style=feature:road|visibility:off&markers=color:0x26a69a|{{trip.Destino.Ciudad}}&key=AIzaSyBhJ2RzDZjSI1rTjvfs9imr_WL61k16RD0&scale=1&format=jpg&sensor=FALSE">
 		</a>
@@ -13,7 +13,7 @@
 			<p>{{trip.FechaInicio}}</p>
 		</div>
 		<div class="card-control" ng-controller="compareCtrl">
-			<span ng-click="toggle('123')" ng-class="{green : isIn('123')}" class="compare-icon glyphicon glyphicon-check pull-left" id="{{trip.Consecutivo}}"></span>
+			<span ng-click="toggle('{{trip._id}}')" ng-class="{green : isIn('{{trip._id}}')}" class="compare-icon glyphicon glyphicon-check pull-left" id="{{trip.Consecutivo}}"></span>
 			<a class="flat-btn pull-right" href="/profile/{{trip.Consecutivo}}">Ver más</a>
 		</div>
 </div>

@@ -46,14 +46,12 @@ ng-click="toggle('right')"></div>
         </li>
         <li>
             <a href="#">
-                <i class="sidebar-icon icon-material-drafts"></i>
                 Configuraciones
             </a>
         </li>
         <li class="divider"></li>
         <li>
             <a href="#">
-                <i class="sidebar-icon icon-material-drafts"></i>
                 Cerrar sesión
             </a>
         </li>
@@ -65,7 +63,7 @@ ng-click="toggle('right')"></div>
     <!--  <div class="sidebar-text">Text</div> -->
 </aside>
 
-<aside ng-class="{open : state('right')}" class="sidebar sidebar-default sidebar-fixed-right" role="navigation">
+<aside id="sideRight" ng-class="{open : state('right')}" class="sidebar sidebar-default sidebar-fixed-right" role="navigation">
     <!-- Sidebar header -->
     <div class="sidebar-header header-cover" style="background-color:#009688">
         <!-- Top bar 
@@ -86,39 +84,44 @@ ng-click="toggle('right')"></div>
 
     <!-- Sidebar navigation -->
     <ul class="nav sidebar-nav" ng-controller="compareCtrl">
-            <a ng-href="/dashboard/54266f0f96f5d5892e36bb49">
-                <i class="sidebar-icon icon-material-inbox"></i>
                 Viajes
-            </a>
         </li>
         <li>
-            <a href="#">
-                <i class="sidebar-icon icon-material-star"></i>
-                Pendientes
-            </a>
+            <p id="f1"></p>
         </li>
         <li>
-            <a href="#">
-                <i class="sidebar-icon icon-material-send"></i>
-                Aclaraciones
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="sidebar-icon icon-material-drafts"></i>
-                Configuraciones
-            </a>
+            <p id="f2"></p>
         </li>
         <li class="divider"></li>
         <li>
-            <a href="#">
-                <i class="sidebar-icon icon-material-drafts"></i>
-                Cerrar sesión
-            </a>
+                Funcionarios
+        </li>
+        <li>
+            <p id="f3"></p>
+        </li>
+        <li>
+            <p id="f4"></p>
+        </li>
+        <li>
+            <div class="flat-btn" id="comparar">Comparar</div>
+            <div class="flat-btn pull-left">Limpiar</div>
         </li>
     </ul>
     <!-- Sidebar divider -->
-    <!-- <div class="sidebar-divider"></div> -->
+    <!-- <div class="sidebar-divider"></div> 
+    .card.micro#compare-card
+    .card-content
+        h6 Viajes
+            span.glyphicon.glyphicon-ok.pull-right.green#comparar
+        p#f1
+        p#f2
+        h6 Funcionarios
+            span.glyphicon.glyphicon-ok.pull-right.green#comparar2
+        p#f3
+        p#f4
+    .card-control
+        a.flat-btn.pull-right.normal#limpiar Limpiar
+
 
     <!-- Sidebar text -->
     <!--  <div class="sidebar-text">Text</div> -->
