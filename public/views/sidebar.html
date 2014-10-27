@@ -1,0 +1,125 @@
+<!-- Overlay for fixed sidebar -->
+<div class="sidebar-overlay" ng-class="{active : state('left')}"
+ng-click="toggle('left')"></div>
+<div class="sidebar-overlay" ng-class="{active : state('right')}"
+ng-click="toggle('right')"></div>
+
+<!-- Material sidebar -->
+<aside ng-class="{open : state('left')}" id="sidebar" class="sidebar sidebar-default sidebar-fixed-left" role="navigation">
+    <!-- Sidebar header -->
+    <div class="sidebar-header header-cover" style="background-color: #009688">
+        <!-- Top bar 
+        <div class="top-bar"></div>
+        <!-- Sidebar toggle button -->
+        <button type="button" class="sidebar-toggle" ng-click="toggle('left')">
+            <i class="icon-material-sidebar-arrow"></i>
+        </button>
+        <!-- Sidebar brand image -->
+        <div class="sidebar-image">
+            <img src="../images/user.jpg">
+        </div>
+        <!-- Sidebar brand name -->
+        <a class="sidebar-brand">
+            Alfonso Oñate
+        </a>
+    </div>
+
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav">
+        <li ng-click="toggle('left')">
+            <a ng-href="/dashboard/54266f0f96f5d5892e36bb49">
+                <i class="sidebar-icon icon-material-inbox"></i>
+                Viajes
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-star"></i>
+                Pendientes
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-send"></i>
+                Aclaraciones
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-drafts"></i>
+                Configuraciones
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-drafts"></i>
+                Cerrar sesión
+            </a>
+        </li>
+    </ul>
+    <!-- Sidebar divider -->
+    <!-- <div class="sidebar-divider"></div> -->
+
+    <!-- Sidebar text -->
+    <!--  <div class="sidebar-text">Text</div> -->
+</aside>
+
+<aside ng-class="{open : state('right')}" class="sidebar sidebar-default sidebar-fixed-right" role="navigation">
+    <!-- Sidebar header -->
+    <div class="sidebar-header header-cover" style="background-color:#009688">
+        <!-- Top bar 
+        <div class="top-bar"></div>
+        <!-- Sidebar toggle button -->
+        <button type="button" class="sidebar-toggle" ng-click="toggle('right')">
+            <i class="icon-material-sidebar-arrow"></i>
+        </button>
+        <!-- Sidebar brand image 
+        <div class="sidebar-image">
+            <img src="../images/user.jpg">
+        </div>
+        <!-- Sidebar brand name -->
+        <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+            Comparar
+        </a>
+    </div>
+
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav" ng-controller="compareCtrl">
+            <a ng-href="/dashboard/54266f0f96f5d5892e36bb49">
+                <i class="sidebar-icon icon-material-inbox"></i>
+                Viajes
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-star"></i>
+                Pendientes
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-send"></i>
+                Aclaraciones
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-drafts"></i>
+                Configuraciones
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="#">
+                <i class="sidebar-icon icon-material-drafts"></i>
+                Cerrar sesión
+            </a>
+        </li>
+    </ul>
+    <!-- Sidebar divider -->
+    <!-- <div class="sidebar-divider"></div> -->
+
+    <!-- Sidebar text -->
+    <!--  <div class="sidebar-text">Text</div> -->
+</aside>
