@@ -41,9 +41,9 @@ para saber como utilizarla por favor consulta la [wiki](https://github.com/LuisE
 ##Instalación Rapida
 Para lograr el buen funcionamiento de esta App Web se necesita instalar las Dependencias anteriormente mencionadas.
 
-Despues de haber instalado las dependencias, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips.git).
+Despues de haber instalado las dependencias, clona el repositorio [CheckTrips](https://github.com/LuisEnVilla/CheckTrips/tree/Angular.git).
 
-`git clone git://github.com/LuisEnVilla/CheckTrips.git`
+`git clone git://github.com/LuisEnVilla/CheckTrips/tree/Angular.git`
 
 Asegurate que se esta ejecutando el servidor mongod, que se instala junto con MongoDB. Ejecuta mongorestore para importar la base de datos que esta en la carpeta BD del proyecto.
 
