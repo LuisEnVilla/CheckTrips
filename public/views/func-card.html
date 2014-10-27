@@ -1,6 +1,13 @@
-<div class="card small">
-	<div class="card-chip">
-		<img class="img-chip" ng-src="/images/user.jpg" alt="Usuario">
-		<a ng-href="/funcionario/{{f._id}}">{{f.Nombre.Nombres}} {{f.Nombre.ApellidoP}}</a>
+<div class="card micro">
+	<div class="card-content-left">
+		<a ng-href="/funcionario/{{f._id}}"><span class="md-title">{{f.Nombre.Nombres}} {{f.Nombre.ApellidoP}}</span></a>
+		<p><span class="md-subhead">{{f.Trabajo.Cargo}}</span></p>
+		<p><span class="md-caption">{{f.Trabajo.Puesto}}</span></p>
+		<div class="card-control">
+			<a class="flat-btn">Comparar</a>
+		</div>
+	</div>
+	<div class="card-img-right">
+		<img class="img-right" ng-src="/images/user.jpg" alt="Usuario">
 	</div>
 </div>

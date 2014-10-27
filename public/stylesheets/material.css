@@ -1,5 +1,5 @@
 /*---INPUT---*/
-
+/*
 .group {
 	position:relative;
 	margin-top:45px;
@@ -84,7 +84,36 @@ input:focus ~ .highlight {
 	to    { width:0; background:transparent; }
 }
 
+/*---TYPOGRAPHY---*/
+
+.md-title {
+	font-size: 2rem;
+	font-weight: medium;
+	color: rgba(0,0,0,0.87);
+}
+
+.md-subhead {
+	font-size: 1.6rem;
+	color: rgba(0,0,0,0.87);
+}
+
+.md-caption {
+	font-size: 1.2rem;
+	color: rgba(0,0,0,0.54);
+}
 /*---CARD---*/
+
+.card a {
+	color: black;
+}
+
+.card a:hover{
+	color: black;
+}
+
+.card:nth-child(3n+0) {
+  margin-right: 0;
+}
 
 .card {
 		color: black !important;
@@ -92,10 +121,10 @@ input:focus ~ .highlight {
 		border-radius: 0.2rem;
 		padding: 0;
 		height: auto;
-		box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-		margin-bottom: 0.8em;
+		box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3);
 		z-index: 5;
 		position: relative;
+		margin: 0.4rem;
 }
 
 .card-chip {
@@ -117,6 +146,19 @@ input:focus ~ .highlight {
 		height: 18rem;
 }
 
+.card-img-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 33.3%;
+}
+
+.img-right {
+	width: 100%;
+	height: 100%;
+}
+
 .card-content {
 		color: black !important;
 		font-weight: 400;
@@ -124,20 +166,27 @@ input:focus ~ .highlight {
 		padding: 1.6rem;
 }
 
+.card-content-left {
+	position: relative;
+	padding: 1.6rem;
+	width: 66.6%;
+	height: 100%;
+}
+
 .card-control {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	padding: 1.6rem;
+	padding: 0.8rem;
 }
 
 .small {
-	height: 46rem;
+	height: 44rem;
 }
 
 .micro {
-	height: 200px;
+	height: 18rem;
 }
 
 /*---BUTTONS---*/
@@ -197,18 +246,64 @@ input:focus ~ .highlight {
 		opacity: 0.85;
 }
 
-/*---DROPDOWN---*/
-
-.dropdown-toggle{
-	background-color: white !important;
-	background-image: none;
-	border-radius: 2px;
-	width:100px; 
+.c-search {
 }
 
-.dropdown-menu {
-	width: 100px;
-	min-width: 100px;
+.search-box {
+	padding: 0.8rem;
+}
+
+.search-box input {
+	width: 100%;
+}
+
+.badges {
+	margin: 0.8rem;
+}
+
+.n-badge{
+	margin: 0px auto;
+	border-radius: 50%;
+	border: 1px solid;
+	width: 5.6rem;
+	height: 5.6rem;
+	text-align: center;
+	vertical-align: middle;
+	padding: 1.1rem 0;
+	font-size: 2rem;
+	position: relative;
+}
+
+.badge-comp {
+	position: absolute;
+	bottom: 0;
+	width: 2.8rem;
+	border-radius: 40%;
+	font-size: 1rem;
+	left: 1.3rem;
+	color: white;
+	background-color: yellow;
+}
+
+.c-badge {
+	text-align: center;
+}
+
+.badge-desc {
+	color: rgba(0,0,0,0.7);
+}
+
+.func{
+	text-align: center;
+}
+
+.profile-pic {
+	border-radius: 50%;
+	border: 5px solid white;
+	background-image: url(../images/user.jpg);
+	width: 12.8rem;
+	height: 12.8rem;
+	background-size: cover;
 }
 
 @media only screen and (max-width: 768px) {
