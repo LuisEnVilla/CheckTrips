@@ -10,7 +10,6 @@ var index = require('./routes/index');
 var api = require('./routes/api');
 var app = express();
 
-
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -52,6 +51,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;

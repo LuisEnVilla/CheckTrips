@@ -648,7 +648,7 @@ router.post('/seguir',function(req, res){
 					user.save();
 					var mensajes = new db.mensaje({
 						Destino : req.body.telefono,
-    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrips, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde checktrips.mx, ahora podrás recibir las notificaciones correspondientes al funcionario "+req.body.nombreSolicitud+" , además de las aclaraciones que dicho funcionario proporcione.",
+    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrips, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde http://checktrips.jit.su/, ahora podrás recibir las notificaciones correspondientes al funcionario "+req.body.nombreSolicitud+" , además de las aclaraciones que dicho funcionario proporcione.",
 					});
 					mensajes.save();
 					res.status(200);
@@ -665,7 +665,7 @@ router.post('/seguir',function(req, res){
 					user.save();
 					var mensajes = new db.mensaje({
 						Destino : req.body.telefono,
-    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrips, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde checktrips.smx, ahora podrás recibir las notificaciones correspondientes al viaje con el numero de comision "+req.body.nombreSolicitud+" , además de las aclaraciones correspondientes de dicho viaje.",
+    					Mensaje : "Hola "+ req.body.nombre +", bienvenido a CheckTrips, la plataforma para seguir, registrar y aclarar los viajes de funcionarios públicos del ifai. Acabas de registrar tu numero desde http://checktrips.jit.su/, ahora podrás recibir las notificaciones correspondientes al viaje con el numero de comision "+req.body.nombreSolicitud+" , además de las aclaraciones correspondientes de dicho viaje.",
 					});
 					mensajes.save();
 					res.status(200);
@@ -1053,6 +1053,36 @@ router.get('/comparar/:id/:id2/:tipo', function(req, res) {
 	else{
 		return res.send(404, err.message);
 	}
+});
+
+/*
+	log 
+*/
+
+router.post('/log', function(req, res) {
+  db.funcionario.findOne({Correo : req.body.mail}, function(err, usuario){
+  	if (err){
+  		res.render('logeo');
+  	}
+  	else if (!usuario){
+  		res.render('logeo');
+  	}
+  	else if (req.body.pass != usuario.Trabajo.Clave){
+  		res.render('logeo');
+  	}
+  	else{
+  		db.catalogoComision.find({},(function(err, catalogoComisiones){
+  			db.catalogoTema.find({},(function(err, catalogoTemas){
+        db.catalogoEdos.find().distinct('NombreEntidad',(function(err, catalogoEdos){
+          db.catalogoEdos.find().distinct('NOmbreMunicipio',(function(err, catalogoMpios){
+				  res.render('insert',{usuario:usuario, catalogoComisiones:catalogoComisiones,catalogoTemas:catalogoTemas,
+           catalogoEdos:catalogoEdos, catalogoMpios: catalogoMpios})
+          }))
+        }))
+  			}));
+  		}));
+  	}
+  });
 });
 
 /* GET home page. */
