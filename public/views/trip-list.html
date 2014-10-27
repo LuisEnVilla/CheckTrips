@@ -1,0 +1,21 @@
+<a class="float-btn mini left">+</a>
+<div class="c-tabs fixed-top"></div>
+<div class="container appbar-margin">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="md-caption">Recientes</h3>
+			<div ng-repeat="trip in trips" class="list-item">
+				<a ng-href="/details/{{trip._id}}">
+				<div class="img-chip colorful">
+				{{trip.Tema | fLetter : 1}}
+				</div>
+				<div><span class="md-subhead">{{trip.Tema.length < 25 ? trip.Tema : (trip.Tema | fLetter : 25) + '...'}}</span><br>
+				<span class="md-caption">{{trip.Destino.Ciudad}}, {{trip.Destino.Estado}}</span></div>
+				<div class="pull-right hidden-sm hidden-xs">
+					<span class="md-caption">{{trip.FechaInicio}}</span>
+				</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

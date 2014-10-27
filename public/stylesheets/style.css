@@ -1,191 +1,130 @@
 *{
 	font-family: Roboto, sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 body,html {
 	width: 100%;
 	height: 100%;
-	font-weight: 400;
+	font-weight: 300;
 	font-family: Roboto, sans-serif;
 	background-color: #ECF0F1;
 	font-size: 10px;
+	/*padding-top: 6.4rem;*/
 }
 
-/*---HEADER---*/
+.appbar-margin {
+	margin-top: 11.8rem;
+}
 
-.navbar{
+/*---APP-BAR---*/
+
+.col-md-4 {
+	padding: 0;
+}
+
+.appbar{
 	background: #009688;
-	max-height: 6.4rem;
+	height: 6.4rem;
+	padding-right: 2.4rem;
+	z-index: 1001 !important;
 }
 
-.nav>li>a{
-	color: white;
-}
-
-.nav li {
+.appbar div {
 	display: inline-block;
-}
-
-a.navbar-brand {
-	font-family: 'Lobster Two', cursive;
-	font-weight: 400;
-	font-style: italic;
-	margin: 0;
-	font-size: 2.5em;
 	color: white;
+	line-height: 6.4rem;
+	font-size: 2.4rem;
 }
 
-h1 {
-	display: inline-block;
-	font-family: 'Lobster Two', cursive;
-	font-weight: 400;
-	font-style: italic;
-	margin: 0;
-	font-size: 2rem;
+.appbar-title > #title{
+	margin-left: 3.2rem;
 }
 
-#compare-card {
-	width: 300px;
-	position: fixed;
-	top:60px;
-	right: 10px;
-	display: none;
-	z-index: 1000;
-}
-
-#compare-btn {
+.appbar-ic {
+	margin-left: 2.4rem;
 	cursor: pointer;
 }
 
+a{
+	color: white;
+}
 
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+/*---TABS---*/
+
+.c-tabs {
+	height: 11.2rem;
+	padding-top: 6.4rem;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+	background-color: #009688;
+	padding-left: 5.6rem;
+	margin-bottom: 1rem;
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+}
+
+.paper-tabs {
+	padding: 0 2.4rem;
+	padding-top: 1.3rem;
+	padding-bottom: 2rem;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.paper-tabs:hover{
+	border-bottom: 0.2rem solid white;
+}
+
+.paper-tabs.active{
+	border-bottom: 0.2rem solid white;
+}
+
+/*---SEARCH BOX---*/
+
+input[type="text"] {
+  border: 0;
+  margin-left: 1rem;
+  width: 95%;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+.search-box > span {
+	font-size: 2rem;
+}
 
 /*---INDEX---*/
-
-.intro-header {
-	padding-top: 70px;
-	padding-bottom: 50px;
-	text-align: center;
-	background: url(../images/fondo1.jpg) no-repeat center center;
-	color: #f8f8f8;
-	background-size: cover;
-	height: 100%;
-}
-
-.intro-header span>.btn {
-	color: #FFC107;
-}
-
-.intro-message {
-	position: relative;
-	padding-top: 10%;
-	padding-bottom: 20%;
-}
-
-.intro-message > h1 {
-	margin: 0;
-	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-	font-size: 5em;
-}
-
-.intro-divider {
-	width: 80%;
-	border-top: 1px solid #f8f8f8;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.intro-message > h3 {
-	text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-}
-
-.col-md-4 {
-	padding: 0 0.4em;
-}
-
-.form-control {
-	height: 50px;
-}
-
-.lead {
-	font-size: 18px;
-	font-weight: 400;
-	text-align: justify;
-}
-
-.glyphicon-stats {
-	font-size: 1.5em;
-	color: gray;
-}
 
 .green {
 	color: green !important;
 }
 
-form {
-	margin-top: 3em;
-}
-
-.search-box {
-	background-color: white;
-	width: 500px;
-	margin:0 auto;
-}
-
 /*---TOP---*/
 
 #main {
-	margin-top: 6.4rem;
+	margin-top: 12.8rem;
 
-}
-
-.top-title {
-	text-transform: uppercase;
-	font-weight: 100;
-	margin: 2em 0.5em;
-	color: black;
-	text-align: left;
 }
 
 .compare-icon {
 	cursor: pointer;
 	font-size: 2rem;
-}
-
-/*---PROFILE---*/
-
-#map {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-repeat: no-repeat;
-	background-size:100% auto; 
-	height: 300px;
-	width: 100%;
-}
-
-.details-title {
-	font-weight: 500;
-	text-transform: uppercase;
-	color: black;
-	font-size: 2em;
-	padding: 0.5em;
-	padding-left: 1em;
-}
-
-.dl-horizontal dt {
-		width: auto;
-    margin-right: 1em;
-    margin-left: 1em;
-    text-align: left;
-}
-.dl-horizontal dd{
-		margin-left: 0.5em;
-		text-align: left;
-    font-weight: bolder;
-}
-
-dl dd {
-  text-align: justify;
 }
 
 /*---COMPARE---*/
@@ -199,8 +138,8 @@ dl dd {
 	top: 0;
 	left: 0;
 	right: 0;
-	padding-top: 12.8rem;
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+	padding-top: 6.4rem;
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3);
 	box-shadow: 0 2px 2px rgba(0,0,0,0.3);
 	margin-bottom: 1em;
 	background-color: #009688;

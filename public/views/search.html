@@ -1,0 +1,27 @@
+<tabs></tabs>
+<div class="container" ng-controller="tripsCtrl" ng-show="isSelected(1)">
+	<div class="row c-search">
+		<div class="card search-box col-md-12">
+		<span class="glyphicon glyphicon-search"></span>
+		<input type="text" ng-model="query.Funcionario_id.Nombre.Nombres" placeholder="Buscar por consecutivo, nombre de funcionario o evento ...">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4" ng-repeat="trip in trips | filter : query | orderBy : '+Funcionario_id.Nombre.Nombres' | limitTo : 9">
+			<trip-cards></trip-cards>
+		</div>
+	</div>
+</div>
+<div class="container" ng-controller="funcCtrl" ng-show="isSelected(2)">
+	<div class="row c-search">
+		<div class="card search-box col-md-12">
+		<span class="glyphicon glyphicon-search"></span>
+		<input type="text" ng-model="query.Nombre.Nombres" placeholder="Buscar por dependencia o nombre de funcionario ...">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4" ng-repeat="f in func | filter : query | limitTo : 9">
+			<func-card></func-card>
+		</div>
+	</div>
+</div>
