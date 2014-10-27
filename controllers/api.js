@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. *//*
+/* GET home page. */
 router.get('/top', function(req, res) {
 		db.viaje.find({FechaInicio:{$regex:"08/"}}
 		,'Consecutivo Aclaraciones _id Tema Tipo GastoPasaje FechaInicio Origen Destino Funcionario_id')
@@ -79,9 +79,9 @@ router.get('/funcionario/:dato2/:dato3', function(req, res) {
 			res.send(funcionarios);
 			});
 		}
-});*/
+});
 /* GET home page. */
-router.post('/users', function(req, res) {
+/*router.post('/users', function(req, res) {
 	db.funcionario.findOne({Correo : req.body.email},function(err, usuario){
 			if (err) res.send(500, err.message);
 			if (req.body.password === usuario.Trabajo.Clave){
@@ -108,6 +108,6 @@ router.get('/users/viajes/:id',function(req, res){
 		if (err) res.send(500, err.message);
 		res.status(200).jsonp(viajes)
 	});
-});
+});*/
 
 module.exports = router;
