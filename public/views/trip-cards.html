@@ -13,7 +13,7 @@
 			<p>{{trip.FechaInicio}}</p>
 		</div>
 		<div class="card-control" ng-controller="compareCtrl">
-			<span ng-click="toggle('{{trip._id}}')" ng-class="{green : isIn('{{trip._id}}')}" class="compare-icon glyphicon glyphicon-check pull-left" id="{{trip.Consecutivo}}"></span>
+			<span class="compare-icon glyphicon glyphicon-check pull-left" id="{{trip.Consecutivo}}"></span>
 			<a class="flat-btn pull-right" href="/profile/{{trip.Consecutivo}}">Ver más</a>
 		</div>
 </div>

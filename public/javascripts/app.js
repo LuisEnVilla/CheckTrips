@@ -108,7 +108,7 @@ var app = angular.module("main", ['directives', 'filters']);
 		})
 	}])
 	app.controller('fTripsCtrl', ['$scope','$http', '$routeParams',function($scope, $http, $routeParams){
-		$http.get('/funcionario/viajes/'+$routeParams.id).success(function(data){
+		$http.get('/dashboard/funcionario/viajes/54266f0f96f5d5892e36bb49').success(function(data){
 			$scope.trips = data
 		})
 	}])
@@ -135,7 +135,7 @@ var app = angular.module("main", ['directives', 'filters']);
 			compareService.toggle(id)
 		}
 		$scope.isIn = function(id){
-			compareService.isIn(id)
+			return compareService.isIn(id)
 		}
 	}])
 

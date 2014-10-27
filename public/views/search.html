@@ -3,11 +3,11 @@
 	<div class="row c-search">
 		<div class="card search-box col-md-12">
 		<span class="glyphicon glyphicon-search"></span>
-		<input type="text" ng-model="query.Funcionario_id.Nombre.Nombres" placeholder="Buscar por consecutivo, nombre de funcionario o evento ...">
+		<input type="text" ng-model="query" placeholder="Buscar por consecutivo, nombre de funcionario o evento ...">
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4" ng-repeat="trip in trips | filter : query | orderBy : '+Funcionario_id.Nombre.Nombres' | limitTo : 9">
+		<div class="col-md-4" ng-repeat="trip in trips | filter : query | orderBy : '+Funcionario_id.Nombre.Nombres' | limitTo : 15">
 			<trip-cards></trip-cards>
 		</div>
 	</div>
@@ -16,11 +16,11 @@
 	<div class="row c-search">
 		<div class="card search-box col-md-12">
 		<span class="glyphicon glyphicon-search"></span>
-		<input type="text" ng-model="query.Nombre.Nombres" placeholder="Buscar por dependencia o nombre de funcionario ...">
+		<input type="text" ng-model="query" placeholder="Buscar por dependencia o nombre de funcionario ...">
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4" ng-repeat="f in func | filter : query | limitTo : 9">
+		<div class="col-md-4" ng-repeat="f in func | filter : query | limitTo : 15">
 			<func-card></func-card>
 		</div>
 	</div>

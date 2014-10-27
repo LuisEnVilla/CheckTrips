@@ -6,14 +6,13 @@ block content
 			background-color:transparent;
 		}
 	include ./header
-	.intro-header
-		.container
-			.row
-				.col-lg-12
-					.intro-message
-						h1 Check Trips
-						h4: kbd Realiza una búsqueda o explora los viajes de los funcionarios.
-						a.btn.btn-lg.raised-btn.inicio(href="/search") Explorar
-						a.btn.btn-lg.raised-btn.inicio(href="http://slides.com/luisenriquevilla/checktrips") Presentación
-						a.btn.btn-lg.raised-btn.inicio(href="http://youtu.be/gL7IANu46Ps") ScreenCast
+	.container(style="margin-top: 11.4rem")
+		.row
+			.col-md-8.col-md-offset-2.text-center
+					img.img-responsive.center-block(src="images/suitcase-puzzle.png" width="300px" height="300px")
+					h1 Check Trips
+					h4: kbd Realiza una búsqueda o explora los viajes de los funcionarios.
+					a.btn.btn-lg.raised-btn.inicio(href="/search") Explorar
+					a.btn.btn-lg.raised-btn.inicio(href="http://slides.com/luisenriquevilla/checktrips") Presentación
+					a.btn.btn-lg.raised-btn.inicio(href="http://youtu.be/gL7IANu46Ps") ScreenCast
 		include ./footer
