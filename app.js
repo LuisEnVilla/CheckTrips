@@ -18,6 +18,7 @@ var aclaracion = require('./controllers/aclaraciones');
 var api = require('./controllers/api');
 var alta = require('./controllers/altaviaje');
 var search = require('./controllers/search');
+var dashboard = require('./controllers/dashboard');
 var app = express();
 // Configuration
 
@@ -46,6 +47,7 @@ app.use('/aclarar',aclaracion);
 app.use('/api',api);
 app.use('/alta',alta);
 app.use('/search', search);
+app.use('/dashboard',dashboard)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -16,7 +16,8 @@ users : require('./modelUsers')(mongoose),
 mensaje : require('./modelMensaje')(mongoose),
 catalogoComision :  require('./catalogoComision')(mongoose),
 catalogoTema : require('./CatalogoTema')(mongoose),
-catalogoEdos : require('./CatalogoEdos') (mongoose)
+catalogoEdos : require('./CatalogoEdos') (mongoose),
+viajePendiente : require('./modelViajePendiente') (mongoose)
 // agregar más modelos aquí en caso de haberlos
 };
 module.exports = global.db;
